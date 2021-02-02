@@ -358,10 +358,10 @@ mode "resize" {
         # Pressionar para cima diminuirá a altura da janela.
         # Pressionar para baixo aumentará a altura da janela.
 
-        bindsym Left resize shrink width 15 px or 15 ppt
-        bindsym Down resize grow height 15 px or 15 ppt
-        bindsym Up resize shrink height 15 px or 15 ppt
-        bindsym Right resize grow width 15 px or 15 ppt
+        bindsym Left resize shrink width 5 px or 5 ppt
+        bindsym Down resize grow height 5 px or 5 ppt
+        bindsym Up resize shrink height 5 px or 5 ppt
+        bindsym Right resize grow width 5 px or 5 ppt
 
         # De volta ao normal: Enter ou Escape ou $ mod + r
         bindsym Return mode "default"
@@ -374,7 +374,7 @@ mode "resize" {
 #                           G A P S                                #
 ####################################################################
 
-gaps inner 10
+gaps inner 5
 gaps outer 0
 #smart_gaps on
 
