@@ -9,11 +9,20 @@
 | Program Launcher | [Rofi](https://github.com/davatorium/rofi)                                                                                         |                                                                                        
 | Status Bar     | [Polybar](https://github.com/polybar/polybar)
 | Image viewer | [Viewnior](http://siyanpanayotov.com/project/viewnior)                                                                                                                                                                                             
+| Program Launcher | [Rofi](https://github.com/davatorium/rofi)                                                                                         |                                                                                        
 | Print Screen     | [Flameshot](https://github.com/lupoDharkael/flameshot)                                                                               |
 | Screen Recorder    | [Simple Screen Recorder](https://www.maartenbaert.be/simplescreenrecorder/)                                                                                                    
 | Terminal Emulator   | [Kitty](https://github.com/kovidgoyal/kitty)                                                                                  |
 | Shell               | [ZSH](https://wiki.archlinux.org/index.php/Zsh)                                                                               |
 |Text editor     | [NeoVim](https://github.com/neovim/neovim)         |
-                                                                          |
-| Lockscreen    | [Fortune.sh](https://github.com/fffranks/dotfiles/blob/master/.config/polybar/scripts/fortune.sh)                                                                                                  
-| Notification Daemon   | [Dunst](https://github.com/dunst-project/dunst)                                                                                    
+| Lockscreen    | [Fortune.sh](https://github.com/fffranks/dotfiles/blob/master/.config/polybar/scripts/fortune.sh) 
+
+| Image viewer | [Viewnior](http://siyanpanayotov.com/project/viewnior)  
+
+| Notification Daemon   | [Dunst](https://github.com/dunst-project/dunst)
+
+| Vídeo Player        | [MPV](https://mpv.io/)	
+
+| Music Player | [Spotify](https://flathub.org/apps/details/com.spotify.Client)
+
+|
