@@ -1,0 +1,1006 @@
+# Credits: Franklin Souza
+# Telegram: @FranklinTech
+# Dúvidas: https://github.com/jaagr/polybar
+
+# ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗ 
+# ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+# ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+# ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+# ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+# ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+                                                       
+#################################################################
+#                             CORES                             #
+#################################################################
+
+# Label font
+# label-font = 0
+
+[colors]
+#background = #00000000
+#background = #1e1f29
+#foreground = #f8f8f2
+#background-alt = #444
+#foreground-alt = #444
+#primary = ${colors.foreground}
+#secondary = ${colors.background}
+#border1 = #ec8f4b
+
+# My alerts
+#
+# Dracula
+# alert = #ff5555
+
+##############################################3
+
+# Pywal
+foreground = ${xrdb:color7:#222}
+background = ${xrdb:color0:#222}
+primary = ${xrdb:color1:#222}
+secondary = ${xrdb:color2:#222}
+alert = ${xrdb:color1:#222}
+
+#################################################################
+#                               Barra TOP                       #
+#################################################################
+
+[bar/top]
+monitor = ${env:MONITOR:LVDS-1}
+dpi = 90
+width = 100%
+height = 20
+#width = 80%
+#offset-x = 10%
+#pffset-y = 4px
+#override-redirect = true
+radius = 10
+#fixed-center = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 1
+line-color = ${colors.foreground}
+
+#border-size = 1
+#border-color = ${colors.foreground}
+
+#border-bottom-size = 1
+#border-bottom-color = ${colors.foreground}
+
+padding-left = 0
+padding-right = 1
+
+module-margin-left = 2
+module-margin-right = 2
+
+#################################################################
+#                         FONTS BAR TOP                         #
+#################################################################
+
+#font-0 = "Bahamas:style=Regular:pixelsize=9;9"
+font-0 = "Poppins:style=Regular:pixelsize=9;3"
+#font-0 = "Font Awesome 5 Free:style=Regular:pixelsize=9;9"
+#font-0 = "Font Awesome 5 Brands:style=Regular:pixelsize=9;9"
+#font-0 = "Baumans:style=Regular:pixelsize=9;9"
+font-1 = "xos4 Terminess Powerline:pixelsize=13;1"
+font-2 = "Hack Nerd Font:style=Regular:pixelsize=10;2"
+#font-3 = "Font Awesome 5 Brands:style=Regular:pixelsize=8"
+#font-4 = "Font Awesome 5 Free:style=Regular:pixelsize=8"
+
+#################################################################
+#                         SEPARADOR BAR TOP                     #
+#################################################################
+
+separator = |
+#separator = /
+
+#################################################################
+#                         MÓDULOS BAR TOP                       #
+#################################################################
+
+modules-left = mpd 
+modules-center = title
+modules-right = pulse calendar date powermenu
+
+#################################################################
+#                         TRAY BAR TOP                          #
+#################################################################
+
+#tray-position = right
+#tray-detached = false
+#tray-maxsize = 12
+#tray-padding = 4
+#tray-scale = 1.0
+#tray-transparent = true
+#tray-offset-x = 1
+#tray-offset-y = 1
+#tray-background = ${colors.background}
+
+#################################################################
+#                        OPTIONS IGNORE                         #
+#################################################################
+
+#wm-restack = bspwm
+#wm-restack = i3
+
+#scroll-up = bspwm-desknext
+#scroll-down = bspwm-deskprev
+
+#scroll-up = i3wm-wsnext
+#scroll-down = i3wm-wsprev
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+#################################################################
+#                          BARRA BOTTOM                         #
+#################################################################
+
+[bar/bottom]
+monitor = ${env:MONITOR:LVDS-1}
+dpi = 90
+width = 100%
+#width = 80%
+height = 20
+#offset-x = 10%
+#pffset-y = 4px
+#override-redirect = true
+radius = 10
+fixed-center = true
+bottom = true
+enable-ipc = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 2
+line-color = ${colors.foreground}
+
+#border-size = 1
+#border-color = ${colors.foreground}
+
+#border-top-size = 1
+#border-top-color = ${colors.foreground}
+
+padding-left = 0
+padding-right = 1
+
+module-margin-left = 2
+module-margin-right = 2
+
+#################################################################
+#                         FONTS BAR BOTTOM                      #
+#################################################################
+
+#font-0 = "Bahamas:style=Regular:pixelsize=10;3"
+font-0 = "Poppins:style=Regular:pixelsize=9;1"
+#font-0 = "Font Awesome 5 Free:style=Regular:pixelsize=8;1"
+#font-0 = "Font Awesome 5 Brands:style=Regular:pixelsize=8;1"
+#font-0 = "Baumans:style=Regular:pixelsize=9;1"
+font-1 = "xos4 Terminess Powerline:pixelsize=13;1"
+font-2 = "Hack Nerd Font:style=Regular:pixelsize=10;2"
+#font-3 = "Font Awesome 5 Brands:style=Regular:pixelsize=8"
+#font-4 = "Font Awesome 5 Free:style=Regular:pixelsize=8"
+
+#################################################################
+#                         SEPARADOR BAR BOTTOM                  #
+#################################################################
+
+separator = |
+#separator = /
+
+#################################################################
+#                         MÓDULOS BAR BOTTOM                    #
+#################################################################
+
+modules-left = i3
+modules-center =  
+modules-right = xkeyboard up 
+
+#################################################################
+#                         TRAY BAR BOTTOM                       #
+#################################################################
+
+tray-position = right
+tray-detached = false
+tray-maxsize = 11
+tray-padding = 2
+tray-scale = 1.0
+tray-transparent = false
+tray-offset-x = 0
+tray-offset-y = 0
+tray-background = ${colors.background}
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+#################################################################
+#                         MÓDULO DE TITULO                      #
+#################################################################
+
+[module/title]
+type = internal/xwindow
+
+#format =   <label>
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+#format-underline = ${colors.foreground}
+#label-underline = ${colors.foreground}
+
+label = %title%
+label-foreground = ${colors.foreground}
+label-maxlen = 50
+
+label-empty = Sem Janelas
+label-empty-foreground = ${colors.foreground}
+
+#################################################################
+#                         MÓDULO DO TECLADO                     #
+#################################################################
+
+[module/xkeyboard]
+type = internal/xkeyboard
+blacklist-1 = num lock
+
+#format-prefix = " "
+format-prefix-foreground = ${colors.foreground}
+#format-prefix-underline = ${colors.foreground}
+
+label-layout = %layout%
+#label-layout-underline = ${colors.foreground}
+#label-layout-foreground = ${colors.foreground}
+#label-layout-background = ${colors.background}
+
+label-indicator-padding = 1
+label-indicator-margin = 1
+#label-indicator-background = ${colors.background}
+#label-indicator-underline = ${colors.foreground}
+
+#################################################################
+#                         MÓDULO UPTIME                         #
+#################################################################
+
+[module/uptime]
+type = custom/script
+interval = 1
+exec = $HOME/.config/polybar/scripts/uptime.sh
+label = "%{F${xrdb:color7:#222}  %{F-} %output:0:37:...%"
+#format-suffix = "  "
+format = <label>
+format-suffix-foreground = ${colors.foreground}
+#format-underline =  ${colors.foreground}
+
+#################################################################
+#                     MÓDULO FILESYSTEM - HOME                  #
+#################################################################
+
+[module/filesystem]
+type = internal/fs
+interval = 20
+
+mount-0 = /home
+#fixed-values = true
+#spacing = 2
+
+format-mounted-prefix = "  "
+#format-mounted-prefix = "  "
+#format-mounted-prefix = " "
+format-mounted-prefix-foreground = ${colors.foreground}
+#label-mounted-underline = #ffffff
+#format-mounted-prefix-underline = #ffffff
+format = <label>
+
+format-mounted = <label-mounted>
+
+label-mounted = %used%
+#label-mounted = %free%
+label-unmounted = %mountpoint% Não montado
+#label-unmounted-foreground = ${colors.foreground-alt}
+
+#################################################################
+#                      MÓDULO FILESYSTEM - ROOT                 #
+#################################################################
+
+[module/filesystem2]
+type = internal/fs
+interval = 20
+
+mount-0 = /
+#fixed-values = true
+#spacing = 2
+
+format-mounted-prefix = " 濫 "
+format-mounted-prefix-foreground = ${colors.foreground}
+#format-mounted-foreground = ${colors.foreground}
+#label-mounted-underline = ${colors.foreground}
+#format-mounted-prefix-underline = ${colors.foreground}
+
+format = <label>
+
+format-mounted = <label-mounted>
+
+label-mounted =  %used%
+#label-mounted = %free%
+label-unmounted = %mountpoint% Não montado
+#label-unmounted-foreground = ${colors.foreground-alt}
+
+#################################################################
+#                         MÓDULO BSPWM                          #
+#################################################################
+
+[module/bspwm]
+type = internal/bspwm
+format = <label-state> <label-mode>
+index-sort = false
+wrapping-scroll = false
+pin-workspaces = true
+enable-click = true
+enable-scroll = false
+reverse-scroll = false
+fuzzy-match = true
+
+ws-icon-0 = 
+ws-icon-1 = 
+ws-icon-2 = 
+ws-icon-3 = 
+ws-icon-4 = 
+ws-icon-5 = 
+ws-icon-6 = 
+ws-icon-7 = 
+ws-icon-8 = 
+ws-icon-9 = 
+
+strip-wsnumbers = false
+label-state-foreground = ${xrdb:color0:#222}
+
+label-mode = %mode%
+label-mode-foreground = ${xrdb:color0:#222}
+label-mode-background = ${xrdb:color7:#222}
+label-mode-underline = ${xrdb:color0:#222}
+label-mode-padding = 2
+
+label-focused = %name%
+label-focused-foreground = ${xrdb:color0:#222}
+label-focused-background = ${xrdb:color7:#222}
+label-focused-underline= ${xrdb:color0:#222}
+label-focused-padding = 2
+
+label-unfocused = %name%
+label-unfocused-foreground = ${xrdb:color7:#222}
+label-unfocused-background = ${xrdb:color0:#222}
+label-unfocused-underline = ${xrdb:color7:#222}
+label-unfocused-padding = 2
+
+label-visible = %index%
+label-visible-foreground = ${xrdb:color0:#222}
+label-visible-background = ${xrdb:color7:#222}
+label-visible-underline = ${xrdb:color0:#222}
+label-visible-padding = 2
+
+label-urgent = %name%
+label-urgent-foreground = ${xrdb:color0:#222}
+label-urgent-background = ${xrdb:color3:#222}
+label-urgent-underline = ${xrdb:color0:#222
+label-urgent-padding = 2
+
+#################################################################
+#                SEPARADOR WS (WORKSAPCES) BSPWM                #
+#################################################################
+
+label-separator = |
+label-separator-padding = 2
+label-separator-foreground = ${xrdb:color7:#222}
+
+#################################################################
+#                         MÓDULO I3-GAPS                        #
+#################################################################
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
+pin-workspaces = true
+enable-click = true
+enable-scroll = false
+reverse-scroll = false
+fuzzy-match = true
+
+#ws-icon-0 = 
+#ws-icon-1 = 
+#ws-icon-2 = 
+#ws-icon-3 = 
+#ws-icon-4 = 
+#ws-icon-5 = 
+#ws-icon-6 = 
+#ws-icon-7 = 
+#ws-icon-8 = 
+#ws-icon-9 = 
+
+strip-wsnumbers = false
+label-state-foreground = ${colors.foreground}
+
+label-mode = %mode%
+label-mode-foreground = ${colors.foreground}
+label-mode-background = ${colors.background}
+label-mode-underline = ${colors.alert}
+label-mode-padding = 2
+
+label-focused = %name%
+label-focused-foreground = ${colors.background}
+label-focused-background = ${colors.foreground} 
+label-focused-underline = ${colors.alert}
+label-focused-padding = 2
+
+label-unfocused = %name%
+label-unfocused-foreground = ${colors.foreground}
+label-unfocused-background = ${colors.background}
+#label-unfocused-underline = ${colors.foreground}
+label-unfocused-padding = 2
+
+label-visible = %index%
+label-visible-foreground = ${colors.foreground}
+label-visible-background = ${colors.background}
+label-visible-underline = #ebdbb2
+label-visible-padding = 2
+
+label-urgent = %name%
+label-urgent-foreground = ${colors.foreground}
+label-urgent-background = ${colors.alert}
+label-urgent-underline = ${colors.foreground}
+label-urgent-padding = 2
+
+#################################################################
+#               SEPARADOR WS (WORKSAPCES) i3WM                  #
+#################################################################
+
+label-separator = |
+label-separator-padding = 2
+label-separator-foreground = ${colors.foreground}
+
+#################################################################
+#                           MÓDULO MPD                          #
+#################################################################
+
+[module/mpd]
+type = internal/mpd
+#format-online = <label-song> <toggle> <icon-repeatone> <label-time> <icon-stop>
+#format-online = <label-song> <label-time> <icon-prev> <icon-stop> <toggle> <icon-next>
+format-online = <label-song>   <bar-progress>   <label-time>  <icon-stop>  <toggle>
+#format-online = <label-song>  <label-time>   <icon-stop>   <toggle>
+#format-online = <label-song> <label-time>
+
+icon-prev = 
+icon-stop = 
+icon-play = 
+icon-pause = 
+icon-next = 
+icon-seekb = seekb
+icon-seekf = seekf
+icon-random = rdm
+icon-repeat = 
+icon-repeatone = ¹
+icon-single = single
+icon-consume = consume
+
+# Somente para <bar-progress> quando usada
+bar-progress-width = 6
+bar-progress-indicator =
+bar-progress-fill = "─"
+bar-progress-fill-foreground = ${colors.alert}
+bar-progress-empty = "─"
+
+#label-song =  %title%
+#label-song-maxlen = 25
+#label-song-underline = ${colors.foreground}
+#label-song-ellipsis = true
+label-song = %{F${colors.foreground} %{F-} %title%%{F-}
+
+#################################################################
+#                        MÓDULO XBACKLIGHT                      #
+#################################################################
+
+[module/xbacklight]
+type = internal/xbacklight
+
+format = <label> <bar>
+label = BL
+
+bar-width = 10
+bar-indicator = |
+bar-indicator-foreground = #fff
+bar-indicator-font = 2
+bar-fill = ─
+bar-fill-font = 2
+bar-fill-foreground = #9f78e1
+bar-empty = ─
+bar-empty-font = 2
+bar-empty-foreground = ${colors.foreground-alt}
+
+#################################################################
+#                      MÓDULO XBACKLIGHT - ACPI                 #
+#################################################################
+
+[module/backlight-acpi]
+inherit = module/xbacklight
+type = internal/backlight
+card = intel_backlight
+
+#################################################################
+#                          MÓDULO CPU                           #
+#################################################################
+
+[module/cpu]
+type = internal/cpu
+interval = 1.5
+format-prefix = "  "
+format-prefix-foreground = ${colors.foreground}
+#format-underline = ${colors.foreground}
+label = %percentage%%
+
+#################################################################
+#                            MÓDULO MEMORY                      #
+#################################################################
+
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix = "  "
+format-prefix-foreground = ${colors.foreground}
+#format-underline = ${colors.foreground}
+label = %percentage_used%%
+
+#################################################################
+#                            MÓDULO DATE                        #
+#################################################################
+
+[module/date]
+type = internal/date
+interval = 1
+
+#date = "%a %d/%m/%y"
+#date-alt = " %a %d/%m/%y"
+
+#time = %I:%M:%S %p
+#time = %I:%M %p
+time = %H:%M
+#time = %H: %M: %S
+#time-alt = %H:%M:%S
+
+format-prefix = "  "
+#format-prefix = " "
+format-prefix-foreground = ${colors.foreground}
+#format-underline = #cc241d
+#format-background = #cc241d
+
+label = %date% %time%
+
+#################################################################
+#                          MÓDULO PULSEAUDIO                    #
+#################################################################
+
+[module/pulse]
+type = internal/pulseaudio
+use-ui-max = true
+
+format-volume = <label-volume>
+#format-volume-underline = #458588
+#format-volume-background = #458588
+#label-volume = 墳 %percentage%%
+label-volume =  %percentage%%
+label-volume-foreground = ${colors.foreground}
+
+label-muted =  Sem som
+label-muted-foreground = ${colors.alert}
+format-muted-underline = ${colors.alert}
+
+#################################################################
+#                            MÓDULO ALSA                        #
+#################################################################
+
+[module/alsa]
+type = internal/alsa
+use-ui-max = true
+
+format-volume = <label-volume>
+format-volume-prefix = " 墳 "
+format-volume-underline = ${colors.foreground}
+format-volume-prefix-foreground = ${colors.foreground}
+label-volume = %percentage%%
+
+format-muted-prefix = " "
+format-muted-foreground = ${colors.alert}
+format-muted-underline = ${colors.alert}
+label-muted = Sem áudio
+
+#################################################################
+#                       MÓDULO TEMPERATURA CPU                  #
+#################################################################
+
+[module/temperature]
+type = internal/temperature
+interval = 0.5
+#hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input
+#hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input
+thermal-zone = 0
+warn-temperature = 60
+
+format = <ramp> <label>
+#format-underline = ${colors.foreground}
+format-warn = <ramp> <label-warn>
+format-warn-underline = #ff0000
+
+label = %temperature-c%
+label-warn = %temperature-c%
+label-warn-foreground = #ff0000
+
+ramp-0 = 
+ramp-0-foreground = #5eccfc
+ramp-1 = 
+ramp-1-foreground = #6ffc5e
+ramp-2 = 
+ramp-2-foreground = #e4fc5e
+ramp-3 = 
+ramp-3-foreground = #fca440
+ramp-4 = 
+ramp-4-foreground = #f84f0b
+ramp-5 = 
+ramp-5-foreground = #ff0000
+
+#################################################################
+#                       MÓDULO TEMPERATURA GPU                  #
+#################################################################
+
+[module/gputemp]
+type = internal/temperature
+interval = 0.5
+hwmon-path = /sys/devices/pci0000:00/0000:00:01.0/0000:01:00.0/hwmon/hwmon1/temp1_input
+#hwmon-path = /sys/devices/pci0000:00/0000:00:01.0/0000:01:00.0/hwmon/hwmon2/temp1_input
+#hwmon-path = /sys/devices/pci0000:00/0000:00:01.0/0000:01:00.0/hwmon/hwmon3/temp1_input
+thermal-zone = 0
+warn-temperature = 80
+format = <ramp> <label>
+#format-underline = ${colors.foreground}
+format-warn = <ramp> <label-warn>
+format-warn-underline = #ff0000
+
+label = %temperature-c%
+label-warn = %temperature-c%
+label-warn-foreground = #ff0000
+
+ramp-0 = 
+ramp-0-foreground = #5eccfc
+ramp-1 = 
+ramp-1-foreground = #6ffc5e
+ramp-2 = 
+ramp-2-foreground = #e4fc5e
+ramp-3 = 
+ramp-3-foreground = #fca440
+ramp-4 = 
+ramp-4-foreground = #f84f0b
+ramp-5 = 
+ramp-5-foreground = #ff0000
+
+#ramp-0 = 
+#ramp-1 = 
+#ramp-2 = 
+#ramp-foreground = #ffffff
+
+#################################################################
+#                         MÓDULO POWERMENU                      #
+#################################################################
+
+[module/powermenu]
+type = custom/menu
+
+expand-right = true
+
+format-spacing = 2
+
+#label-open = "  "
+label-open = "  "
+label-open-foreground = ${colors.foreground}
+#format-underline = #ffffff
+#label-open-foreground = ${colors.foreground}
+label-close = | Cancelar
+label-close-foreground = ${colors.alert}
+label-separator =|
+label-separator-foreground = ${colors.foreground}
+
+menu-0-0 = "Sair?"
+menu-0-0-exec = menu-open-1
+menu-0-1 = "Suspender?"
+menu-0-1-exec = menu-open-2
+menu-0-2 = "Reiniciar?"
+menu-0-2-exec = menu-open-3
+menu-0-3 = "Desligar?"
+menu-0-3-exec = menu-open-4
+menu-1-0 = "Sair AGORA?"
+menu-1-0-exec = i3-msg exit
+#menu-1-0-exec = bspc quit
+menu-2-0 = "Suspender AGORA?"
+menu-2-0-exec = systemctl suspend
+menu-3-0 = "Reiniciar AGORA?"
+menu-3-0-exec = systemctl reboot
+menu-4-0 = "Desligar AGORA?"
+menu-4-0-exec = systemctl poweroff
+
+#################################################################
+#                          IGNORE OPTIONS                       #
+#################################################################
+
+[settings]
+screenchange-reload = true
+#compositing-background = xor
+#compositing-background = screen
+#compositing-foreground = source
+#compositing-border = over
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
+
+# vim:ft=dosini
+
+#################################################################
+#                      ALGUNS MÓDULOS CRIADOS                   #
+#################################################################
+[module/mic]
+type = custom/ipc
+initial = 1
+hook-0 = echo ""
+hook-1 = echo ""
+click-left = $HOME/.config/polybar/scripts/mic.sh
+
+[module/qbittorrent]  
+type = custom/script  
+exec = $HOME/.config/polybar/scripts/polybar-qbittorrent
+interval = 0.1
+
+#[module/speedtest]  
+#type = custom/script  
+#exec-if = hash speedtest
+#exec = $HOME/.config/polybar/scripts/polybar-speedtest  
+#interval = 90
+
+[module/menu]
+type = custom/text
+content = "%{F${colors.foreground}  %{F-} Menu"
+content-foreground = ${colors.foreground}
+#content-underline = ${colors.foreground}
+click-left = rofi -show drun -theme ~/.config/rofi/drun.rasi &
+
+[module/telegram]
+type = custom/text
+content = "  "
+content-foreground = ${colors.foreground}
+#content-underline = ${colors.foreground}
+click-left = exec $HOME/.local/bin/telegram &
+
+[module/terminal]
+type = custom/text
+content = "  "
+content-foreground = ${colors.foreground}
+#content-underline = ${colors.foreground}
+click-left = exec kitty &
+#click-left = exec urxvt &
+
+[module/user]
+type = custom/text
+content = "%{F${colors.foreground}  %{F-} Hello, Franklin"
+#content-underline = #5e8d87
+
+[module/linux]
+type = custom/text
+content = "%{F${colors.foreground}%{F-} Arch Linux"
+#content-underline = ${colors.foreground}
+#click-left = rofi -show drun -theme ~/.config/rofi/drun.rasi &
+
+[module/frase]
+type = custom/text
+content = "%{F${colors.foreground}%{F-}  Seja livre, use Linux!!!"
+#content-underline = ${colors.foreground}
+
+[module/refresh]
+type = custom/text
+content = "  "
+content-foreground = ${colors.foreground}
+click-left = i3-msg restart &
+
+[module/github]
+type = custom/text
+#content = 
+content = 
+content-foreground = ${colors.foreground}
+click-left = ~/Scripts/github.sh
+
+[module/print]
+type = custom/text
+content = "%{F${colors.foreground}  %{F-}"
+#content-underline = ${colors.foreground}
+#click-left = bash -c 'maim "$HOME/Imagens/Captura de tela de %d-%m-%Y %H:%M:%S.png"' &
+#click-left = bash -c 'scrot "$HOME/Imagens/Captura de tela de %d-%m-%Y %H:%M:%S.png"' &
+click-left = $HOME/Scripts/screenshot.sh &
+
+[module/lock]
+type = custom/text
+content = "  "
+content-foreground = ${colors.foreground}
+#content-underline = ${colors.foreground}
+click-left = $HOME/.config/polybar/scripts/fortune.sh &
+
+[module/up]
+type = custom/script
+interval = 600
+exec = ~/.config/polybar/scripts/updates-arch.sh
+#click-left = exec i3-sensible-terminal -e sudo pacman -Syu  &
+
+[module/pacman]
+type = custom/script
+interval = 1
+exec = pacman -Qq | wc -l
+label = "%{F${colors.foreground}  %{F-} %output:0:37:...%"
+#format-underline = #d79921
+#format-background = #d79921
+
+[module/news-archlinux]
+type = custom/script
+exec = ~/.config/polybar/scripts/news-archlinux.py
+interval = 600
+click-left = firefox https://www.archlinux.org/ &
+
+[module/gmail]
+type = custom/script
+exec = ~/.config/polybar/gmail/launch.py
+tail = true
+click-left = exec firefox https://mail.google.com/mail/u/0/#inbox &
+
+[module/kernel]
+type = custom/script
+exec = uname -r
+label = "%{F#${colors.foreground}  %{F-} %output:0:37:...%"
+#format-underline = ${colors.foreground}
+
+[module/btc]
+type = custom/script
+interval = 60
+exec = $HOME/Scripts/btc.py
+label = "%{F#${colors.foreground}  %{F-} %output:0:37:...%"
+#format-underline = ${colors.foreground}
+
+[module/spotify]
+type = custom/script
+interval = 1
+format-prefix = " "
+format = <label>
+exec = python ~/.config/polybar/scripts/spotify.py -f '{artist}: {song}'
+#format-underline = #1db954
+
+[module/scratchpad-indicator]
+type = custom/script
+interval = 0.1
+exec = python $HOME/.config/polybar/scripts/i3-scratchpad-indicator.py
+#label = "%{F#${colors.foreground}  %{F-} %output:0:37:...%"
+#format-underline = ${colors.foreground}
+
+[module/trash]
+type = custom/script
+interval = 0.1
+exec = $HOME/.config/polybar/scripts/infotrash.sh
+click-left = thunar trash:///
+click-right= rm -rf .local/share/Trash/files
+label = "%{F#${colors.foreground}  %{F-} %output:0:37:...%"
+#format-underline = ${colors.foreground}
+
+[module/clima]
+type = custom/script
+interval = 1
+exec = $HOME/.config/polybar/scripts/weather.sh
+#label = "%{F#${colors.foreground}%{F-} %output:0:37:...%"
+#label = "%{F#${colors.foreground}  %{F-} %output:0:37:...%"
+label = "%{F#${colors.foreground} %{F-} %output:0:37:...%"
+click-left = firefox https://openweathermap.org/city/3387880
+#format-underline = #d3869b
+#format-background = #d3869b
+
+[module/calendar]
+type = custom/script
+interval = 1
+#exec = date "+%a, %d %b %Y"
+#exec = date "+%a %d %b, %y"
+exec = date "+%a, %d %b"
+#exec = date "+%d / %y"
+#exec = date "+%a %d %b, %Y - %H:%M:%S"
+label = "%{F${colors.foreground}  %{F-} %output:0:36:...%"
+#label = "%{F${colors.foreground} %{F-} %output:0:36:...%"
+#format-underline = #98971a
+#format-background = #98971a
+#click-left = gsimplecal &
+#click-left = exec $HOME/Scripts/calendario.sh
+click-left = notify-send "$(cal)"
+
+[module/gravar]
+type = custom/script
+interval = 0.1
+label = %output%
+#click-left = alacritty -e ~/.config/polybar/scripts/gravar.sh &
+exec = ~/.config/polybar/scripts/gravar.sh status
+tail = true
+
+[module/grabc]
+type = custom/text
+content = " "
+content-foreground = ${colors.foreground}
+#content-underline = ${colors.foreground}
+click-left = exec $HOME/Scripts/grabc.sh
+
+[module/img]
+type = custom/text
+content = " "
+content-foreground = ${colors.foreground}
+#content-underline = ${colors.foreground}
+click-left = exec dimg
+
+[module/bluetooth]
+type = custom/text
+#content = "  "
+content = "  "
+content-foreground = ${colors.foreground}
+#content-underline = ${colors.foreground}
+click-left = exec blueman-applet &
+click-right = exec blueman-manager &
+
+[module/net]
+type = custom/script
+interval = 0.1
+label = %output%
+exec = ~/.config/polybar/scripts/checknet.sh
+tail = true
+
+[module/wifi]
+type = custom/text
+content = " "
+content-foreground = ${colors.foreground}
+#content-underline = ${colors.foreground}
+click-left = exec i3-sensible-terminal -e nmtui  &
+
+[module/rede]
+type = internal/network
+interface = wlan0
+interval = 0.1
+
+format-packetloss = <animation-packetloss>
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+label-connected = Conectado
+label-connected-foreground = #64ff33
+label-disconnected = Desconectado
+label-disconnected-foreground = #fe2020
+
+[module/wireless]
+type = internal/network
+interface = wlan0
+interval = 0.1
+
+format-packetloss = <animation-packetloss>
+format-connected = <ramp-signal>
+format-disconnected = <label-disconnected>
+#label-connected = Conectado
+label-connected-foreground = #3dff00
+label-disconnected = Desconectado
+label-disconnected-foreground = #ff0000
+
+ramp-signal-0 = 
+ramp-signal-0-foreground = #fe3823
+ramp-signal-1 = 
+ramp-signal-1-foreground = #ecf91c
+ramp-signal-2 = 
+ramp-signal-2-foreground = #55ff00
+#ramp-signal-3 = 
+#ramp-signal-3-foreground = #D8DE72
+#ramp-signal-4 = 
+#ramp-signal-4-foreground = #BADE72
+#ramp-signal-5 = 
+#ramp-signal-5-foreground = #96DE72
