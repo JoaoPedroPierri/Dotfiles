@@ -29,7 +29,7 @@ set $win Mod4
 #font pango:FiraCode 10
 #font pango:Fantasque Sans Mono 8
 #font pango:Bahamas 8
-#font pango:Poppins 8
+#font pango:Poppins 8a
 font pango:DejaVu Sans Mono 8
 
 ####################################################################
@@ -45,9 +45,9 @@ focus_on_window_activation focus
 #                           B O R D A S                            #
 ####################################################################
 
-default_border pixel 4
-default_floating_border pixel 4
-new_window pixel 4
+default_border pixel 1
+default_floating_border pixel 1
+new_window pixel 1
 #smart_borders on
 
 #hide_edge_borders smart
@@ -77,7 +77,7 @@ new_window pixel 4
 # it fails to get colors from Xresources.
 
 #set_from_resource $fg i3wm.color7 #f0f0f0
-#set_from_resource $bg i3wm.color2 #f0f0f0
+set_from_resource $bg i3wm.color2 #f0f0f0
 
 # classe                borda  fundo texto indicador  borda filho
 client.focused          $bg     $bg   $fg    $bg         $bg
@@ -358,10 +358,10 @@ mode "resize" {
         # Pressionar para cima diminuirá a altura da janela.
         # Pressionar para baixo aumentará a altura da janela.
 
-        bindsym Left resize shrink width 5 px or 5 ppt
-        bindsym Down resize grow height 5 px or 5 ppt
-        bindsym Up resize shrink height 5 px or 5 ppt
-        bindsym Right resize grow width 5 px or 5 ppt
+        bindsym Left resize shrink width 2 px or 2 ppt
+        bindsym Down resize grow height 2 px or 2 ppt
+        bindsym Up resize shrink height 2 px or 2 ppt
+        bindsym Right resize grow width 2 px or 2 ppt
 
         # De volta ao normal: Enter ou Escape ou $ mod + r
         bindsym Return mode "default"
@@ -374,7 +374,7 @@ mode "resize" {
 #                           G A P S                                #
 ####################################################################
 
-gaps inner 5
+gaps inner 2
 gaps outer 0
 #smart_gaps on
 
@@ -391,12 +391,12 @@ mode "$mode_gaps" {
 }
 
 mode "$mode_gaps_inner" {
-        bindsym plus  gaps inner current plus 5
-        bindsym minus gaps inner current minus 5
+        bindsym plus  gaps inner current plus 2
+        bindsym minus gaps inner current minus 2
         bindsym 0     gaps inner current set 0
 
-        bindsym Shift+plus  gaps inner all plus 5
-        bindsym Shift+minus gaps inner all minus 5
+        bindsym Shift+plus  gaps inner all plus 2
+        bindsym Shift+minus gaps inner all minus 2
         bindsym Shift+0     gaps inner all set 0
 
         bindsym d gaps inner current set $gaps_inner_default, mode "default"
@@ -407,12 +407,12 @@ mode "$mode_gaps_inner" {
 }
 
 mode "$mode_gaps_outer" {
-        bindsym plus  gaps outer current plus 5
-        bindsym minus gaps outer current minus 5
+        bindsym plus  gaps outer current plus 2
+        bindsym minus gaps outer current minus 2
         bindsym 0     gaps outer current set 0
 
-        bindsym Shift+plus  gaps outer all plus 5
-        bindsym Shift+minus gaps outer all minus 5
+        bindsym Shift+plus  gaps outer all plus 2
+        bindsym Shift+minus gaps outer all minus 2
         bindsym Shift+0     gaps outer all set 0
 
         bindsym d gaps outer current set $gaps_outer_default, mode "default"
