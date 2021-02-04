@@ -91,8 +91,8 @@ client.background       $bg
 #                          A T A L H O S                           #
 ####################################################################
 
-# MPV
-bindsym $win+m exec mpv
+# VLC
+bindsym $win+v exec vlc
 
 # Spotify
 bindsym $win+Shift+s exec spotify
@@ -281,8 +281,8 @@ for_window [class="(Spotify)"] move to workspace $ws5
 # Gimp ws=6
 for_window [class="(Gimp)"] move to workspace $ws6
 
-# MPV ws=7
-for_window [class="(mpv)"] move to workspace $ws7 focus
+# VLC ws=7
+for_window [class="(vlc)"] move to workspace $ws7 focus
 
 # Qbittorrent ws=8
 for_window [class="(qBittorrent)"] move to workspace $ws8 focus
