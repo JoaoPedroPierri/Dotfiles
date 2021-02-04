@@ -143,7 +143,6 @@ SPACESHIP_CHAR_SUFFIX=" "n
   alias up="sudo pacman -Syu && sudo pacman -Syy"
   alias reb="adb reboot"
   alias boot="adb reboot bootloader"
-  alias twrp="fastboot boot twrp-3.5.0_9-0-ocean.img"
   alias erase="fastboot erase userdata && fastboot -w"
 
   # Plugins do zsh
