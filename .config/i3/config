@@ -45,10 +45,9 @@ focus_on_window_activation focus
 #                           B O R D A S                            #
 ####################################################################
 
-default_border pixel 6
-default_floating_border pixel 6
-new_window pixel 6
-#smart_borders on
+default_border pixel 2
+default_floating_border pixel 2
+new_window pixel 2
 
 #hide_edge_borders smart
 #hide_edge_borders both
@@ -77,7 +76,7 @@ new_window pixel 6
 # it fails to get colors from Xresources.
 
 #set_from_resource $fg i3wm.color7 #f0f0f0
-set_from_resource $bg i3wm.color2 #f0f0f0
+set_from_resource $bg i3wm.color2 f0f0f0
 
 # classe                borda  fundo texto indicador  borda filho
 client.focused          $bg     $bg   $fg    $bg         $bg
@@ -358,10 +357,10 @@ mode "resize" {
         # Pressionar para cima diminuirá a altura da janela.
         # Pressionar para baixo aumentará a altura da janela.
 
-        bindsym Left resize shrink width 6 px or 6 ppt
-        bindsym Down resize grow height 6 px or 6 ppt
-        bindsym Up resize shrink height 6 px or 6 ppt
-        bindsym Right resize grow width 6 px or 6 ppt
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or  10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
 
         # De volta ao normal: Enter ou Escape ou $ mod + r
         bindsym Return mode "default"
@@ -374,7 +373,7 @@ mode "resize" {
 #                           G A P S                                #
 ####################################################################
 
-gaps inner 6
+gaps inner 4
 gaps outer 0
 #smart_gaps on
 
@@ -391,12 +390,12 @@ mode "$mode_gaps" {
 }
 
 mode "$mode_gaps_inner" {
-        bindsym plus  gaps inner current plus 6
-        bindsym minus gaps inner current minus 6
+        bindsym plus  gaps inner current plus 5
+        bindsym minus gaps inner current minus 5
         bindsym 0     gaps inner current set 0
 
-        bindsym Shift+plus  gaps inner all plus 6
-        bindsym Shift+minus gaps inner all minus 6
+        bindsym Shift+plus  gaps inner all plus 5
+        bindsym Shift+minus gaps inner all minus 5
         bindsym Shift+0     gaps inner all set 0
 
         bindsym d gaps inner current set $gaps_inner_default, mode "default"
