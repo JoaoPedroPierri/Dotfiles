@@ -1,3 +1,7 @@
+# Credits: Franklin Souza
+# Telegram: @FranklinTech
+# Dúvidas: https://github.com/jaagr/polybar
+
 # ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗ 
 # ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
 # ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
@@ -49,7 +53,7 @@ height = 20
 #offset-x = 10%
 #pffset-y = 4px
 #override-redirect = true
-radius = 10
+#radius = 10
 #fixed-center = true
 
 background = ${colors.background}
@@ -88,14 +92,14 @@ font-2 = "Hack Nerd Font:style=Regular:pixelsize=10;2"
 #                         SEPARADOR BAR TOP                     #
 #################################################################
 
-separator = |
-#separator = /
+#separator = |
+separator = /
 
 #################################################################
 #                         MÓDULOS BAR TOP                       #
 #################################################################
 
-modules-left = mpd 
+modules-left = 
 modules-center = title
 modules-right = pulse calendar date powermenu
 
@@ -138,11 +142,11 @@ monitor = ${env:MONITOR:LVDS-1}
 dpi = 90
 width = 100%
 #width = 80%
-height = 20
+height = 25
 #offset-x = 10%
 #pffset-y = 4px
 #override-redirect = true
-radius = 10
+#radius = 10
 fixed-center = true
 bottom = true
 enable-ipc = true
@@ -183,15 +187,15 @@ font-2 = "Hack Nerd Font:style=Regular:pixelsize=10;2"
 #                         SEPARADOR BAR BOTTOM                  #
 #################################################################
 
-separator = |
-#separator = /
+#separator = |
+separator = /
 
 #################################################################
 #                         MÓDULOS BAR BOTTOM                    #
 #################################################################
 
 modules-left = i3
-modules-center =  
+modules-center = 
 modules-right = xkeyboard up 
 
 #################################################################
@@ -239,8 +243,8 @@ label-empty-foreground = ${colors.foreground}
 type = internal/xkeyboard
 blacklist-1 = num lock
 
-#format-prefix = " "
-format-prefix-foreground = ${colors.foreground}
+format-prefix = " "
+#format-prefix-foreground = ${colors.foreground}
 #format-prefix-underline = ${colors.foreground}
 
 label-layout = %layout%
@@ -621,7 +625,7 @@ interval = 0.5
 hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input
 #hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input
 thermal-zone = 0
-warn-temperature = 60
+warn-temperature = 80
 
 format = <ramp> <label>
 #format-underline = ${colors.foreground}
