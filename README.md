@@ -1,4 +1,4 @@
-Contato (Telegram)](https://t.me/joaoppierri)
+[Contato (Telegram)](https://t.me/joaoppierri)
 
 # ***`CURRENT SETUP:`***
 | Tipos               | Softwares                                                                                                                           |
