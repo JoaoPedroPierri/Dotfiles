@@ -202,14 +202,3 @@ sudo pacman -S xf86-video-amdgpu --noconfirm
 ```
 sudo pacman -S xorg-server xorg-xinit pulseaudio-alsa pavucontrol ttf-jetbrains-mono ttf-nerd-fonts-symbols-mono xclip usbutils wget dmenu kitty nitrogen viwnior  flameshot numlockx python-pip pacman-contrib xdg-user-dirs --noconfirm && xdg-user-dirs-update
 ```
-
-#EXTRAS DEPOIS DO SISTEMA INSTALADO#
-```
-➜ AnyDesk
-sudo pacman -S --needed base-devel git
-git clone https://aur.archlinux.org/pikaur.git
-cd pikaur > makepkg -fsri
-sudo pikaur -S anydesk-bin
-
-➜ Google Chrome > git clone https://aur.archlinux.org/google-chrome.git > makepkg -s >  sudo pacman -U google-chrome-87.0.4280.66-1-x86_64.pkg.tar.zst
-```
