@@ -45,9 +45,9 @@ focus_on_window_activation focus
 #                           B O R D A S                            #
 ####################################################################
 
-default_border pixel 2
-default_floating_border pixel 2
-new_window pixel 2
+default_border pixel 1
+default_floating_border pixel 1
+new_window pixel 1
 
 #hide_edge_borders smart
 #hide_edge_borders both
@@ -62,37 +62,18 @@ new_window pixel 2
 ####################################################################
 
 # classe                borda   fundo   texto   ind.    borda filho
-#client.focused          #50fa7b #50fa7b #50fa7b #50fa7b   #50fa7b
-#client.focused_inactive #ffffff #ffffff #ffffff #ff5555   #ff5555
-#client.unfocused        #ffffff #ff5555 #ffffff #ffffff   #ff5555
-#client.urgent           #ff5555 #ff5555 #ff5555 #ff5555   #ff5555
-#client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
-
-# Pywal
-# Set colors from Xresources
-# Change 'color7' and 'color2' to whatever colors you want i3 to use
-# from the generated scheme.
-# NOTE: The '#f0f0f0' in the lines below is the color i3 will use if
-# it fails to get colors from Xresources.
-
-#set_from_resource $fg i3wm.color7 #f0f0f0
-set_from_resource $bg i3wm.color2 f0f0f0
-
-# classe                borda  fundo texto indicador  borda filho
-client.focused          $bg     $bg   $fg    $bg         $bg
-client.focused_inactive $bg     $bg   $fg    $bg         $bg
-client.unfocused        $bg     $bg   $fg    $bg         $bg
-client.urgent           $bg     $bg   $fg    $bg         $bg
-client.placeholder      $bg     $bg   $fg    $bg         $bg
-
-client.background       $bg
+client.focused          #A3BE8C #A3BE8C #A3BE8C #A3BE8C   #A3BE8C
+client.focused_inactive #ffffff #ffffff #ffffff #ff5555   #BF616A
+client.unfocused        #ffffff #BF616A #ffffff #ffffff   #BF616A
+client.urgent           #BF616A #BF616A #BF616A #BF616A   #BF616A
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 ####################################################################
 #                          A T A L H O S                           #
 ####################################################################
 
-# VLC
-bindsym $win+v exec vlc
+# MPV
+bindsym $win+m exec mpv
 
 # Spotify
 bindsym $win+Shift+s exec spotify
@@ -281,8 +262,8 @@ for_window [class="(Spotify)"] move to workspace $ws5
 # Gimp ws=6
 for_window [class="(Gimp)"] move to workspace $ws6
 
-# VLC ws=7
-for_window [class="(vlc)"] move to workspace $ws7 focus
+# MPV ws=7
+for_window [class="(mpv)"] move to workspace $ws7 focus
 
 # Qbittorrent ws=8
 for_window [class="(qBittorrent)"] move to workspace $ws8 focus
@@ -373,7 +354,7 @@ mode "resize" {
 #                           G A P S                                #
 ####################################################################
 
-gaps inner 4
+gaps inner 8
 gaps outer 0
 #smart_gaps on
 
@@ -438,9 +419,6 @@ bindsym XF86AudioNext exec --no-startup-id playerctl next
 #                         INICIAR COM O I3                         #
 ####################################################################
 
-# i3Lock
-#exec --no-startup-id $HOME/.config/polybar/scripts/fortune.sh
-
 # Autotiling
 exec_always --no-startup-id autotiling
 
@@ -453,9 +431,6 @@ exec_always --no-startup-id ~/.config/polybar/scripts/launch.sh
 # Wallpapers
 exec_always --no-startup-id nitrogen --restore
 
-# AutoWallpaper
-#exec --no-startup-id ~/Scripts/autoWallpaper.sh
-
 # Dunst - Notificação
 exec --no-startup-id dunst -b
 
@@ -464,16 +439,6 @@ exec --no-startup-id flameshot
 
 # Layout do teclado
 exec --no-startup-id setxkbmap br
-
-# Pywal
-exec_always --no-startup-id $HOME/.cache/wal/colors.sh
-
-# Música
-#exec --no-startup-id $HOME/Scripts/mpd-notify.sh
-#exec --no-startup-id mpd &
-
-# Bloqueio de Tela (Temporizador)
-#exec --no-startup-id xautolock -time 3 -locker $HOME/.config/polybar/scripts/fortune.sh
 
 # Bluetooth
 #exec --no-startup-id blueman-applet
