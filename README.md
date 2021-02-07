@@ -21,4 +21,4 @@
 # [Nord Theme](https://github.com/arcticicestudio/nord)
 
 <img src="i3-nord.png">
-<img src="i3-dracula.png>
+<img src="i3-dracula.png">
