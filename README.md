@@ -18,7 +18,6 @@
 | Notification Daemon   | [Dunst](https://github.com/dunst-project/dunst)                                                                                    
 | Development   | [NeoVim](https://github.com/neovim/neovim)
 
-# [Nord Theme](https://github.com/arcticicestudio/nord)
+# [Dracula Theme](https://github.com/dracula/dracula-theme)
 
-<img src="i3-nord.png">
 <img src="i3-dracula.png">

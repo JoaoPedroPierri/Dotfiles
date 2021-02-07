@@ -87,7 +87,7 @@ separator = /
 
 modules-left = 
 modules-center = title
-modules-right = pulse calendar date powermenu
+modules-right = pulse calendar clima date powermenu
 
 #################################################################
 #                         TRAY BAR TOP                          #
@@ -182,7 +182,7 @@ separator = /
 
 modules-left = i3
 modules-center = 
-modules-right = xkeyboard up 
+modules-right = scratchpad-indicator xkeyboard up 
 
 #################################################################
 #                         TRAY BAR BOTTOM                       #
