@@ -15,7 +15,7 @@
 [colors]
 #background = #00000000
 background = #1e1f29
-foreground = #f8f8f2
+foreground = #D8DEE9
 #background-alt = #444
 #foreground-alt = #444
 #primary = ${colors.foreground}
@@ -23,8 +23,9 @@ foreground = #f8f8f2
 #border1 = #ec8f4b
 
 # My alerts
+
 # Dracula
-alert = #ff5555
+#alert = #ff5555
 
 #################################################################
 #                               Barra TOP                       #
@@ -87,7 +88,7 @@ separator = /
 
 modules-left = 
 modules-center = title
-modules-right = pulse calendar clima date powermenu
+modules-right = pulse calendar date powermenu
 
 #################################################################
 #                         TRAY BAR TOP                          #
