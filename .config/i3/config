@@ -26,8 +26,8 @@ set $win Mod4
 #font pango:DejaVu Sans Mono, Terminus Bold Semi-Condensed 11
 #font pango:Terminus 11px
 
-#font pango:FiraCode 10
-font pango:Fantasque Sans Mono 8
+font pango:FiraCode 10
+#font pango:Fantasque Sans Mono 8
 #font pango:Bahamas 8
 #font pango:Poppins 8a
 #font pango:DejaVu Sans Mono 8
@@ -48,6 +48,7 @@ focus_on_window_activation focus
 default_border pixel 1
 default_floating_border pixel 1
 new_window pixel 1
+smart_bordes on
 
 #hide_edge_borders smart
 #hide_edge_borders both
@@ -63,14 +64,18 @@ new_window pixel 1
 
 # classe                borda   fundo   texto   ind.    borda filho
 client.focused          #A3BE8C #A3BE8C #A3BE8C #A3BE8C   #A3BE8C
-client.focused_inactive #ffffff #ffffff #ffffff #ff5555   #BF616A
-client.unfocused        #ffffff #BF616A #ffffff #ffffff   #BF616A
-client.urgent           #BF616A #BF616A #BF616A #BF616A   #BF616A
+client.focused_inactive #ffffff #ffffff #ffffff #ff5555   #ff5555
+client.unfocused        #ffffff #ff5555 #ffffff #ffffff   #ff5555
+client.urgent           #ff5555 #ff5555 #ff5555 #ff5555   #ff5555
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 ####################################################################
 #                          A T A L H O S                           #
 ####################################################################
+
+# Mover para scratchpad/mostra scratchpad
+bindsym $win+o move scratchpad
+bindsym $win+l scratchpad show
 
 # MPV
 bindsym $win+m exec mpv
@@ -95,40 +100,17 @@ bindsym $win+Shift+f exec --no-startup-id flameshot config
 bindsym $win+g exec google-chrome-stable
 
 # Iniciar Telegram
-#bindsym $win+t exec --no-startup-id $HOME/.Telegram/Telegram
 bindsym $win+t exec --no-startup-id $HOME/.local/bin/telegram
-
-# Integração com Pywal
-bindsym $win+F9 exec --no-startup-id wal -i ~/Wallpapers/Teste1.jpg && $HOME/.config/dunst/launcherdunst.sh
-bindsym $win+F10 exec --no-startup-id wal -i ~/Wallpapers/Teste2.jpg && $HOME/.config/dunst/launcherdunst.sh
-bindsym $win+F11 exec --no-startup-id wal -i ~/Wallpapers/Teste3.jpg && $HOME/.config/dunst/launcherdunst.sh
-bindsym $win+F12 exec --no-startup-id wal -i ~/Wallpapers/Teste5.jpg && $HOME/.config/dunst/launcherdunst.sh
-
-# Sair do i3wm
-#bindsym $win+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'Você deseja sair do i3gaps?' -B 'Sim, desejo sair do i3gaps' 'i3-msg exit'"
 
 # Bloquear tela
 bindsym $win+x exec --no-startup-id $HOME/.config/polybar/scripts/fortune.sh
 
-# Iniciar Gravação de Tela (FFmpeg)
-#bindsym $win+F8  exec --no-startup-id ~/.config/polybar/scripts/gravar.sh
+# Iniciar Terminal
+bindsym $win+Return exec --no-startup-id i3-sensible-terminal
 
 # Iniciar Gravação de Tela (SimpleScreenRecorder)
 bindsym $win+F8 exec --no-startup-id simplescreenrecorder --start-hidden
-
-# Printar Tela
-#bindsym $win+c exec --no-startup-id $HOME/Scripts/screenshot.sh
-bindsym $win+c exec --no-startup-id $HOME/Scripts/printscreen.sh
-#bindsym $win+z exec --no-startup-id scrot -d 5 &
-
-# Iniciar terminal
-bindsym $win+Return exec --no-startup-id i3-sensible-terminal
-
-# Script para desenhar o terminal (Alacritty)
-#bindsym $win+Return exec --no-startup-id $HOME/Scripts/termDraw.sh
-
-# Script para desenhar o terminal (Kitty)
-#bindsym $win+Return exec --no-startup-id $HOME/Scripts/kittyDraw.sh
+bindsym $win+Shift+F9 exec  killall simplescreenrecorder
 
 # Fechar janela focada
 bindsym $win+q kill
