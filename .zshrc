@@ -140,7 +140,8 @@ SPACESHIP_CHAR_SYMBOL="❯"
 SPACESHIP_CHAR_SUFFIX=" "n
 
 # My aliases
-  alias up="sudo pacman -Syu && sudo pacman -Syy"
+  alias up="sudo pacman -Syyu"
+  alias del="sudo pacman -Scc"
   alias reb="adb reboot"
   alias boot="adb reboot bootloader"
   alias erase="fastboot erase userdata && fastboot -w"
