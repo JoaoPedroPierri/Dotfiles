@@ -1,4 +1,4 @@
-[Guia-Arch][https://github.com/JoaoPedroPierri/dotfiles/blob/master/Arch%20Guia.md]
+[Guia-Arch](https://github.com/JoaoPedroPierri/dotfiles/blob/master/Arch%20Guia.md)
 
 # ***`CURRENT SETUP:`***
 | Tipos               | Softwares                                                                                                                           |
