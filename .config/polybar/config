@@ -33,9 +33,9 @@ foreground = #D8DEE9
 
 [bar/top]
 monitor = ${env:MONITOR:LVDS-1}
-dpi = 90
+dpi = 80
 width = 100%
-height = 20
+height = 16
 #width = 80%
 #offset-x = 10%
 #pffset-y = 4px
@@ -126,10 +126,10 @@ cursor-scroll = ns-resize
 
 [bar/bottom]
 monitor = ${env:MONITOR:LVDS-1}
-dpi = 90
+dpi = 80
 width = 100%
 #width = 80%
-height = 25
+height = 16
 #offset-x = 10%
 #pffset-y = 4px
 #override-redirect = true
@@ -182,7 +182,7 @@ separator = /
 #################################################################
 
 modules-left = i3
-modules-center = 
+modules-center =
 modules-right = scratchpad-indicator xkeyboard up 
 
 #################################################################
@@ -609,8 +609,8 @@ label-muted = Sem áudio
 type = internal/temperature
 interval = 0.5
 #hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input
-hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input
-#hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input
+#hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input
 thermal-zone = 0
 warn-temperature = 80
 
@@ -886,8 +886,8 @@ type = custom/script
 interval = 1
 exec = $HOME/.config/polybar/scripts/weather.sh
 #label = "%{F#${colors.foreground}%{F-} %output:0:37:...%"
-#label = "%{F#${colors.foreground}  %{F-} %output:0:37:...%"
-label = "%{F#${colors.foreground} %{F-} %output:0:37:...%"
+label = "%{F#${colors.foreground}  %{F-} %output:0:37:...%"
+#label = "%{F#${colors.foreground} %{F-} %output:0:37:...%"
 click-left = firefox https://openweathermap.org/city/3387880
 #format-underline = #d3869b
 #format-background = #d3869b
