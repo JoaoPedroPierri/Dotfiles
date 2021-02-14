@@ -2,7 +2,7 @@
 
 # License: GPL v3.0
 # João Pedro Pierri
-@joaoppierri
+# @joaoppierri
 # Install config i3 script
 
 # Criando diretórios
@@ -17,6 +17,7 @@ mkdir $HOME/.themes
 mkdir $HOME/.icons
 mkdir $HOME/.Lock
 mkdir $HOME/.local/bin
+mkdir $HOME/scripts
 mkdir $HOME/Wallpapers
 
 
@@ -53,6 +54,10 @@ git clone https://github.com/JoaoPedroPierri/dotfiles.git
 # Criando o dir ~/.local/bin e dando permissões aos scripts
 cp $HOME/.joaopp-repo/dotfiles/bin/* $HOME/.local/bin
 cd $HOME/.local/bin && chmod +x *
+
+# Criando o dir ~/Scripts e dando permissões aos scripts
+cp $HOME/.joaopp-repo/dotfiles/scripts/* $HOME/ccripts
+cd $HOME/Scripts && chmod +x *
 
 # Copiando as fontes para o sistema
 cp $HOME/.joaopp-repo/dotfiles/fonts/* $HOME/.fonts
