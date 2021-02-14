@@ -88,7 +88,7 @@ separator = /
 
 modules-left = 
 modules-center = title
-modules-right = pulse calendar date powermenu
+modules-right = pulse info-redshift-temp calendar date powermenu
 
 #################################################################
 #                         TRAY BAR TOP                          #
@@ -734,6 +734,13 @@ margin-bottom = 5
 #################################################################
 #                      ALGUNS MÓDULOS CRIADOS                   #
 #################################################################
+
+[module/info-redshift-temp]
+type = custom/script
+exec = $HOME/.config/polybar/scripts/redshift-info.sh
+click-left = $HOME/Scripts/redshift.sh
+interval = 1
+
 [module/mic]
 type = custom/ipc
 initial = 1
