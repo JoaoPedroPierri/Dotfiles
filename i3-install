@@ -18,11 +18,11 @@ mkdir $HOME/.icons
 mkdir $HOME/.Lock
 mkdir $HOME/.local/bin
 mkdir $HOME/scripts
-mkdir $HOME/Wallpapers
+mkdir $HOME/wallpapers
 
 
 # Baixando pacotes
-sudo pacman -S git wget dunst simplescreenrecorder aria2 mpv libnotify viewnior python-pip pacman-contrib  gvfs-mtp android-tools xdg-user-dirs pulseaudio-alsa w3m flameshot ttf-jetbrains-mono ttf-fantasque-sans-mono ttf-fira-code zsh zsh-autosuggestions zsh-syntax-highlighting reflector keepassxc redshift ttf-font-awesome lib32-dbus-glib imagemagick jq --noconfirm && xdg-user-dirs-update
+sudo pacman -S git wget dunst simplescreenrecorder aria2 mpv libnotify viewnior python-pip pacman-contrib  gvfs-mtp android-tools xdg-user-dirs pulseaudio-alsa w3m flameshot ttf-jetbrains-mono ttf-fantasque-sans-mono ttf-fira-code zsh zsh-syntax-highlighting reflector redshift ttf-font-awesome lib32-dbus-glib imagemagick jq --noconfirm && xdg-user-dirs-update
 
 # Compilações
 

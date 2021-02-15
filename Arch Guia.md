@@ -1,19 +1,29 @@
-# EU USO ESSE GUIA PARA MEU USO PRÓPRIO (SEI O QUE ESTOU FAZENDO) NÃO ME RESPONSABILIZO POR NADA.
-# UM GUIA DE INSTALAÇÃO DO ARCH, RECOMENDO LER A WIKI OFICIAL DA DISTRO, NÃO ME RESPONSABILIZO POR DANDOS
-# WIKI: https://wiki.archlinux.org/index.php/Installation_guide_(Portugu%C3%AAs)
+# Arch Linux Install
+
+# Eu uso esse guia para meu próprio uso, não me responsabilizo por problemas.
+
 
 ➜ Layout do Teclado ABNT2:
 
 ```
 loadkeys br-abnt2
 ```
+
+➜ Mudar tamanho da fonte:
+
+```
+setfont lat14-19
+```
+
 ➜ Conectar ao Wifi:
 
 ```
-iwctl>
-station wlan0 scan>
-station wlan0 get-networks>
-station wlan0 connect <nomedarede> > senha e pra sair ctrl+d
+iwctl
+station wlan0 scan
+station wlan0 get-networks
+station wlan0 connect <nomedarede> 
+*SENHA*
+Sair ctrl+d
 ```
 
 ➜ Separar as partições:
