@@ -3,19 +3,19 @@
 # Eu uso esse guia para meu próprio uso, não me responsabilizo por problemas.
 
 
-➜ Layout do Teclado ABNT2:
+### Layout do Teclado ABNT2:
 
 ```
 loadkeys br-abnt2
 ```
 
-➜ Mudar tamanho da fonte:
+### Mudar tamanho da fonte:
 
 ```
 setfont lat14-19
 ```
 
-➜ Conectar ao Wifi:
+### Conectar ao Wifi:
 
 ```
 iwctl
@@ -26,13 +26,13 @@ station wlan0 connect <nomedarede>
 Sair ctrl+d
 ```
 
-➜ Separar as partições:
+### Separar as partições:
 
 ```
 cfdisk
 ```
 
-➜ Formatar as partições:
+### Formatar as partições:
 
 ```
 mkfs.vfat -F32 /dev/sda1 (EFI)
@@ -41,15 +41,15 @@ mkfs.ext4 /dev/sda3 -> mkswap /dev/sda3 (SWAP)
 mkfs.btrfs -f /dev/sda4 (HOME)
 ```
 
-➜ Montar partições:
+### Montar partições:
 
 ```
 OBS: Comece montando a sua partição root
 
 
-mount /dev/sdaX (Montar root)
+mount /dev/sdaX (Montar ROOT)
 mount /dev/sdaX (Montar UEFI)
-mount /dev/sdaX (Montar home)
+mount /dev/sdaX (Montar HOME)
 swapon /dev/sdaX (Montar SWAP)
 
 Como eu uso:
@@ -60,19 +60,19 @@ mkdir /mnt/home && mount /dev/sda4 /mnt/home
 swapon /dev/sda3
 ```
 
-➜ Instalar sistema base:
+### Instalar sistema base:
 
 ```
 pacstrap /mnt base neovim linux-firmware base-devel
 ```
 
-➜ Gerar FSTAB:
+### Gerar FSTAB:
 
 ```
 genfstab -p /mnt >> /mnt/etc/fstab
 ```
 
-➜ Entrar no chroot:
+### Entrar no chroot:
 
 ```
 arch-chroot /mnt
@@ -86,13 +86,13 @@ pacman -S networkmanager
 systemctl enable NetworkManager
 ```
 
-➜ Setar o horário no sistema:
+### Setar o horário no sistema:
 
 ```
 hwclock --systohc
 ```
 
-➜ Mudando o idioma do SISTEMA (OPCIONAL):
+### Mudando o idioma do SISTEMA (OPCIONAL):
 
 ```
 nvim /etc/locale.gen
@@ -101,19 +101,19 @@ locale-gen
 echo LANG=pt_BR.UTF-8 > /etc/locale.conf > export LANG=pt_BR.UTF-8
 ```
 
-➜ Configurar o teclado para subir em PT-BR:
+### Configurar o teclado para subir em PT-BR:
 
 ```
 echo KEYMAP=br-abnt2 > /etc/vconsole.conf
 ```
 
-➜ Colocar nome host:
+### Colocar nome host:
 
 ```
 echo joaopp/zatara > /etc/hostname
 ```
 
-➜ Baixar kernel:
+### Baixar kernel:
 
 ```
 pacman -S linux linux-headers ➜ Kernel Stable (default)
@@ -122,7 +122,7 @@ pacman -S linux-lts linux-lts-headers ➜ Kernel a longo prazo
 pacman -S linux-hardened linux-hardened-headers ➜ Kernel focado na segurança
 ```
 
-➜ Configurar pacman.conf:
+### Configurar pacman.conf:
 
 ```
 nvim /etc/pacman.conf
@@ -133,32 +133,33 @@ Descomentar linhas:
 #Easter egg:
 
 Debaixo da linha VerbosePkgLists, digite: ILoveCandy
+```
 
-➜ Sincronizar repositórios:
+### Sincronizar repositórios:
 
 ```
 pacman -Syy
 ```
 
-➜ Senha root:
+### Senha root:
 
 ```
 passwd
 ```
 
-➜ Criar user:
+### Criar user:
 
 ```
-useradd -m -g users -G wheel,audio,video,daemon,dbus,disk,rfkill,games,power,lp,optical,scanner,storage,input -s /bin/bash joaopp
+useradd -m -g users -G wheel,audio,video,daemon,dbus,disk,rfkill,games,power,lp,optical,scanner,storage,input -s /bin/bash user
 ```
 
-➜ Criar senha para o user:
+### Criar senha para o user:
 
 ```
-passwd joaopp/zatara
+passwd USER
 ```
 
-➜ Editar arquivo sudo:
+### Editar arquivo sudo:
 
 ```
 nvim /etc/sudoers
@@ -171,22 +172,22 @@ Você adiciona seu user:
 
 user ALL=(ALL)ALL
 
-➜(***)
+### (***)
 
 No final do arquivo, debaixo de Read drop-in files from /etc/sudoers.d, digite: Defaults pwfeedback
 ```
 
-➜ Baixar e instalar o GRUB:
+### Baixar e instalar o GRUB:
 
 ```
 # UEFI
 pacman -S grub efibootmgr
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=Grub_Arch --recheck
 
-➜ Caso tenha Dualboot:
+### Caso tenha Dualboot:
 pacman -S os-prober ntfs-3g --noconfirm
 
-➜ Atualize o GRUB
+### Atualize o GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
@@ -197,19 +198,19 @@ grub-mkconfig -o /boot/grub/grub.cfg
 ➜ nmtui
 ```
 
-➜ AMD (antiga):
+### AMD (antiga):
 
 ```
 sudo pacman -S xf86-video-ati --noconfirm
 ```
 
-➜ AMD (nova):
+### AMD (nova):
 
 ```
 sudo pacman -S xf86-video-amdgpu --noconfirm
 ```
 
-➜ Baixar alguns pacotes:
+### Baixar alguns pacotes:
 ```
 sudo pacman -S xorg-server xorg-xinit pulseaudio-alsa pavucontrol ttf-jetbrains-mono ttf-nerd-fonts-symbols-mono xclip usbutils wget dmenu kitty nitrogen viwnior  flameshot numlockx python-pip pacman-contrib xdg-user-dirs redshift --noconfirm && xdg-user-dirs-update
 ```
