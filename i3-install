@@ -20,7 +20,6 @@ mkdir $HOME/.local/bin
 mkdir $HOME/scripts
 mkdir $HOME/wallpapers
 
-
 # Baixando pacotes
 sudo pacman -S git wget dunst simplescreenrecorder aria2 mpv libnotify viewnior python-pip pacman-contrib  gvfs-mtp android-tools xdg-user-dirs pulseaudio-alsa w3m flameshot ttf-jetbrains-mono ttf-fantasque-sans-mono ttf-fira-code zsh zsh-syntax-highlighting reflector redshift ttf-font-awesome lib32-dbus-glib imagemagick jq --noconfirm && xdg-user-dirs-update
 
@@ -38,12 +37,6 @@ git clone https://aur.archlinux.org/autotiling.git
 cd $HOME/.compile/autotiling
 makepkg -sic --noconfirm
 
-# Compilando -> Pulseaudio-ctl
-cd $HOME/.compile
-git clone https://aur.archlinux.org/pulseaudio-ctl.git
-cd $HOME/.compile/pulseaudio-ctl
-makepkg -sic --noconfirm
-
 # Limpar console
 clear
 
@@ -56,7 +49,7 @@ cp $HOME/.joaopp-repo/dotfiles/bin/* $HOME/.local/bin
 cd $HOME/.local/bin && chmod +x *
 
 # Criando o dir ~/Scripts e dando permissões aos scripts
-cp $HOME/.joaopp-repo/dotfiles/scripts/* $HOME/ccripts
+cp $HOME/.joaopp-repo/dotfiles/scripts/* $HOME/scripts
 cd $HOME/Scripts && chmod +x *
 
 # Copiando as fontes para o sistema
@@ -65,7 +58,6 @@ cp $HOME/.joaopp-repo/dotfiles/fonts/* $HOME/.fonts
 # Baixando fortune-mod, maim e i3lock
 sudo pacman -S fortune-mod maim i3lock --noconfirm
 cp $HOME/.joaopp-repo/dotfiles/lock/ArchLinux.png $HOME/.Lock
-
 
 # Copiando file zsh
 cp ~/.joaopp-repo/dotfiles/home/.zshrc $HOME
