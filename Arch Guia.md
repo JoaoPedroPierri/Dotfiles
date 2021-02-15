@@ -50,6 +50,7 @@ OBS: Comece montando a sua partição root
 mount /dev/sdaX (Montar root)
 mount /dev/sdaX (Montar UEFI)
 mount /dev/sdaX (Montar home)
+swapon /dev/sdaX (Montar SWAP)
 
 Como eu uso:
 
