@@ -110,7 +110,7 @@ echo KEYMAP=br-abnt2 > /etc/vconsole.conf
 ### Colocar nome host:
 
 ```
-echo joaopp/zatara > /etc/hostname
+echo joao > /etc/hostname ou echo arch > /etc/hostname
 ```
 
 ### Baixar kernel:
