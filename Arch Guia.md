@@ -144,7 +144,7 @@ pacman -Syy
 ### Senha root:
 
 ```
-passwd
+passwd 
 ```
 
 ### Criar user:
@@ -195,7 +195,8 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 ```
 # Notebooks para se conectar a internet via wifi usa o comando: (Requer NetworkManager instalado)
-➜ nmtui
+
+nmtui
 ```
 
 ### AMD (antiga):
