@@ -9,17 +9,6 @@
 loadkeys br-abnt2
 ```
 
-### Conectar ao Wifi:
-
-```
-iwctl
-station wlan0 scan
-station wlan0 get-networks
-station wlan0 connect <nomedarede> 
-*SENHA*
-Sair ctrl+d
-```
-
 ### Separar as partições:
 
 ```
@@ -52,6 +41,15 @@ mount /dev/sda2 /mnt
 mkdir -p /mnt/boot/efi && mount /dev/sda1 /mnt/boot/efi
 mkdir /mnt/home && mount /dev/sda4 /mnt/home
 swapon /dev/sda3
+```
+
+### Conectar ao WIFI:
+
+```
+iwctl
+station wlan0 connect <nomedarede>
+*SENHA*
+Sair: CTRL+D
 ```
 
 ### Instalar sistema base:
@@ -207,7 +205,7 @@ sudo pacman -S xf86-video-amdgpu --noconfirm
 
 ### Baixar alguns pacotes:
 ```
-sudo pacman -S i3 kitty xorg-server xorg-xinit xdg-user-dirs pulseaudio-alsa pavucontrol ttf-jetbrains-mono ttf-nerd-fonts-symbols-mono xclip usbutils wget cmake python-sphinx --noconfirm && xdg-user-dirs-update
+sudo pacman -S i3 kitty xorg-server xorg-xinit xdg-user-dirs pulseaudio-alsa pavucontrol ttf-jetbrains-mono ttf-nerd-fonts-symbols-mono ttf-font-awesome ttf-fira-codettf-nerd-fonts-symbols-mono xclip usbutils wget cmake python-sphinx --noconfirm && xdg-user-dirs-update
 
 >echo exec i3 > .xinitrc
 

@@ -42,7 +42,7 @@ sudo reflector -n 5 --save /etc/pacman.d/mirrorlist
 
 # Baixando pacotes
 
-sudo pacman -S git wget dunst numlockx usbutils xclip pavucontrol simplescreenrecorder aria2 mpv libnotify viewnior python-pip pacman-contrib gvfs-mtp android-tools pulseaudio-alsa w3m flameshot nitrogen ttf-jetbrains-mono ttf-fantasque-sans-mono ttf-fira-codettf-nerd-fonts-symbols-mono zsh zsh-syntax-highlighting redshift ttf-font-awesome lib32-dbus-glib imagemagick jq lsd base-devel --noconfirm 
+sudo pacman -S git wget dunst numlockx simplescreenrecorder aria2 mpv libnotify viewnior python-pip pacman-contrib gvfs-mtp android-tools w3m flameshot nitrogen zsh redshift lib32-dbus-glib imagemagick jq lsd base-devel --noconfirm 
 
 # Limpar console
 
@@ -91,6 +91,10 @@ cd $HOME/.local/bin && chmod +x *
 cp $HOME/.joaopp-repo/dotfiles/scripts/* $HOME/scripts
 
 cd $HOME/Scripts && chmod +x *
+
+# Criando pasta Wallpapers
+
+cp $HOME/.joaopp-repo/dotfiles/Wallpapers/* #HOME/wallpapers
 
 # Copiando as fontes para o sistema
 
