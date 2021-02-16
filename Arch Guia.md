@@ -213,5 +213,5 @@ sudo pacman -S xf86-video-amdgpu --noconfirm
 
 ### Baixar alguns pacotes:
 ```
-sudo pacman -S xorg-server xorg-xinit pulseaudio-alsa pavucontrol ttf-jetbrains-mono ttf-nerd-fonts-symbols-mono xclip usbutils wget dmenu kitty nitrogen viwnior  flameshot numlockx python-pip pacman-contrib cmake e python-sphinx xdg-user-dirs redshift --noconfirm && xdg-user-dirs-update
+sudo pacman -S xorg-server xorg-xinit pulseaudio-alsa pavucontrol ttf-jetbrains-mono ttf-nerd-fonts-symbols-mono xclip usbutils git wget dmenu kitty nitrogen viewnior  flameshot numlockx python-pip pacman-contrib cmake e python-sphinx xdg-user-dirs redshift --noconfirm && xdg-user-dirs-update
 ```
