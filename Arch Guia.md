@@ -9,12 +9,6 @@
 loadkeys br-abnt2
 ```
 
-### Mudar tamanho da fonte:
-
-```
-setfont lat14-19
-```
-
 ### Conectar ao Wifi:
 
 ```
