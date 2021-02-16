@@ -42,7 +42,7 @@ sudo reflector -n 5 --save /etc/pacman.d/mirrorlist
 
 # Baixando pacotes
 
-sudo pacman -S git wget dunst simplescreenrecorder aria2 mpv libnotify viewnior python-pip pacman-contrib gvfs-mtp android-tools xdg-user-dirs pulseaudio-alsa w3m flameshot ttf-jetbrains-mono ttf-fantasque-sans-mono ttf-fira-code zsh zsh-syntax-highlighting redshift ttf-font-awesome lib32-dbus-glib imagemagick jq lsd base-devel --noconfirm && xdg-user-dirs-update
+sudo pacman -S git wget dunst numlockx usbutils xclip pavucontrol simplescreenrecorder aria2 mpv libnotify viewnior cmake python-sphinx python-pip pacman-contrib gvfs-mtp android-tools pulseaudio-alsa w3m flameshot nitrogen ttf-jetbrains-mono ttf-fantasque-sans-mono ttf-fira-codettf-nerd-fonts-symbols-mono zsh zsh-syntax-highlighting redshift ttf-font-awesome lib32-dbus-glib imagemagick jq lsd base-devel --noconfirm 
 
 # Limpar console
 
@@ -67,16 +67,6 @@ cd $HOME/.compile
 git clone https://aur.archlinux.org/autotiling.git
 
 cd $HOME/.compile/autotiling
-
-makepkg -sic --noconfirm
-
-# Compilando -> GC
-
-cd $HOME/.compile
-
-git clone https://aur.archlinux.org/google-chrome.git
-
-cd $HOME/.compile/google-chrome
 
 makepkg -sic --noconfirm
 
