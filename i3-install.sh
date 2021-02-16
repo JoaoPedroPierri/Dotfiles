@@ -42,7 +42,7 @@ sudo reflector -n 5 --save /etc/pacman.d/mirrorlist
 
 # Baixando pacotes
 
-sudo pacman -S git wget dunst numlockx usbutils xclip pavucontrol simplescreenrecorder aria2 mpv libnotify viewnior cmake python-sphinx python-pip pacman-contrib gvfs-mtp android-tools pulseaudio-alsa w3m flameshot nitrogen ttf-jetbrains-mono ttf-fantasque-sans-mono ttf-fira-codettf-nerd-fonts-symbols-mono zsh zsh-syntax-highlighting redshift ttf-font-awesome lib32-dbus-glib imagemagick jq lsd base-devel --noconfirm 
+sudo pacman -S git wget dunst numlockx usbutils xclip pavucontrol simplescreenrecorder aria2 mpv libnotify viewnior python-pip pacman-contrib gvfs-mtp android-tools pulseaudio-alsa w3m flameshot nitrogen ttf-jetbrains-mono ttf-fantasque-sans-mono ttf-fira-codettf-nerd-fonts-symbols-mono zsh zsh-syntax-highlighting redshift ttf-font-awesome lib32-dbus-glib imagemagick jq lsd base-devel --noconfirm 
 
 # Limpar console
 
