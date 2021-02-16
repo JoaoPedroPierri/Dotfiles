@@ -210,4 +210,8 @@ sudo pacman -S xf86-video-amdgpu --noconfirm
 sudo pacman -S i3 kitty xorg-server xorg-xinit xdg-user-dirs pulseaudio-alsa pavucontrol ttf-jetbrains-mono ttf-nerd-fonts-symbols-mono xclip usbutils wget cmake python-sphinx --noconfirm && xdg-user-dirs-update
 
 >echo exec i3 > .xinitrc
+
+wget -c https://github.com/JoaoPedroPierri/dotfiles/raw/master/i3-install.sh
+chmod +x i3-install.sh
+./i3-install.sh
 ```
