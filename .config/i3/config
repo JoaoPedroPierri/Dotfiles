@@ -48,7 +48,7 @@ focus_on_window_activation focus
 default_border pixel 1
 default_floating_border pixel 1
 new_window pixel 1
-smart_bordes on
+#smart_bordes on
 
 #hide_edge_borders smart
 #hide_edge_borders both
