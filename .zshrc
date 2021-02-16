@@ -138,8 +138,3 @@ down() {
 yplay() {
     mpv --ytdl-format=bestaudio ytdl://ytsearch:"$*"
 }
-
-# play music for programming
-pg() {
-    mpv --ytdl-format=bestaudio ytdl://ytsearch:"Música Chillstep para Programação / Cyber / CodificaçãO"
-}
