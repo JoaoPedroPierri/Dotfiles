@@ -30,9 +30,9 @@ cfdisk
 
 ```
 mkfs.vfat -F32 /dev/sda1 (EFI)
-mkfs.btrfs -f /dev/sda2 (LINUX ROOT)
+mkfs.ext4 /dev/sda2 (LINUX ROOT)
 mkfs.ext4 /dev/sda3 -> mkswap /dev/sda3 (SWAP)
-mkfs.btrfs -f /dev/sda4 (HOME)
+mkfs.ext4 /dev/sda4 (HOME)
 ```
 
 ### Montar partições:
