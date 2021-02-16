@@ -144,7 +144,7 @@ passwd
 ### Criar user:
 
 ```
-useradd -m -g users -G wheel,audio,video,daemon,dbus,disk,rfkill,games,power,lp,optical,scanner,storage,input -s /bin/bash user
+useradd -m -g users -s /bin/bash user
 ```
 
 ### Criar senha para o user:
