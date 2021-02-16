@@ -207,7 +207,7 @@ sudo pacman -S xf86-video-amdgpu --noconfirm
 
 ### Baixar alguns pacotes:
 ```
-sudo pacman -S xorg-server xorg-xinit xdg-user-dirs pulseaudio-alsa pavucontrol ttf-jetbrains-mono ttf-nerd-fonts-symbols-mono xclip usbutils wget cmake python-sphinx --noconfirm && xdg-user-dirs-update
+sudo pacman -S i3 kitty xorg-server xorg-xinit xdg-user-dirs pulseaudio-alsa pavucontrol ttf-jetbrains-mono ttf-nerd-fonts-symbols-mono xclip usbutils wget cmake python-sphinx --noconfirm && xdg-user-dirs-update
 
 >echo exec i3 > .xinitrc
 ```
