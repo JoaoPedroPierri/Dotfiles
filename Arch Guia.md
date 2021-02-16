@@ -207,5 +207,6 @@ sudo pacman -S xf86-video-amdgpu --noconfirm
 
 ### Baixar alguns pacotes:
 ```
-sudo pacman -S xorg-server xorg-xinit xdg-user-dirs && echo exec i3 > .xinitrc && xdg-user-dirs-update
+sudo pacman -S xorg-server xorg-xinit xdg-user-dirs && xdg-user-dirs-update
+>echo exec i3 > .xinitrc
 ```
