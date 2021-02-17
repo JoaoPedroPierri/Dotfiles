@@ -4,9 +4,8 @@
 # Pacotes: fortune-mod maim
 
 scr='/tmp/screenshot.png'
-#icon="$HOME/.Lock/TuxLinux.png"
-icon="$HOME/.Lock/ArchLinux01.png"
-font="$HOME/.fonts/Poppins.otf"
+icon="$HOME/.Lock/ArchLinux.png"
+font="$HOME/.fonts/OpensSans.otf"
 
 [ ! -d $HOME/.local/share/i3lock/ ] && mkdir -p $HOME/.local/share/i3lock/
 
@@ -28,5 +27,4 @@ convert "$scr" -scale 10% -scale 1000%\
 	"$icon" -gravity center -composite -matte \
 	-gravity center -pointsize 20 \
     -font $font -fill "#EAE4D1" -annotate +0+220 "$fortune “SENHA!”." "$scr"
-	-font $font -fill "#EAE4D1" -annotate +0+200 "$fortune" "$scr"
 i3lock -ui "$scr"
