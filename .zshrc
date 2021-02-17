@@ -112,29 +112,4 @@ alias vb="fastboot --disable-verity --disable-verification flash vbmeta vbmeta-c
 alias twrp="fastboot flash recovery TWRP-3.5.0-citrus-060121-R1.img"
 alias boot="adb reboot bootloader"
 alias erase="fastboot erase userdata && fastboot -w"
-
-# Functions
-# entering calculator mode
-bindkey -s '^a' 'bc -l\n'
-
-# you can put as many files do you want
-0x0() {
-for i in "$@"; do
-    curl -F file=@$i http://0x0.st
-done
-}
-
-# play video based on the clipboard
-play() {
-        mpv "$(wl-paste 2>/dev/null || xclip -o 2>/dev/null)"
-}
-
-# download file based on the clipboard
-down() {
-    aria2c "$(wl-paste 2>/dev/null || xclip -o 2>/dev/null)"
-}
-
-# play audio based search
-yplay() {
-    mpv --ytdl-format=bestaudio ytdl://ytsearch:"$*"
-}
+alias wttr="curl wttr.in"
