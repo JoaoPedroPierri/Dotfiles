@@ -21,16 +21,8 @@ set $win Mod4
 #                           FONTS                                  #
 ####################################################################
 
-#font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-#font pango:DejaVu Sans Mono 10
-#font pango:DejaVu Sans Mono, Terminus Bold Semi-Condensed 11
-#font pango:Terminus 11px
-
 font pango:FiraCode 10
 #font pango:Fantasque Sans Mono 8
-#font pango:Bahamas 8
-#font pango:Poppins 8a
-#font pango:DejaVu Sans Mono 8
 
 ####################################################################
 #                         FLOATING MODE                            #
