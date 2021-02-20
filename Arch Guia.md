@@ -185,9 +185,9 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 # REBOOTA O SISTEMA E TIRE A MÍDIA / INSTALAÇÃO FINALIZADA DO ARCH LINUX #
 
-```
-# Notebooks para se conectar a internet via wifi usa o comando: (Requer NetworkManager instalado)
 
+### Notebooks para se conectar a internet via wifi usa o comando: (Requer NetworkManager instalado)
+```
 nmtui
 ```
 
@@ -205,7 +205,7 @@ sudo pacman -S xf86-video-amdgpu --noconfirm
 
 ### Baixar alguns pacotes:
 ```
-sudo pacman -S i3 kitty xorg-server xorg-xinit xdg-user-dirs ttf-jetbrains-mono ttf-nerd-fonts-symbols-mono ttf-font-awesome ttf-fira-code ttf-nerd-fonts-symbols-mono xclip usbutils wget cmake python-sphinx --noconfirm && xdg-user-dirs-update
+sudo pacman -S i3 kitty xorg-server xorg-xinit xdg-user-dirs ttf-jetbrains-mono ttf-nerd-fonts-symbols-mono ttf-font-awesome ttf-fira-code ttf-nerd-fonts-symbols-mono cmake python-sphinx --noconfirm && xdg-user-dirs-update
 
 >echo exec i3 > .xinitrc
 
