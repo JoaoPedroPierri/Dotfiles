@@ -82,7 +82,7 @@ systemctl enable NetworkManager
 
 ```
 date
-hwclock --systohc
+hwclock --systohc (se a hora estiver certa, de este comando)
 ```
 
 ### Mudando o idioma do SISTEMA (OPCIONAL):
