@@ -17,6 +17,7 @@ mkdir $HOME/.Lock
 mkdir $HOME/.local/bin
 mkdir $HOME/scripts
 mkdir $HOME/wallpapers
+mkdir $HOME/.config/neofetch
 
 # Atualizando os mirrors BR's
 sudo pacman -S reflector --noconfirm
@@ -24,7 +25,7 @@ sudo pacman -S reflector --noconfirm
 sudo reflector -n 5 --save /etc/pacman.d/mirrorlist
 
 # Baixando pacotes
-clear && sudo pacman -S git wget curl xclip usbutils wget pulseaudio-alsa pavucontrol qbittorrent brightnessctl dunst numlockx simplescreenrecorder mpv libnotify viewnior python-pip pacman-contrib gvfs-mtp android-tools w3m flameshot nitrogen zsh zsh-syntax-highlighting redshift lib32-dbus-glib imagemagick jq lsd base-devel --noconfirm 
+clear && sudo pacman -S git wget curl xorg-xrandr xclip usbutils wget pulseaudio-alsa pavucontrol qbittorrent brightnessctl dunst numlockx simplescreenrecorder mpv libnotify viewnior python-pip pacman-contrib gvfs-mtp android-tools w3m flameshot neofetch nitrogen zsh zsh-syntax-highlighting redshift lib32-dbus-glib imagemagick jq lsd base-devel --noconfirm 
 
 # Limpar console
 
@@ -57,6 +58,9 @@ clear
 # Clonando meu repositório
 cd $HOME/.joaopp-repo
 git clone https://github.com/JoaoPedroPierri/dotfiles.git
+
+# Neofetch
+cp $HOME/.joaopp-repo/dotfiles/.config/neofetch/config.conf ~/.config/neofetch
 
 # Criando o dir ~/.local/bin e dando permissões aos scripts
 cp $HOME/.joaopp-repo/dotfiles/bin/* $HOME/.local/bin
