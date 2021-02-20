@@ -24,7 +24,7 @@ sudo pacman -S reflector --noconfirm
 sudo reflector -n 5 --save /etc/pacman.d/mirrorlist
 
 # Baixando pacotes
-clear && sudo pacman -S git wget curl xclip usbutils wget pulseaudio-alsa pavucontrol qbittorrent brightnessctl dunst numlockx simplescreenrecorder aria2 mpv libnotify viewnior python-pip pacman-contrib gvfs-mtp android-tools w3m flameshot nitrogen zsh zsh-syntax-highlighting redshift lib32-dbus-glib imagemagick jq lsd base-devel --noconfirm 
+clear && sudo pacman -S git wget curl xclip usbutils wget pulseaudio-alsa pavucontrol qbittorrent brightnessctl dunst numlockx simplescreenrecorder mpv libnotify viewnior python-pip pacman-contrib gvfs-mtp android-tools w3m flameshot nitrogen zsh zsh-syntax-highlighting redshift lib32-dbus-glib imagemagick jq lsd base-devel --noconfirm 
 
 # Limpar console
 
@@ -64,7 +64,7 @@ cd $HOME/.local/bin && chmod +x *
 
 # Criando o dir ~/scripts e dando permissões aos scripts
 cp $HOME/.joaopp-repo/dotfiles/scripts/* $HOME/scripts
-cd $HOME/Scripts && chmod +x *
+cd $HOME/scripts && chmod +x *
 
 # Criando pasta Wallpapers
 cp $HOME/.joaopp-repo/dotfiles/Wallpapers/* #HOME/wallpapers
@@ -77,7 +77,7 @@ sudo pacman -S fortune-mod maim i3lock --noconfirm
 cp $HOME/.joaopp-repo/dotfiles/lock/ArchLinux.png $HOME/.Lock
 
 # Copiando file zsh
-cp ~/.joaopp-repo/dotfiles/home/.zshrc $HOME
+cp ~/.joaopp-repo/dotfiles/.zshrc $HOME
 
 # Aplicando tema
 
@@ -104,5 +104,5 @@ cp $HOME/.joaopp-repo/dotfiles/.config/dunst/dunstrc $HOME/.config/dunst
 sudo pacman -S nitrogen --noconfirm
 cd $HOME/wallpapers
 wget -c https://github.com/JoaoPedroPierri/dotfiles/raw/master/Wallpapers/2.jpg
-nitrogen --set-auto $HOME/wallpapers/2.jpg
+nitrogen --set-auto $HOME/wallpapers/8.jpg
 i3-msg restart
