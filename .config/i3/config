@@ -75,9 +75,6 @@ bindsym $win+l scratchpad show
 # MPV
 bindsym $win+m exec mpv
 
-# Spotify
-bindsym $win+Shift+s exec spotify
-
 # qBittorent
 bindsym $win+F1 exec qbittorrent
 
@@ -102,10 +99,6 @@ bindsym $win+x exec --no-startup-id $HOME/.config/polybar/scripts/fortune.sh
 
 # Iniciar Terminal
 bindsym $win+Return exec --no-startup-id i3-sensible-terminal
-
-# Iniciar Gravação de Tela (SimpleScreenRecorder)
-bindsym $win+F8 exec --no-startup-id simplescreenrecorder --start-hidden
-bindsym $win+Shift+F9 exec  killall simplescreenrecorder
 
 # Fechar janela focada
 bindsym $win+q kill
