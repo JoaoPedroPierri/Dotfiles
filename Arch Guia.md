@@ -81,6 +81,7 @@ systemctl enable NetworkManager
 ### Setar o horário no sistema:
 
 ```
+date
 hwclock --systohc
 ```
 
@@ -205,9 +206,10 @@ sudo pacman -S xf86-video-amdgpu --noconfirm
 
 ### Baixar alguns pacotes:
 ```
-sudo pacman -S i3 kitty xorg-server xorg-xinit xdg-user-dirs ttf-jetbrains-mono ttf-nerd-fonts-symbols-mono ttf-font-awesome ttf-fira-code ttf-nerd-fonts-symbols-mono cmake python-sphinx --noconfirm && xdg-user-dirs-update
+sudo pacman -S i3 kitty wget xorg-server xorg-xinit xdg-user-dirs ttf-jetbrains-mono ttf-nerd-fonts-symbols-mono ttf-font-awesome ttf-fira-code ttf-nerd-fonts-symbols-mono cmake python-sphinx --noconfirm && xdg-user-dirs-update
 
 >echo exec i3 > .xinitrc
+>startx 
 
 wget -c https://github.com/JoaoPedroPierri/dotfiles/raw/master/i3-install.sh
 chmod +x i3-install.sh
