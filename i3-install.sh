@@ -71,7 +71,7 @@ cp $HOME/.joaopp-repo/dotfiles/scripts/* $HOME/scripts
 cd $HOME/scripts && chmod +x *
 
 # Criando pasta Wallpapers
-cp $HOME/.joaopp-repo/dotfiles/Wallpapers/* #HOME/wallpapers
+cp $HOME/.joaopp-repo/dotfiles/wallpapers/* #HOME/wallpapers
 
 # Copiando as fontes para o sistema
 cp $HOME/.joaopp-repo/dotfiles/.fonts/* $HOME/.fonts
@@ -107,6 +107,6 @@ cp $HOME/.joaopp-repo/dotfiles/.config/dunst/dunstrc $HOME/.config/dunst
 # Nitrogen
 sudo pacman -S nitrogen --noconfirm
 cd $HOME/wallpapers
-wget -c https://github.com/JoaoPedroPierri/dotfiles/raw/master/Wallpapers/2.jpg
+wget -c https://github.com/JoaoPedroPierri/dotfiles/raw/master/Wallpapers/8.jpg
 nitrogen --set-auto $HOME/wallpapers/8.jpg
 i3-msg restart

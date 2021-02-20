@@ -20,7 +20,7 @@ cfdisk
 ```
 mkfs.vfat -F32 /dev/sda1 (EFI)
 mkfs.ext4 /dev/sda2 (LINUX ROOT)
-mkfs.ext4 /dev/sda3 -> mkswap /dev/sda3 (SWAP)
+mkfs.ext4 /dev/sda3 --> mkswap /dev/sda3 (SWAP)
 mkfs.ext4 /dev/sda4 (HOME)
 ```
 
@@ -91,7 +91,8 @@ hwclock --systohc (se a hora estiver certa, de este comando)
 nvim /etc/locale.gen
 Descomenta a linha: #pt_BR.UTF-8
 locale-gen
-echo LANG=pt_BR.UTF-8 > /etc/locale.conf > export LANG=pt_BR.UTF-8
+echo LANG=pt_BR.UTF-8 > /etc/locale.conf
+export LANG=pt_BR.UTF-8
 ```
 
 ### Configurar o teclado para subir em PT-BR:
@@ -109,7 +110,7 @@ echo joao > /etc/hostname ou echo arch > /etc/hostname
 ### Baixar kernel:
 
 ```
-pacman -S linux linux-headers ➜ Kernel Stable (default)
+pacman -S linux linux-headers ➜ Kernel Stable ➜ Default
 pacman -S linux-zen linux-zen-headers ➜ Kernel focado em desempenho
 pacman -S linux-lts linux-lts-headers ➜ Kernel a longo prazo
 pacman -S linux-hardened linux-hardened-headers ➜ Kernel focado na segurança
@@ -125,7 +126,7 @@ Descomentar linhas:
 
 #Easter egg:
 
-Debaixo da linha VerbosePkgLists, digite: ILoveCandy
+Debaixo da linha VerbosePkgLists ➜ ILoveCandy
 ```
 
 ### Sincronizar repositórios:
@@ -143,13 +144,13 @@ passwd
 ### Criar user:
 
 ```
-useradd -m -g users -s /bin/bash user
+useradd -m -g users -s /bin/bash nomedouser
 ```
 
 ### Criar senha para o user:
 
 ```
-passwd USER
+passwd NOMEDOUSER
 ```
 
 ### Editar arquivo sudo:
@@ -167,7 +168,7 @@ user ALL=(ALL)ALL
 
 ### (***)
 
-No final do arquivo, debaixo de Read drop-in files from /etc/sudoers.d, digite: Defaults pwfeedback
+Debaixo de Read drop-in files from /etc/sudoers.d ➜ Defaults pwfeedback
 ```
 
 ### Baixar e instalar o GRUB:
@@ -186,8 +187,8 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 # REBOOTA O SISTEMA E TIRE A MÍDIA / INSTALAÇÃO FINALIZADA DO ARCH LINUX #
 
+### Notebooks via wifi usa o comando: (Requer NetworkManager instalado)
 
-### Notebooks para se conectar a internet via wifi usa o comando: (Requer NetworkManager instalado)
 ```
 nmtui
 ```
@@ -205,12 +206,17 @@ sudo pacman -S xf86-video-amdgpu --noconfirm
 ```
 
 ### Baixar alguns pacotes:
+
 ```
 sudo pacman -S i3 kitty wget xorg-server xorg-xinit xdg-user-dirs ttf-jetbrains-mono ttf-nerd-fonts-symbols-mono ttf-font-awesome ttf-fira-code ttf-nerd-fonts-symbols-mono cmake python-sphinx --noconfirm && xdg-user-dirs-update
 
 >echo exec i3 > .xinitrc
 >startx 
+```
 
+### DEPOIS DE INICIAR O I3
+
+```
 wget -c https://github.com/JoaoPedroPierri/dotfiles/raw/master/i3-install.sh
 chmod +x i3-install.sh
 ./i3-install.sh

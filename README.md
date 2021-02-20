@@ -22,4 +22,4 @@
 
 # [Dracula Theme](https://github.com/dracula/dracula-theme)
 
-<img src="i3-dracula.png">
+<img src="i3.png">
