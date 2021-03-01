@@ -108,8 +108,12 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 alias up='sudo pacman -Syu'
 alias del="sudo pacman -Scc"
 alias reb="adb reboot"
+alias bootloader="adb reboot bootloader"
+alias fast="fastboot reboot"
 alias vb="fastboot --disable-verity --disable-verification flash vbmeta vbmeta-citrus.img"
 alias twrp="fastboot flash recovery TWRP-3.5.0-citrus-060121-R1.img"
-alias boot="adb reboot bootloader"
 alias erase="fastboot erase userdata && fastboot -w"
 alias wttr="curl wttr.in"
+
+
+
