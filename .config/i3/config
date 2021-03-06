@@ -218,14 +218,12 @@ bindsym $win+Shift+0 move container to workspace number $ws10
 
 # Browser ws=1
 for_window [class="(google-chrome-stable)"] move to workspace $ws1 focus
-assign [class="(google-chrome-stable)"] $ws1
 
 # Terminal ws=2
-for_window [class="(kitty)"] move to workspace $ws2
-assign [class="(kitty")] $ws2
+#for_window [class="(kitty)"] move to workspace $ws2
 
 # Telegram ws=3
-for_window [class="(Telegram)"] move to workspace $ws3
+for_window [class="(Telegram)"] move to workspace $ws3 focus
 
 # Spotify ws=5
 for_window [class="(Spotify)"] move to workspace $ws5
@@ -237,7 +235,7 @@ for_window [class="(Gimp)"] move to workspace $ws6
 for_window [class="(mpv)"] move to workspace $ws7 
 
 # Qbittorrent ws=8
-for_window [class="(qBittorrent)"] move to workspace $ws8 focus
+for_window [class="(qBittorrent)"] move to workspace $ws8 
 
 ####################################################################
 #                           R E G R A S                            #
@@ -246,13 +244,14 @@ for_window [class="(qBittorrent)"] move to workspace $ws8 focus
 # Ativar o floating e mover a janela para o centro:[..., floating enable, move position center
 
 # Kitty (Terminal)
-for_window [class="(kitty)"]floating enable, move position center
+for_window [class="(kitty)"]floating enable
 
 # Spotify (Streamer Music)
 for_window [class="(Spotify)"]floating enable, move position center
 
 # Telegram (Desktop)
-for_window [class="(Telegram)"]floating enable, move position center
+#for_window [class="(Telegram)"]floating enable, move position center
+for_wondows [class="(Telegram)"] move position center
 
 # MPV (Player de música/Vídeo)
 for_window [class="(mpv)"]floating enable, move position center
