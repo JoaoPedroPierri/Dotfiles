@@ -111,7 +111,7 @@ alias reb="adb reboot"
 alias bootloader="adb reboot bootloader"
 alias fast="fastboot reboot"
 alias vb="fastboot --disable-verity --disable-verification flash vbmeta vbmeta-citrus.img"
-alias twrp="fastboot flash recovery TWRP-3.5.0-citrus-060121-R1.img"
+alias twrp="fastboot flash recovery twrp_citrus-3.5-1-A10.img"
 alias erase="fastboot erase userdata && fastboot -w"
 alias wttr="curl wttr.in"
 
