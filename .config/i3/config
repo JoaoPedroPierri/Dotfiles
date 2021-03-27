@@ -220,7 +220,7 @@ bindsym $win+Shift+0 move container to workspace number $ws10
 for_window [class="(google-chrome-stable)"] move to workspace $ws1 focus
 
 # Terminal ws=2
-#for_window [class="(kitty)"] move to workspace $ws2
+for_window [class="(kitty)"] move to workspace $ws2 focus
 
 # Telegram ws=3
 for_window [class="(Telegram)"] move to workspace $ws3 focus
