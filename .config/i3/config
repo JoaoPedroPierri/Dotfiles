@@ -68,6 +68,9 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 # Redshift.sh
 bindsym $win+Shift+b exec --no-startup-id $HOME/scripts/redshift.sh
 
+# YT
+bindsym $win+Shift+y exec --no-startup-id kitty -e yt -t 
+
 # Mover para scratchpad/mostra scratchpad
 bindsym $win+o move scratchpad
 bindsym $win+l scratchpad show
