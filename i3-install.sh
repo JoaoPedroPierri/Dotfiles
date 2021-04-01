@@ -25,7 +25,7 @@ sudo pacman -S reflector --noconfirm
 sudo reflector -n 5 --save /etc/pacman.d/mirrorlist
 
 # Baixando pacotes
-clear && sudo pacman -S git wget curl xorg-xrandr xclip unzip usbutils wget pulseaudio-alsa pavucontrol qbittorrent brightnessctl dunst numlockx mpv libnotify viewnior python-pip pacman-contrib gvfs-mtp android-tools w3m flameshot neofetch nitrogen udev zsh zsh-syntax-highlighting redshift lib32-dbus-glib imagemagick jq lsd base-devel --noconfirm 
+clear && sudo pacman -S git wget curl xorg-xrandr xclip libreoffice unzip usbutils wget pulseaudio-alsa pavucontrol qbittorrent brightnessctl dunst numlockx mpv libnotify viewnior python-pip pacman-contrib gvfs-mtp android-tools w3m flameshot neofetch nitrogen udev zsh zsh-syntax-highlighting redshift lib32-dbus-glib imagemagick jq lsd base-devel --noconfirm 
 
 # Limpar console
 
@@ -39,6 +39,11 @@ git clone https://aur.archlinux.org/google-chrome.git
 cd $HOME/.compile/google-chrome
 makepkg -sic --noconfirm
 
+# Compilando -> scrcpy
+cd $HOME/.compile
+git clone https://aur.archlinux.org/scrcpy.git
+cd $HOME/.compile/scrcpy
+makepkg -sic --noconfirm
 
 # Compilando -> Polybar
 cd $HOME/.compile
