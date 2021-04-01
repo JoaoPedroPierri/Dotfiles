@@ -86,7 +86,7 @@ separator = /
 #                         MÓDULOS BAR TOP                       #
 #################################################################
 
-modules-left = 
+modules-left = dolar
 modules-center = title
 modules-right = pulse calendar info-redshift-temp date powermenu
 
