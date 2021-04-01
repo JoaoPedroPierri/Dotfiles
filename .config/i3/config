@@ -295,6 +295,9 @@ for_window [class="(Nitrogen)"]floating enable, move position center
 # FontPreview
 for_window [class="(Sxiv)"]floating enable, move position center
 
+# Scrcpy
+for_window [instance="scrcpy"] floating enable
+
 # Script para gravar a tela
 #for_window [class="alacritty" title="castnow"] move window to scratchpad
 #for_window [title="(gravar$)"] move window to scratchpad
