@@ -1,30 +1,12 @@
-# ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗ 
-# ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
-# ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
-# ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
-# ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
-# ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
-                                                       
 #################################################################
 #                             CORES                             #
 #################################################################
-
-# Label font
-# label-font = 0
 
 [colors]
 #background = #00000000
 background = #1e1f29
 foreground = #D8DEE9
-#background-alt = #444
-#foreground-alt = #444
-#primary = ${colors.foreground}
-#secondary = ${colors.background}
-#border1 = #ec8f4b
 
-# My alerts
-
-# Dracula
 #alert = #ff5555
 
 #################################################################
@@ -58,8 +40,8 @@ line-color = ${colors.foreground}
 padding-left = 0
 padding-right = 1
 
-module-margin-left = 2
-module-margin-right = 2
+module-margin-left = 0
+module-margin-right = 1
 
 #################################################################
 #                         FONTS BAR TOP                         #
@@ -79,7 +61,6 @@ font-2 = "Hack Nerd Font:style=Regular:pixelsize=10;2"
 #                         SEPARADOR BAR TOP                     #
 #################################################################
 
-#separator = |
 separator = /
 
 #################################################################
@@ -153,8 +134,8 @@ line-color = ${colors.foreground}
 padding-left = 0
 padding-right = 1
 
-module-margin-left = 2
-module-margin-right = 2
+module-margin-left = 0
+module-margin-right = 1
 
 #################################################################
 #                         FONTS BAR BOTTOM                      #
@@ -174,7 +155,6 @@ font-2 = "Hack Nerd Font:style=Regular:pixelsize=10;2"
 #                         SEPARADOR BAR BOTTOM                  #
 #################################################################
 
-#separator = |
 separator = /
 
 #################################################################
@@ -192,11 +172,11 @@ modules-right = scratchpad-indicator xkeyboard up
 tray-position = right
 tray-detached = false
 tray-maxsize = 11
-tray-padding = 2
+tray-padding = 3
 tray-scale = 1.0
 tray-transparent = false
-tray-offset-x = 0
-tray-offset-y = 0
+tray-offset-x = 1
+tray-offset-y = 1
 tray-background = ${colors.background}
 
 cursor-click = pointer
@@ -230,7 +210,7 @@ label-empty-foreground = ${colors.foreground}
 type = internal/xkeyboard
 blacklist-1 = num lock
 
-format-prefix = " "
+#format-prefix = " "
 #format-prefix-foreground = ${colors.foreground}
 #format-prefix-underline = ${colors.foreground}
 
@@ -239,8 +219,8 @@ label-layout = %layout%
 #label-layout-foreground = ${colors.foreground}
 #label-layout-background = ${colors.background}
 
-label-indicator-padding = 1
-label-indicator-margin = 1
+label-indicator-padding = 0
+label-indicator-margin = 0
 #label-indicator-background = ${colors.background}
 #label-indicator-underline = ${colors.foreground}
 
