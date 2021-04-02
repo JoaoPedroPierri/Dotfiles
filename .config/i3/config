@@ -402,9 +402,6 @@ bindsym XF86AudioNext exec --no-startup-id playerctl next
 # Autotiling
 exec_always --no-startup-id autotiling
 
-# Gerar Xresources
-#exec_always --no-startup-id xrdb -merge ~/.Xresources
-
 # Polybar
 exec_always --no-startup-id ~/.config/polybar/scripts/launch.sh
 
@@ -421,6 +418,7 @@ exec --no-startup-id flameshot
 exec --no-startup-id setxkbmap br
 
 # Redshift
+exec --no-startup-id redshift
 exec --no-startup-id redshift -c ~/.config/redshift/redshift.conf
 
 # Bluetooth
