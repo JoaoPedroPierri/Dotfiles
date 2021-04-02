@@ -1,6 +1,5 @@
-# Arch Linux Install
-
-# Eu uso esse guia para meu próprio uso, não me responsabilizo por problemas.
+### Arch Linux Install
+### Eu uso esse guia para meu próprio uso, não me responsabilizo por problemas.
 
 
 ### Layout do Teclado ABNT2:
@@ -220,4 +219,11 @@ sudo pacman -S i3 kitty wget xorg-server xorg-xinit xdg-user-dirs ttf-jetbrains-
 wget -c https://github.com/JoaoPedroPierri/dotfiles/raw/master/i3-install.sh
 chmod +x i3-install.sh
 ./i3-install.sh
+```
+
+### EXTRA
+
+# Yay:
+```
+cd && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si && cd && sudo rm -rf yay-bin
 ```
