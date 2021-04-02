@@ -41,15 +41,6 @@ default_border pixel 1
 default_floating_border pixel 1
 new_window pixel 1
 #smart_bordes on
-
-#hide_edge_borders smart
-#hide_edge_borders both
-
-# Bordas Arrendondadas
-# OBS: Tem que ter o pacote:
-# https://aur.archlinux.org/packages/i3-gaps-rounded-git
-#border_radius 
-
 ####################################################################
 #                          C O R E S                               #
 ####################################################################
@@ -114,15 +105,6 @@ bindsym $win+q kill
 #                          FEATURES                                #
 ####################################################################
 
-# Desenho de marcas na decoração da janela
-# show_marks yes
-
-# Atraso na redefinição da dica de urgência na alteração da área de trabalho
-# force_display_urgency_hint 500 ms
-
-# Alternância automática ao alternar para o espaço de trabalho atual
-# workspace_auto_back_and_forth no
-
 # Opções
 focus_follows_mouse yes
 mouse_warping none
@@ -161,7 +143,6 @@ bindsym $win+Shift+space floating toggle
 bindsym $win+Shift+r restart
 
 # Menu
-#bindsym $win+d exec --no-startup-id dmenu_run -l 4 -i -f -fn FiraCode -nb '#CCCCCC' -nf '#000000' -sb '#BF474D' -sf '#FFFFFF' -p '>_'
 bindsym $win+d exec --no-startup-id rofi -show drun -theme "~/.config/rofi/drun.rasi"
 
 # Screenshot
@@ -302,34 +283,6 @@ for_window [class="(Sxiv)"]floating enable, move position center
 # Scrcpy
 for_window [instance="scrcpy"] floating enable
 
-# Script para gravar a tela
-#for_window [class="alacritty" title="castnow"] move window to scratchpad
-#for_window [title="(gravar$)"] move window to scratchpad
-
-####################################################################
-#                           R E S I Z E                          #
-####################################################################
-# redimensionar janela (você também pode usar o mouse para isso)
-mode "resize" {
-        # Essas ligações são acionadas assim que você entra no modo de redimensionamento
-
-        # Pressionar à esquerda Rwill diminuirá a largura da janela.
-        # Pressionar à direita aumentará a largura da janela.
-        # Pressionar para cima diminuirá a altura da janela.
-        # Pressionar para baixo aumentará a altura da janela.
-
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or  10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
-
-        # De volta ao normal: Enter ou Escape ou $ mod + r
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-        bindsym $win+r mode "default"
-}
- bindsym $win+r mode "resize"
-
 ####################################################################
 #                           G A P S                                #
 ####################################################################
@@ -337,50 +290,6 @@ mode "resize" {
 gaps inner 8
 gaps outer 0
 #smart_gaps on
-
-set $mode_gaps Gaps: (o) outer, (i) inner
-set $mode_gaps_outer Outer Gaps: +|-|0|d (local), Shift + +|-|0|d (global)
-set $mode_gaps_inner Inner Gaps: +|-|0|d (local), Shift + +|-|0|d (global)
-bindsym $win+Shift+g mode "$mode_gaps"
-
-mode "$mode_gaps" {
-        bindsym o      mode "$mode_gaps_outer"
-        bindsym i      mode "$mode_gaps_inner"
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
-
-mode "$mode_gaps_inner" {
-        bindsym plus  gaps inner current plus 5
-        bindsym minus gaps inner current minus 5
-        bindsym 0     gaps inner current set 0
-
-        bindsym Shift+plus  gaps inner all plus 5
-        bindsym Shift+minus gaps inner all minus 5
-        bindsym Shift+0     gaps inner all set 0
-
-        bindsym d gaps inner current set $gaps_inner_default, mode "default"
-        bindsym Shift+d gaps inner all set $gaps_inner_default, mode "default"
-
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
-
-mode "$mode_gaps_outer" {
-        bindsym plus  gaps outer current plus 6
-        bindsym minus gaps outer current minus 6
-        bindsym 0     gaps outer current set 0
-
-        bindsym Shift+plus  gaps outer all plus 6
-        bindsym Shift+minus gaps outer all minus 6
-        bindsym Shift+0     gaps outer all set 0
-
-        bindsym d gaps outer current set $gaps_outer_default, mode "default"
-        bindsym Shift+d gaps outer all set $gaps_outer_default, mode "default"
-
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
 
 ####################################################################
 #                         CONTROLE DO AÚDIO                        #
