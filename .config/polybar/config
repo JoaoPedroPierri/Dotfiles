@@ -86,9 +86,9 @@ separator = /
 #                         MÓDULOS BAR TOP                       #
 #################################################################
 
-modules-left = dolar
+modules-left = 
 modules-center = title
-modules-right = pulse calendar info-redshift-temp date powermenu
+modules-right = pulse calendar date info-redshift-temp powermenu
 
 #################################################################
 #                         TRAY BAR TOP                          #
