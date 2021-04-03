@@ -79,8 +79,8 @@ bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 # Teclado -> Layout
 bindsym $win+b exec --no-startup-id setxkbmap br
 
-# Flameshot config
-bindsym $win+Shift+f exec --no-startup-id flameshot config
+# Printar Tela
+bindsym $win+z exec --no-startup-id sleep 0 && shot -c -r
 
 # Iniciar Google Chrome
 bindsym $win+g exec google-chrome-stable
@@ -146,7 +146,11 @@ bindsym $win+Shift+r restart
 bindsym $win+d exec --no-startup-id rofi -show drun -theme "~/.config/rofi/drun.rasi"
 
 # Screenshot
-bindsym Print exec --no-startup-id flameshot gui
+bindsym Print exec --no-startup-id shot -s -r # -> Salvar tela
+bindsym $win+Print exec --no-startup-id shot -c -r # -> Copiar a tela
+bindsym $win+Shift+Print exec --no-startup-id shot -u -r # -> Upar print na web
+bindsym --release $win+c exec --no-startup-id shot -c -a  # -> Selecionar area
+bindsym --release $win+v exec --no-startup-id shot -u -a  # -> Selecionar area upload web
 
 ####################################################################
 #                              WORKSPACE                           #
