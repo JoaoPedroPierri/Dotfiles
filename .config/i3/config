@@ -94,10 +94,6 @@ bindsym $win+x exec --no-startup-id $HOME/.config/polybar/scripts/fortune.sh
 # Iniciar Terminal
 bindsym $win+Return exec --no-startup-id i3-sensible-terminal
 
-# Iniciar Gravação de Tela (SimpleScreenRecorder)
-bindsym $win+F8 exec --no-startup-id simplescreenrecorder --start-hidden # -> Inicia o ssr
-bindsym $win+Shift+s exec --no-startup-id killall simplescreenrecorder # -> Mata o ssr
-
 # Fechar janela focada
 bindsym $win+q kill
 
