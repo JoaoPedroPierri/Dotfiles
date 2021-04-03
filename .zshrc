@@ -116,4 +116,7 @@ alias erase="fastboot erase userdata && fastboot -w"
 alias wttr="curl wttr.in"
 
 
-
+# play audio based search
+yplay() {
+    mpv --ytdl-format=bestaudio ytdl://ytsearch:"$*"
+}
