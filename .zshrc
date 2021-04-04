@@ -152,3 +152,8 @@ usage() {
         fi
     done
 }
+
+# startx
+if ["$(tty)" = "/dev/tty1"]; then 
+      exec startx
+fi
