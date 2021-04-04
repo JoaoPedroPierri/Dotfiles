@@ -19,8 +19,6 @@
 | Notification Daemon   | [Dunst](https://github.com/dunst-project/dunst)                                                                                    
 | Development   | [NeoVim](https://github.com/neovim/neovim)
 
-# [i3Install](https://github.com/JoaoPedroPierri/Arch%Guia.md)
-
 # i3 Gaps
 
 <img src="i3.png">
