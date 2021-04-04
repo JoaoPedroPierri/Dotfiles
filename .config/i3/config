@@ -238,8 +238,8 @@ for_window [class="(kitty)"]floating enable
 for_window [class="(Spotify)"]floating enable, move position center
 
 # Telegram (Desktop)
-#for_window [class="(Telegram)"]floating enable, move position center
-for_wondows [class="(Telegram)"] move position center
+for_window [class="(Telegram)"]floating enable, move position center
+#for_wondows [class="(Telegram)"] move position center
 
 # MPV (Player de música/Vídeo)
 for_window [class="(mpv)"]floating enable, move position center
