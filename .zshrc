@@ -128,3 +128,24 @@ play() {
 down() {
     aria2c "$(wl-paste 2>/dev/null || xclip -o 2>/dev/null)"
 }
+
+pkginf() {
+    clear && pacman -Si $@ | awk '/Name/{print "Package: " $3}/Version/{print "Version: " $3}/Installed Size/{printf "Size: %s %s\n", $4, $5}'
+}
+
+pkginf1() {
+   clear && pacman -Q $@
+}
+
+usage() {
+    for p in "$@" ; do
+        if pidof $p >/dev/null ; then
+            RAM=$(echo $(ps -A --sort -rsz -o comm,rss | grep $p | sed -n 1p | sed 's/.* //g') / 1000 | bc)
+            PRAM=$(ps -A --sort -rsz -o comm,pmem | grep $p | sed -n 1p | sed 's/.* //g')
+            PCPU=$(ps -A --sort -rsz -o comm,pcpu | grep $p | sed -n 1p | sed 's/.* //g')
+            echo "$p is using ${RAM}mb of RAM (${PRAM}%) and ${PCPU}% of CPU"
+        else
+            echo "$p is not running"
+        fi
+    done
+}
