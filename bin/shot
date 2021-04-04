@@ -1,7 +1,7 @@
 #!/bin/sh
 
 TMP="/tmp/$(date +"%Y-%m-%d_%H:%M:%S").png"
-DIR="$HOME/Pictures/$(date +"%Y-%m-%d_%H:%M:%S").png"
+DIR="$HOME/Imagens/$(date +"%Y-%m-%d_%H:%M:%S").png"
 
 sr ()
 {

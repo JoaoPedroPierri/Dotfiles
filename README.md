@@ -22,4 +22,4 @@
 # [Dracula Theme](https://github.com/dracula/dracula-theme)
 
 <img src="i3.png">
-<img src="i3-neofetch.png">
+<img src="i3neofetch.png">
