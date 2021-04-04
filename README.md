@@ -19,7 +19,9 @@
 | Notification Daemon   | [Dunst](https://github.com/dunst-project/dunst)                                                                                    
 | Development   | [NeoVim](https://github.com/neovim/neovim)
 
-# [Dracula Theme](https://github.com/dracula/dracula-theme)
+# [i3Install](https://github.com/JoaoPedroPierri/Arch Guia)
+
+# i3 Gaps
 
 <img src="i3.png">
 <img src="i3neofetch.png">

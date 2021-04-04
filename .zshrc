@@ -113,10 +113,18 @@ alias fast="fastboot reboot"
 alias vb="fastboot --disable-verity --disable-verification flash vbmeta vbmeta-citrus.img"
 alias twrp="fastboot flash recovery twrp_citrus-3.5-1-A10.img"
 alias erase="fastboot erase userdata && fastboot -w"
-alias wttr="curl wttr.in"
-
 
 # play audio based search
 yplay() {
     mpv --ytdl-format=bestaudio ytdl://ytsearch:"$*"
+}
+
+# play video based on the clipboard
+play() {
+        mpv "$(wl-paste 2>/dev/null || xclip -o 2>/dev/null)"
+} 
+
+# download files based on the clipboard
+down() {
+    aria2c "$(wl-paste 2>/dev/null || xclip -o 2>/dev/null)"
 }
