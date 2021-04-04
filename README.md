@@ -11,7 +11,7 @@
 | Vídeo Player        | [MPV](https://mpv.io/)														    |
 | Music Player | [Spotify](https://flathub.org/apps/details/com.spotify.Client)                   								    |
 | Image viewer | [Viewnior](http://siyanpanayotov.com/project/viewnior)                                                                                                                                                                                             
-| Print Screen     | [Flameshot](https://github.com/lupoDharkael/flameshot)                                                                               |
+| Print Screen     | [Import](https://github.com/JoaoPedroPierri/dotfiles/blob/master/bin/shot)                                                                               |
 | Terminal Emulator   | [Kitty](https://github.com/kovidgoyal/kitty)                                                                                 |
 | Shell               | [ZSH](https://wiki.archlinux.org/index.php/Zsh)                                                                                                         
 | Text editor     | [NeoVim](https://github.com/neovim/neovim)                                                    							    |
