@@ -10,3 +10,5 @@
  alias twrp='fastboot flash recovery twrp_citrus-3.5-1-A10.img'
  alias erase='fastboot erase userdata && fastboot -w'
  alias help='cat ~/.aliases'
+ alias i3='nvim .config/i3/config'
+ alias poly='nvim .config/polybar/config'
