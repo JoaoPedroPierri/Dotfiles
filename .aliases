@@ -12,3 +12,4 @@
  alias help='cat ~/.aliases'
  alias i3='nvim .config/i3/config'
  alias poly='nvim .config/polybar/config'
+ alias gith='git add . && git commit -m "update" && git push -f'
