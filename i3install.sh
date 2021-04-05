@@ -23,6 +23,22 @@ echo '[1] - Sim'
 echo '[2] - Não'
 echo
 read EXECUTE
+  continue
+else
+  echo 'Saindo...' && sleep 1 && exit 0
+fi
+
+clear && echo '
+██╗██████╗       ██╗███╗   ██╗███████╗████████╗ █████╗ ██╗     ██╗     
+██║╚════██╗      ██║████╗  ██║██╔════╝╚══██╔══╝██╔══██╗██║     ██║     
+██║ █████╔╝█████╗██║██╔██╗ ██║███████╗   ██║   ███████║██║     ██║     
+██║ ╚═══██╗╚════╝██║██║╚██╗██║╚════██║   ██║   ██╔══██║██║     ██║     
+██║██████╔╝      ██║██║ ╚████║███████║   ██║   ██║  ██║███████╗███████╗
+╚═╝╚═════╝       ╚═╝╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚══════╝
+                                                                       '
+echo
+echo 'Pressione enter para continuar'
+read
 
 if [ $EXECUTE == '1' ] ; then
   i3_init
@@ -54,7 +70,7 @@ mkdir $HOME/.config/neofetch
 
 instal_packages(){
 clear && echo 'De permissão sudo para baixar os pacotes:' && echo && echo 'Pressione ENTER para continuar...' && echo && read
-clear && sudo pacman -S git curl net-tools aria2 opensshd xorg-xrandr xclip libreoffice unzip usbutils wget pulseaudio-alsa pavucontrol qbittorrent youtube-dl fzf ueberzug noto-font noto-fonts-cjk brightnessctl dunst numlockx mpv libnotify viewnior python-pip pacman-contrib gvfs-mtp android-tools w3m neofetch nitrogen udev zsh zsh-syntax-highlighting qbittorent  redshift lib32-dbus-glib imagemagick jq lsd base-devel --noconfirm 
+clear && sudo pacman -S git curl net-tools aria2 opensshd xorg-xrandr xclip libreoffice unzip usbutils wget pulseaudio-alsa pavucontrol qbittorrent youtube-dl fzf ueberzug noto-font noto-fonts-cjk brightnessctl dunst numlockx mpv libnotify viewnior jdk8-openjdk python-pip pacman-contrib gvfs-mtp android-tools w3m neofetch nitrogen udev zsh zsh-syntax-highlighting qbittorent  redshift lib32-dbus-glib imagemagick jq lsd base-devel --noconfirm 
 }
 
 compilations(){
