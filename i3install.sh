@@ -121,6 +121,8 @@ cp $HOME/.joaopp-repo/dotfiles/.fonts/* $HOME/.fonts
 sudo pacman -S fortune-mod maim i3lock --noconfirm
 cp $HOME/.joaopp-repo/dotfiles/lock/ArchLinux.png $HOME/.Lock
 cp ~/.joaopp-repo/dotfiles/.zshrc $HOME
+cp ~/.joaopp-repo/dotfiles/.zprofile $HOME
+cp ~/.joaopp-repo/dotfiles/.aliases $HOME
 }
 
 end_script(){
