@@ -1,25 +1,29 @@
 source "$HOME"/.aliases # My Aliases
 
-# Export bin
-export PATH="${PATH}:${HOME}/.local/bin/"
-
-# If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# History ZSH
+HISTFILE=~/.zhistory # My zsh history
+HIST_SIVE=1000 # Size history list
+SAVEHIST=500 # Size history list
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/joao/.oh-my-zsh"
 
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+# Themes
 ZSH_THEME="robbyrussell"
 
-plugins=(git sudo web-search) 
+# Plugins
+plugins=(git sudo) 
 
 source $ZSH/oh-my-zsh.sh
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh     # Plugin Syntax
+
+CASE_SENSITIVE="false"
+HYPHEN_INSENSITIVE="true"
+
+# Functions
 
 # play audio based search
 yplay() {
