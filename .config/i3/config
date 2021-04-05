@@ -21,8 +21,7 @@ set $win Mod4
 #                           FONTS                                  #
 ####################################################################
 
-font pango:FiraCode 10
-#font pango:Fantasque Sans Mono 8
+font pango:Iosevkea Medium 8
 
 ####################################################################
 #                         FLOATING MODE                            #
