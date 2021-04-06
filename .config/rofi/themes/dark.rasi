@@ -1,21 +1,21 @@
 configuration {
   show-icons: false;
   icon-theme: "Papirus";
-  /*font: "FiraCode Regular Medium 11";*/
+  font: "Iosevka Medium 9";
   /*font: "JetBrains Mono Medium 9";*/
-  font: "Bahamas 10";
+  /*font: "Bahamas 10";*/
   drun-display-format: "{icon} {name}";
   display-run: " ";
-  display-drun: " ";
+  display-drun: " ";
   display-window: " ";
 }
 
 * {
     selected-normal-foreground:  #000000;
-    foreground:                  #f8f8f2;
-    background:                  #1e1f29;
+    foreground:                  #FFFFFF;
+    background:                  #141414;
     normal-foreground:           @foreground;
-    alternate-normal-background: #1e1f29;
+    alternate-normal-background: #141414;
     red:                         rgba ( 220, 50, 47, 100 % );
     selected-urgent-foreground:  rgba ( 29, 32, 33, 100 % );
     blue:                        rgba ( 38, 139, 210, 100 % );
@@ -24,13 +24,13 @@ configuration {
     active-foreground:           rgba ( 29, 32, 33, 100 % );
     lightbg:                     rgba ( 238, 232, 213, 100 % );
     selected-active-foreground:  rgba ( 29, 32, 33, 100 % );
-    alternate-active-background: #1e1f29;
-    bordercolor:                 #1e1f29;
+    alternate-active-background: #141414;
+    bordercolor:                 #141414;
     alternate-normal-foreground: @foreground;
-    normal-background:           #1e1f29;
+    normal-background:           #141414;
     lightfg:                     rgba ( 88, 104, 117, 100 % );
-    selected-normal-background:  #f1fa8c;
-    border-color:                #f1fa8c;
+    selected-normal-background:  #FFFFFF;
+    border-color:                #FFFFFF;
     spacing:                     3;
     separatorcolor:              #2E3440;
     separator-style:             "solid";
