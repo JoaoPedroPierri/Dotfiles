@@ -4,10 +4,9 @@
 
 [colors]
 #background = #00000000
-background = #1e1f29
-foreground = #D8DEE9
-
-#alert = #ff5555
+background = #191919
+foreground = #FFFFFF
+alert = #c22832
 
 #################################################################
 #                               Barra TOP                       #
