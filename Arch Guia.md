@@ -67,9 +67,9 @@ arch-chroot /mnt
 ```
 
 # INTERNET
-# NetworkManager
 
 ```
+NetworkManager
 pacman -S networkmanager
 systemctl enable NetworkManager
 ```
