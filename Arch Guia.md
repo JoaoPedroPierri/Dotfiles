@@ -1,6 +1,4 @@
-### Arch Linux Install
-### Eu uso esse guia para meu próprio uso, não me responsabilizo por problemas.
-
+### Arch Linux Install - Eu uso esse guia para meu próprio uso, não me responsabilizo por problemas.
 
 ### Layout do Teclado ABNT2:
 
@@ -19,15 +17,14 @@ cfdisk
 ```
 mkfs.vfat -F32 /dev/sda1 (EFI)
 mkfs.ext4 /dev/sda2 (LINUX ROOT)
-mkfs.ext4 /dev/sda3 --> mkswap /dev/sda3 (SWAP)
+mkfs.ext4 /dev/sda3 ➜ mkswap /dev/sda3 (SWAP)
 mkfs.ext4 /dev/sda4 (HOME)
 ```
 
 ### Montar partições:
 
 ```
-OBS: Comece montando a sua partição root
-
+OBS: Comece montando a sua partição root.
 
 mount /dev/sdaX (Montar ROOT)
 mount /dev/sdaX (Montar UEFI)
@@ -48,7 +45,7 @@ swapon /dev/sda3
 iwctl
 station wlan0 connect <nomedarede>
 *SENHA*
-Sair: CTRL+D
+Sair ➜ CTRL+D
 ```
 
 ### Instalar sistema base:
@@ -119,9 +116,7 @@ pacman -S linux-hardened linux-hardened-headers ➜ Kernel focado na segurança
 
 ```
 nvim /etc/pacman.conf
-Descomentar linhas:
-#multilib
-#incluide
+Descomentar linhas ➜ #multilib; #incluide.
 
 #Easter egg:
 
@@ -221,9 +216,8 @@ chmod +x i3-install.sh
 ./i3-install.sh
 ```
 
-### EXTRA
+### EXTRAS - YAY
 
-# Yay:
 ```
 cd && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si && cd && sudo rm -rf yay-bin
 ```
