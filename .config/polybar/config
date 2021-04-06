@@ -38,7 +38,7 @@ line-color = ${colors.foreground}
 #border-bottom-color = ${colors.foreground}
 
 padding-left = 0
-padding-right = 1
+padding-right = 0
 
 module-margin-left = 0
 module-margin-right = 1
@@ -47,9 +47,10 @@ module-margin-right = 1
 #                         FONTS BAR TOP                         #
 #################################################################
 
-font-0 = "Poppins:style=Regular:pixelsize=9;1"
+font-0 = "Iosevka:style=Medium:pixelsize=9;2"
 font-1 = "xos4 Terminess Powerline:pixelsize=13;1"
 font-2 = "Hack Nerd Font:style=Regular:pixelsize=10;2"
+#font-3 = "Font Awesome 5 Brands:style=Regular:pixelsize=8"
 
 #################################################################
 #                         SEPARADOR BAR TOP                     #
@@ -63,7 +64,7 @@ separator = |
 
 modules-left = 
 modules-center = title
-modules-right = pulse calendar date info-redshift-temp powermenu
+modules-right = pulse date info-redshift-temp powermenu
 
 #################################################################
 #                         TRAY BAR TOP                          #
@@ -108,7 +109,7 @@ height = 16
 #offset-x = 10%
 #pffset-y = 4px
 #override-redirect = true
-#radius = 10
+radius = 0
 fixed-center = true
 bottom = true
 enable-ipc = true
@@ -126,7 +127,7 @@ line-color = ${colors.foreground}
 #border-top-color = ${colors.foreground}
 
 padding-left = 0
-padding-right = 1
+padding-right = 0
 
 module-margin-left = 0
 module-margin-right = 1
@@ -135,9 +136,10 @@ module-margin-right = 1
 #                         FONTS BAR BOTTOM                      #
 #################################################################
 
-font-0 = "Poppins:style=Regular:pixelsize=9;1"
+font-0 = "Iosevka:style=Medium:pixelsize=8;3"
 font-1 = "xos4 Terminess Powerline:pixelsize=13;1"
 font-2 = "Hack Nerd Font:style=Regular:pixelsize=10;2"
+#font-3 = "Font Awesome 5 Brands:style=Regular:pixelsize=8"
 
 #################################################################
 #                         SEPARADOR BAR BOTTOM                  #
@@ -165,10 +167,7 @@ tray-scale = 1.0
 tray-transparent = false
 tray-offset-x = 1
 tray-offset-y = 1
-tray-background = ${colors.background}
-
-cursor-click = pointer
-cursor-scroll = ns-resize
+#tray-background = #00000000
 
 #################################################################
 #                         MÓDULO DE TITULO                      #
@@ -281,73 +280,6 @@ label-unmounted = %mountpoint% Não montado
 #label-unmounted-foreground = ${colors.foreground-alt}
 
 #################################################################
-#                         MÓDULO BSPWM                          #
-#################################################################
-
-[module/bspwm]
-type = internal/bspwm
-format = <label-state> <label-mode>
-index-sort = false
-wrapping-scroll = false
-pin-workspaces = true
-enable-click = true
-enable-scroll = false
-reverse-scroll = false
-fuzzy-match = true
-
-ws-icon-0 = 
-ws-icon-1 = 
-ws-icon-2 = 
-ws-icon-3 = 
-ws-icon-4 = 
-ws-icon-5 = 
-ws-icon-6 = 
-ws-icon-7 = 
-ws-icon-8 = 
-ws-icon-9 = 
-
-strip-wsnumbers = false
-label-state-foreground = ${xrdb:color0:#222}
-
-label-mode = %mode%
-label-mode-foreground = ${xrdb:color0:#222}
-label-mode-background = ${xrdb:color7:#222}
-label-mode-underline = ${xrdb:color0:#222}
-label-mode-padding = 2
-
-label-focused = %name%
-label-focused-foreground = ${xrdb:color0:#222}
-label-focused-background = ${xrdb:color7:#222}
-label-focused-underline= ${xrdb:color0:#222}
-label-focused-padding = 2
-
-label-unfocused = %name%
-label-unfocused-foreground = ${xrdb:color7:#222}
-label-unfocused-background = ${xrdb:color0:#222}
-label-unfocused-underline = ${xrdb:color7:#222}
-label-unfocused-padding = 2
-
-label-visible = %index%
-label-visible-foreground = ${xrdb:color0:#222}
-label-visible-background = ${xrdb:color7:#222}
-label-visible-underline = ${xrdb:color0:#222}
-label-visible-padding = 2
-
-label-urgent = %name%
-label-urgent-foreground = ${xrdb:color0:#222}
-label-urgent-background = ${xrdb:color3:#222}
-label-urgent-underline = ${xrdb:color0:#222
-label-urgent-padding = 2
-
-#################################################################
-#                SEPARADOR WS (WORKSAPCES) BSPWM                #
-#################################################################
-
-label-separator = |
-label-separator-padding = 2
-label-separator-foreground = ${xrdb:color7:#222}
-
-#################################################################
 #                         MÓDULO I3-GAPS                        #
 #################################################################
 
@@ -362,17 +294,6 @@ enable-scroll = false
 reverse-scroll = false
 fuzzy-match = true
 
-#ws-icon-0 = 
-#ws-icon-1 = 
-#ws-icon-2 = 
-#ws-icon-3 = 
-#ws-icon-4 = 
-#ws-icon-5 = 
-#ws-icon-6 = 
-#ws-icon-7 = 
-#ws-icon-8 = 
-#ws-icon-9 = 
-
 strip-wsnumbers = false
 label-state-foreground = ${colors.foreground}
 
@@ -380,38 +301,38 @@ label-mode = %mode%
 label-mode-foreground = ${colors.foreground}
 label-mode-background = ${colors.background}
 label-mode-underline = ${colors.alert}
-label-mode-padding = 2
+label-mode-padding = 1
 
 label-focused = %name%
 label-focused-foreground = ${colors.background}
 label-focused-background = ${colors.foreground} 
 label-focused-underline = ${colors.alert}
-label-focused-padding = 2
+label-focused-padding = 1
 
 label-unfocused = %name%
 label-unfocused-foreground = ${colors.foreground}
 label-unfocused-background = ${colors.background}
 #label-unfocused-underline = ${colors.foreground}
-label-unfocused-padding = 2
+label-unfocused-padding = 1
 
 label-visible = %index%
 label-visible-foreground = ${colors.foreground}
 label-visible-background = ${colors.background}
 label-visible-underline = #ebdbb2
-label-visible-padding = 2
+label-visible-padding = 1
 
 label-urgent = %name%
 label-urgent-foreground = ${colors.foreground}
 label-urgent-background = ${colors.alert}
 label-urgent-underline = ${colors.foreground}
-label-urgent-padding = 2
+label-urgent-padding = 1
 
 #################################################################
 #               SEPARADOR WS (WORKSAPCES) i3WM                  #
 #################################################################
 
 label-separator = |
-label-separator-padding = 2
+label-separator-padding = 1
 label-separator-foreground = ${colors.foreground}
 
 #################################################################
@@ -514,7 +435,7 @@ label = %percentage_used%%
 type = internal/date
 interval = 1
 
-#date = "%a %d/%m/%y"
+date = "%a %d/%m/%y"
 #date-alt = " %a %d/%m/%y"
 
 #time = %I:%M:%S %p
