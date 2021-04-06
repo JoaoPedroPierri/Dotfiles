@@ -155,12 +155,8 @@ set $ws1 " 1: "
 set $ws2 " 2:  "
 set $ws3 " 3:  "
 set $ws4 " 4:   "
-set $ws5 " 5:  "
-set $ws6 " 6:  "
-set $ws7 " 7: 金 "
-set $ws8 " 8:   "
-set $ws9 " 9:   "
-set $ws10 " 10:  "
+set $ws5 " 5: 金 "
+set $ws6 " 6:   "
 
 #set $ws1 "1"
 #set $ws2 "2"
@@ -204,25 +200,19 @@ bindsym $win+Shift+0 move container to workspace number $ws10
 # Ativar o floating e mover a janela para o centro:[..., floating enable, move position center
 
 # Browser ws=1
-for_window [class="(google-chrome-stable)"] move to workspace $ws1 focus
+for_window [class="(google-chrome-stable)"] move to workspace $ws1 
 
 # Terminal ws=2
-for_window [class="(kitty)"] move to workspace $ws2 focus
+for_window [class="(kitty)"] move to workspace $ws2 
 
 # Telegram ws=3
-for_window [class="(Telegram)"] move to workspace $ws3 focus
+for_window [class="(Telegram)"] move to workspace $ws3 
 
-# Spotify ws=5
-for_window [class="(Spotify)"] move to workspace $ws5
+# MPV ws=4
+for_window [class="(mpv)"] move to workspace $ws4 
 
-# Gimp ws=6
-for_window [class="(Gimp)"] move to workspace $ws6
-
-# MPV ws=7
-for_window [class="(mpv)"] move to workspace $ws7 
-
-# Qbittorrent ws=8
-for_window [class="(qBittorrent)"] move to workspace $ws8 
+# Qbittorrent ws=5
+for_window [class="(qBittorrent)"] move to workspace $ws5 
 
 ####################################################################
 #                           R E G R A S                            #
