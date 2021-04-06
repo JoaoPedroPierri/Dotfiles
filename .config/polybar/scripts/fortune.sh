@@ -1,11 +1,9 @@
 #!/usr/bin/env bash
-# Credit: Franklin Souza
-# Telegram: @FranklinTech
 # Pacotes: fortune-mod maim
 
 scr='/tmp/screenshot.png'
 icon="$HOME/.Lock/ArchLinux.png"
-font="$HOME/.fonts/OpensSans.otf"
+font="$HOME/.fonts/Poppins.otf"
 
 [ ! -d $HOME/.local/share/i3lock/ ] && mkdir -p $HOME/.local/share/i3lock/
 
