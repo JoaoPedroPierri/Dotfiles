@@ -9,7 +9,7 @@
 | Program Launcher | [Rofi](https://github.com/davatorium/rofi)                                                                                         |           
 | Status Bar     | [Polybar](https://github.com/polybar/polybar)                                                                                         |     									    |                                					     	 	    
 | Vídeo Player        | [MPV](https://mpv.io/)														    |
-| Music Player | [Spotify](https://flathub.org/apps/details/com.spotify.Client)                   								    |
+| Music Player | [MPV](https://mpv.io/)                   								    |
 | Image viewer | [Viewnior](http://siyanpanayotov.com/project/viewnior)                                                                                                                                                                                             
 | Print Screen     | [Import](https://github.com/JoaoPedroPierri/dotfiles/blob/master/bin/shot)                                                                               |
 | Terminal Emulator   | [Kitty](https://github.com/kovidgoyal/kitty)                                                                                 |
