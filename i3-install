@@ -41,7 +41,7 @@ sudo pacman -S reflector --noconfirm
 sudo reflector -m 5 --save /etc/pacman.d/mirrorlist
 
 # Baixando pacotes
-clear && sudo pacman -S git curl wget xorg-xrandr aria2 mpv libnotify viewnior python-pip pacman-contrib gvfs-mtp xdg-user-dirs pulseaudio-alsa w3m ttf-jetbrains-mono ttf-fantasque-sans-mono ttf-fira-code zsh zsh-syntax-highlighting  redshift ttf-font-awesome lib32-dbus-glib imagemagick jq base-devel kitty maim youtube-dl noto-fonts-cjk fzf ueberzug dmenu noto-font noto-fonts-cjk libreoffice zip unzip numlockx mpv brightnessctl dunst usbutils qbittorrent neofetch android-tools gucharmap xorg-xrandr --noconfirm && xdg-user-dirs-update
+clear && sudo pacman -S git curl wget xorg-xrandr aria2 mpv libnotify viewnior python-pip pacman-contrib gvfs-mtp xdg-user-dirs pulseaudio-alsa w3m ttf-fantasque-sans-mono zsh zsh-syntax-highlighting  redshift lib32-dbus-glib imagemagick jq base-devel maim youtube-dl  fzf ueberzug dmenu noto-font noto-fonts-cjk libreoffice zip unzip numlockx mpv brightnessctl dunst usbutils qbittorrent neofetch android-tools gucharmap xorg-xrandr --noconfirm && xdg-user-dirs-update
 
 # Compilações
 # Compilando -> Polybar
