@@ -1,30 +1,40 @@
 #!/bin/env bash
 
 # License: GPL v3.0
-# JoaoPedroPierri
-# @joaoppierri
 # Install config i3 script
 
 # Criando diretórios
-mkdir $HOME/.joaopp-repo
+mkdir $HOME/joaopp-repo
 mkdir $HOME/.compile
 mkdir $HOME/.config/rofi
 mkdir $HOME/.config/rofi/themes
+mkdir $HOME/.config/polybar
 mkdir $HOME/.config/dunst
 mkdir $HOME/.config/nvim
 mkdir $HOME/.fonts
 mkdir $HOME/.themes
 mkdir $HOME/.icons
-mkdir $HOME/.Lock
 mkdir $HOME/.local/bin
 mkdir $HOME/scripts
 mkdir $HOME/wallpapers
-mkdir $HOME/.config/neofetch
 
 # Aviso
 clear && echo 'ATENÇÃO: LEIA O SCRIPT ANTES DE EXECUTA-LO!!!'
+echo
+echo 'Deseja executar o script?'
+echo
+echo '1 - Sim'
+echo '2 - Não'
+echo
+read EXECUTE
+echo
+if [ $EXECUTE == '1' ];then
+  continue
+else
+  echo 'Saindo...' && sleep 1 && exit 0
+fi
 
-echo '
+clear && echo '
 ██╗██████╗       ██╗███╗   ██╗███████╗████████╗ █████╗ ██╗     ██╗     
 ██║╚════██╗      ██║████╗  ██║██╔════╝╚══██╔══╝██╔══██╗██║     ██║     
 ██║ █████╔╝█████╗██║██╔██╗ ██║███████╗   ██║   ███████║██║     ██║     
@@ -33,15 +43,11 @@ echo '
 ╚═╝╚═════╝       ╚═╝╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚══════╝
                                                                        '
 echo
-echo 'Pressione enter para continuar'
+echo 'Press enter to continue'
 read
 
-# Atualizando os mirror BR's
-sudo pacman -S reflector --noconfirm
-sudo reflector -m 5 --save /etc/pacman.d/mirrorlist
-
 # Baixando pacotes
-clear && sudo pacman -S git curl wget xorg-xrandr aria2 mpv libnotify viewnior python-pip pacman-contrib gvfs-mtp xdg-user-dirs pulseaudio-alsa w3m ttf-fantasque-sans-mono zsh zsh-syntax-highlighting  redshift lib32-dbus-glib imagemagick jq base-devel maim youtube-dl  fzf ueberzug dmenu noto-font noto-fonts-cjk libreoffice zip unzip numlockx mpv brightnessctl dunst usbutils qbittorrent neofetch android-tools gucharmap xorg-xrandr --noconfirm && xdg-user-dirs-update
+clear && sudo pacman -S git wget dunst  aria2 mpv libnotify viewnior python-pip pacman-contrib  gvfs-mtp xdg-user-dirs pulseaudio-alsa w3m ttf-jetbrains-mono ttf-fantasque-sans-mono ttf-fira-code zsh zsh-syntax-highlighting redshift ttf-font-awesome lib32-dbus-glib imagemagick base-devel kitty maim lsd youtube-dl noto-fonts-cjk net-tools qbittorent usbutils android-tools gucharmap neofetch mpv brightnessctl dunst redshift libreoffice zip unzip numlockx fzf ueberzug noto-fonts ttf-nerd-fonts-symbols-mono --noconfirm && xdg-user-dirs-update
 
 # Compilações
 # Compilando -> Polybar
@@ -68,71 +74,65 @@ git clone https://aur.archlinux.org/scrcpy.git
 cd $HOME/.compile/scrcpy
 makepkg -sic --noconfirm
 
-# Compilando -> Google Chrome
-git clone https://aur.archlinux.org/google-chorome.git
-cd $HOME/.compile/google-chrome
-makepkg -sic --noconfirm
+# Limpar console
+clear
 
 # Clonando meu repositório
-cd $HOME/.joaopp-repo
+cd $HOME/.joao-repo
 git clone https://github.com/JoaoPedroPierri/dotfiles.git
 
 # dir ~/.local/bin e dando permissões aos scripts
-cp $HOME/.joaopp-repo/dotfiles/bin/* $HOME/.local/bin
+cp $HOME/.joao-repo/dotfiles/bin/* $HOME/.local/bin
 cd $HOME/.local/bin && chmod +x *
 
 # dir ~/Scripts e dando permissões aos scripts
-cp $HOME/.joaopp-repo/dotfiles/scripts/* $HOME/scripts
+cp $HOME/.joao-repo/dotfiles/scripts/* $HOME/scripts
 cd $HOME/scripts && chmod +x *
 
 # Copiando as fontes para o sistema
-cp $HOME/.joaopp-repo/dotfiles/fonts/* $HOME/.fonts
+cp $HOME/.joao-repo/dotfiles/.fonts/* $HOME/.fonts
 
 # Copiando files zsh
-cp ~/.joaopp-repo/dotfiles/.zshrc $HOME
-cp ~/.joaopp-repo/dotfiles/.zshenv $HOME
-cp ~/.joaopp-repo/dotfiles/.zprofile $HOME
-cp ~/.joaopp-repo/dotfiles/.aliases $HOME
+cp ~/.joao-repo/dotfiles/home/.zshrc $HOME
+cp ~/.joao-repo/dotfiles/home/.zshenv $HOME
+cp ~/.joao-repo/dotfiles/home/.zprofile $HOME
+cp ~/.joao-repo/dotfiles/home/.aliases $HOME
 touch .zhistory $HOME
 
 # Aplicando tema
 # i3
-cp $HOME/.joaopp-repo/dotfiles/.config/i3/config $HOME/.config/i3/
+cp $HOME/.joao-repo/dotfiles/.config/i3/config $HOME/.config/i3/
 
 # Polybar
-cp -r $HOME/.joaopp-repo/dotfiles/.config/polybar/scripts $HOME/.config/polybar
-cp $HOME/.joaopp-repo/dotfiles/.config/polybar/config $HOME/.config/polybar
+cp -r $HOME/.joao-repo/dotfiles/.config/polybar/scripts $HOME/.config/polybar
+cp $HOME/.joao-repo/dotfiles/.config/polybar/config $HOME/.config/polybar
 chmod +x $HOME/.config/polybar/scripts/*
 
 # Rofi
 sudo pacman -S rofi --noconfirm
-cp $HOME/.joaopp-repo/dotfiles/.config/rofi/drun.rasi $HOME/.config/rofi/
-cp $HOME/.joaopp-repo/dotfiles/.config/rofi/themes/dark.rasi $HOME/.config/rofi/themes/
+cp $HOME/.joao-repo/dotfiles/.config/rofi/drun.rasi $HOME/.config/rofi/
+cp $HOME/.joao-repo/dotfiles/.config/rofi/themes/dark.rasi $HOME/.config/rofi/themes/
 
 # Kitty
-cp $HOME/.joaopp-repo/dotfiles/.config/kitty/kitty.conf $HOME/.config/kitty
-cp $HOME/.joaopp-repo/dotfiles/.config/kitty/theme.conf $HOME/.config/kitty
+cp $HOME/.joao-repo/dotfiles/.config/kitty/kitty.conf $HOME/.config/kitty
+cp $HOME/.joao-repo/dotfiles/.config/kitty/theme.conf $HOME/.config/kitty
 sudo ln -sv /usr/bin/kitty /usr/bin/xterm
 
 # DUNST
-cp $HOME/.joaopp-repo/dotfiles/.config/dunst/dunstrc $HOME/.config/dunst
+cp $HOME/.joao-repo/dotfiles/.config/dunst/dunstrc $HOME/.config/dunst
 
 # NITROGEN
 sudo pacman -S nitrogen --noconfirm
 cd $HOME/wallpapers
-cp $HOME/.joaopp/dotfiles/wallpapers/* #HOME/wallpapers
-nitrogen --set-auto $HOME/wallpapers/8.png
+wget -c https://github.com/fraanks/dotfiles/raw/master/wallpapers/Goku.png
+nitrogen --set-auto $HOME/wallpapers/Goku.png
 
-# NeoVIM
-cp $HOME/.joaopp-repo/dotfiles/.config/nvim/init.vim $HOME/.config/nvim
+# NEOVIM
+cp $HOME/.joao-repo/dotfiles/.config/nvim/init.vim $HOME/.config/nvim
 
-# Neofetch
+# NEOFETCH
 sudo pacman -S neofetch --noconfirm
 cp $HOME/.joaopp-repo/dotfiles/.config/neofetch/config.conf ~/.config/neofetch
-
-# i3 Lock
-sudo pacman -S fortune-mod maim i3lock --noconfirm
-cp $HOME/.joaopp-repo/dotfiles/lock/ArchLinux.png $HOME/.Lock
 
 # Restart i3
 i3-msg restart
