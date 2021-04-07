@@ -4,7 +4,7 @@
 # Install config i3 script
 
 # Criando diretórios
-mkdir $HOME/joaopp-repo
+mkdir $HOME/joao-repo
 mkdir $HOME/.compile
 mkdir $HOME/.config/rofi
 mkdir $HOME/.config/rofi/themes
@@ -93,10 +93,10 @@ cd $HOME/scripts && chmod +x *
 cp $HOME/.joao-repo/dotfiles/.fonts/* $HOME/.fonts
 
 # Copiando files zsh
-cp ~/.joao-repo/dotfiles/home/.zshrc $HOME
-cp ~/.joao-repo/dotfiles/home/.zshenv $HOME
-cp ~/.joao-repo/dotfiles/home/.zprofile $HOME
-cp ~/.joao-repo/dotfiles/home/.aliases $HOME
+cp ~/.joao-repo/dotfiles/.zshrc $HOME
+cp ~/.joao-repo/dotfiles/.zshenv $HOME
+cp ~/.joao-repo/dotfiles/.zprofile $HOME
+cp ~/.joao-repo/dotfiles/.aliases $HOME
 touch .zhistory $HOME
 
 # Aplicando tema
@@ -132,7 +132,7 @@ cp $HOME/.joao-repo/dotfiles/.config/nvim/init.vim $HOME/.config/nvim
 
 # NEOFETCH
 sudo pacman -S neofetch --noconfirm
-cp $HOME/.joaopp-repo/dotfiles/.config/neofetch/config.conf ~/.config/neofetch
+cp $HOME/.joao-repo/dotfiles/.config/neofetch/config.conf ~/.config/neofetch
 
 # Restart i3
 i3-msg restart
