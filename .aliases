@@ -13,3 +13,5 @@
  alias poly='nvim .config/polybar/config'
  alias repo='cd .joaopp-repo/dotfiles/'
  alias gith='git add . && git commit -m "update" && git push -f'
+ alias name='git config --global user.name JoaoPedroPierri'
+ alias email='git config --global user.email joaopedropierri2002@gmail.com'
