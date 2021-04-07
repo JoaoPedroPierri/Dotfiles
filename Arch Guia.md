@@ -207,10 +207,9 @@ sudo pacman -S xf86-video-amdgpu --noconfirm
 ### Baixar alguns pacotes:
 
 ```
-sudo pacman -S i3 kitty wget xorg-server xorg-xinit xdg-user-dirs ttf-jetbrains-mono ttf-nerd-fonts-symbols-mono ttf-font-awesome ttf-fira-code cmake python-sphinx --noconfirm && xdg-user-dirs-update
+sudo pacman -S i3 kitty git wget xorg-server xorg-xinit xdg-user-dirs ttf-jetbrains-mono ttf-nerd-fonts-symbols-mono ttf-font-awesome ttf-fira-code cmake python-sphinx --noconfirm && xdg-user-dirs-update
 
->echo exec i3 > .xinitrc
->startx 
+echo exec i3 > .xinitrc && startx 
 ```
 
 ### DEPOIS DE INICIAR O I3
