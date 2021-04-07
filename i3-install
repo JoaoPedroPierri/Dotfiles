@@ -32,7 +32,6 @@ echo
 read EXECUTE
 echo
 if [ $EXECUTE == '1' ];then
-  continue
 else
   echo 'Saindo...' && sleep 1 && exit 0
 fi
