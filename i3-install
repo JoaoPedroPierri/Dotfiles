@@ -69,6 +69,12 @@ git clone https://aur.archlinux.org/pulseaudio-ctl.git
 cd $HOME/.compile/pulseaudio-ctl
 makepkg -sic --noconfirm
 
+# Compilando -> Google Chrome
+cd $HOME/.compile
+git clone https://aur.archlinux.org/google-chrome.git
+cd $HOME/.compile/google-chrome
+makepkg -sic --noconfirm
+
 # Compilando -> scrcpy
 cd $HOME/.compile
 git clone https://aur.archlinux.org/scrcpy.git
