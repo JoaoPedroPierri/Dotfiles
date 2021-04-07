@@ -13,6 +13,7 @@ mkdir $HOME/.config/dunst
 mkdir $HOME/.config/nvim
 mkdir $HOME/.fonts
 mkdir $HOME/.themes
+mkdir $HOME/.Lock
 mkdir $HOME/.icons
 mkdir $HOME/.local/bin
 mkdir $HOME/scripts
@@ -47,7 +48,7 @@ echo 'Press enter to continue'
 read
 
 # Baixando pacotes
-clear && sudo pacman -S git wget dunst  aria2 mpv libnotify viewnior python-pip pacman-contrib  gvfs-mtp xdg-user-dirs pulseaudio-alsa w3m ttf-jetbrains-mono ttf-fantasque-sans-mono ttf-fira-code zsh zsh-syntax-highlighting redshift ttf-font-awesome lib32-dbus-glib imagemagick base-devel kitty maim lsd youtube-dl noto-fonts-cjk net-tools qbittorent usbutils android-tools gucharmap neofetch mpv brightnessctl dunst redshift libreoffice zip unzip numlockx fzf ueberzug noto-fonts ttf-nerd-fonts-symbols-mono --noconfirm && xdg-user-dirs-update
+clear && sudo pacman -S git wget dunst  aria2 mpv libnotify viewnior python-pip pacman-contrib fortune-mod maim gvfs-mtp xdg-user-dirs pulseaudio-alsa w3m ttf-jetbrains-mono ttf-fantasque-sans-mono ttf-fira-code zsh zsh-syntax-highlighting redshift ttf-font-awesome lib32-dbus-glib imagemagick base-devel kitty maim lsd youtube-dl noto-fonts-cjk net-tools qbittorent usbutils android-tools gucharmap neofetch mpv brightnessctl dunst redshift libreoffice zip unzip numlockx fzf ueberzug noto-fonts ttf-nerd-fonts-symbols-mono --noconfirm && xdg-user-dirs-update
 
 # Compilações
 # Compilando -> Polybar
@@ -80,6 +81,10 @@ clear
 # Clonando meu repositório
 cd $HOME/.joao-repo
 git clone https://github.com/JoaoPedroPierri/dotfiles.git
+
+# i3Lock
+cd $HOME/.Lock
+cp $HOME/.joao-repo/dotfiles/lock/ArchLinux.png
 
 # dir ~/.local/bin e dando permissões aos scripts
 cp $HOME/.joao-repo/dotfiles/bin/* $HOME/.local/bin
