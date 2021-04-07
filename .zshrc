@@ -19,6 +19,7 @@ plugins=(git sudo)
 source $ZSH/oh-my-zsh.sh
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh     # Plugin Syntax
+source /usr/share/zsh/plugins/zsh-autossugestions/zsh-autossugestions.plugin.zsh      # Plugin Autossugestions
 
 CASE_SENSITIVE="false"
 HYPHEN_INSENSITIVE="true"
