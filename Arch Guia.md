@@ -69,7 +69,7 @@ arch-chroot /mnt
 # INTERNET
 
 ```
-NetworkManager
+-NetworkManager
 pacman -S networkmanager
 systemctl enable NetworkManager
 ```
@@ -138,6 +138,11 @@ passwd
 ### Criar user:
 
 ```
+ZSH:
+pacman -S zsh --noconfirm
+useraddd -m -g users -s /bin/zsh nomedouser
+
+BASH
 useradd -m -g users -s /bin/bash nomedouser
 ```
 
@@ -202,7 +207,7 @@ sudo pacman -S xf86-video-amdgpu --noconfirm
 ### Baixar alguns pacotes:
 
 ```
-sudo pacman -S i3 kitty wget xorg-server xorg-xinit xdg-user-dirs ttf-jetbrains-mono ttf-nerd-fonts-symbols-mono ttf-font-awesome ttf-fira-code ttf-nerd-fonts-symbols-mono cmake python-sphinx --noconfirm && xdg-user-dirs-update
+sudo pacman -S i3 kitty wget xorg-server xorg-xinit xdg-user-dirs ttf-jetbrains-mono ttf-nerd-fonts-symbols-mono ttf-font-awesome ttf-fira-code cmake python-sphinx --noconfirm && xdg-user-dirs-update
 
 >echo exec i3 > .xinitrc
 >startx 
@@ -211,9 +216,7 @@ sudo pacman -S i3 kitty wget xorg-server xorg-xinit xdg-user-dirs ttf-jetbrains-
 ### DEPOIS DE INICIAR O I3
 
 ```
-wget -c https://github.com/JoaoPedroPierri/dotfiles/raw/master/i3-install.sh
-chmod +x i3-install.sh
-./i3-install.sh
+wget -c https://github.com/JoaoPedroPierri/dotfiles/raw/master/i3-install && chmod +x i3-install && ./i3-install
 ```
 
 ### EXTRAS - YAY
