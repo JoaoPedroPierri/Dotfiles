@@ -48,7 +48,7 @@ echo 'Press enter to continue'
 read
 
 # Baixando pacotes
-clear && sudo pacman -S git wget dunst imagemagick aria2 mpv libnotify viewnior python-pip pacman-contrib fortune-mod maim gvfs-mtp xdg-user-dirs xorg-xrandr usbutils pavucontrol pulseaudio-alsa w3m ttf-jetbrains-mono ttf-fantasque-sans-mono ttf-fira-code zsh-autosuggestions zsh-syntax-highlighting redshift ttf-font-awesome lib32-dbus-glib imagemagick base-devel kitty lsd youtube-dl noto-fonts-cjk qbittorent usbutils android-tools gucharmap neofetch mpv brightnessctl dunst libreoffice zip unzip numlockx fzf jq youtube-dl mpv fzf ueberzug noto-fonts ttf-nerd-fonts-symbols-mono --noconfirm && xdg-user-dirs-update
+clear && sudo pacman -S git wget dunst imagemagick aria2 mpv libnotify viewnior python-pip pacman-contrib fortune-mod maim gvfs-mtp xdg-user-dirs xorg-xrandr usbutils pavucontrol pulseaudio-alsa w3m ttf-jetbrains-mono ttf-fantasque-sans-mono ttf-fira-code zsh-autosuggestions zsh-syntax-highlighting redshift ttf-font-awesome lib32-dbus-glib imagemagick base-devel kitty lsd youtube-dl noto-fonts-cjk qbittorent usbutils gvfs-mtp android-tools gucharmap neofetch mpv brightnessctl dunst libreoffice zip unzip numlockx fzf jq youtube-dl mpv fzf ueberzug noto-fonts ttf-nerd-fonts-symbols-mono --noconfirm && xdg-user-dirs-update
 
 # Compilações
 # Compilando -> Polybar
