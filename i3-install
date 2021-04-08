@@ -114,6 +114,9 @@ touch .zhistory $HOME
 # i3
 cp $HOME/.joao-repo/dotfiles/.config/i3/config $HOME/.config/i3/
 
+# YTFZF - CONFIG
+cp -r ~/.joao-repo/dotfiles/.config/ytfzf $HOME/.config/
+
 # Polybar
 cp -r $HOME/.joao-repo/dotfiles/.config/polybar/scripts $HOME/.config/polybar
 cp $HOME/.joao-repo/dotfiles/.config/polybar/config $HOME/.config/polybar
