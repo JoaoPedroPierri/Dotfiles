@@ -1,10 +1,7 @@
-# ██╗██████╗      ██████╗ ██████╗ ███╗   ██╗███████╗██╗ ██████╗ 
-# ██║╚════██╗    ██╔════╝██╔═══██╗████╗  ██║██╔════╝██║██╔════╝ 
-# ██║ █████╔╝    ██║     ██║   ██║██╔██╗ ██║█████╗  ██║██║  ███╗
-# ██║ ╚═══██╗    ██║     ██║   ██║██║╚██╗██║██╔══╝  ██║██║   ██║
-# ██║██████╔╝    ╚██████╗╚██████╔╝██║ ╚████║██║     ██║╚██████╔╝
-# ╚═╝╚═════╝      ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚═╝ ╚═════╝ 
-                                                              
+ # User: JoaoPedroPierri
+ # Telegram @joaoppierri
+ # https://i3wm.org/docs/userguide.html
+
 ####################################################################
 #                       P R I N C I P A L                          #
 ####################################################################
@@ -40,6 +37,7 @@ default_border pixel 1
 default_floating_border pixel 1
 new_window pixel 1
 #smart_bordes on
+
 ####################################################################
 #                          C O R E S                               #
 ####################################################################
@@ -151,12 +149,12 @@ bindsym --release $win+v exec --no-startup-id shot -u -a  # -> Selecionar area u
 #                              WORKSPACE                           #
 ####################################################################
 
-set $ws1 " 1: "
+set $ws1 " 1:  "
 set $ws2 " 2:  "
 set $ws3 " 3:  "
-set $ws4 " 4:   "
-set $ws5 " 5: 金 "
-set $ws6 " 6:   "
+set $ws4 " 4: 金 "
+set $ws5 " 5:   "
+set $ws6 " 6:  "
 
 #set $ws1 "1"
 #set $ws2 "2"
@@ -213,6 +211,9 @@ for_window [class="(mpv)"] move to workspace $ws4
 
 # Qbittorrent ws=5
 for_window [class="(qBittorrent)"] move to workspace $ws5 
+
+# Gimp ws=6
+for_window [class="(Gimp)"] move to workspace $ws6
 
 ####################################################################
 #                           R E G R A S                            #
