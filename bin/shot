@@ -6,41 +6,41 @@ DIR="$HOME/Imagens/$(date +"%Y-%m-%d_%H:%M:%S").png"
 sr ()
 {
 	import -quality 100 -window root $DIR
-	notify-send -u low -i "$DIR" "PrintScreen" "Saved in $DIR"    
+	notify-send -u low -i "$DIR" "PrintScreen" "Salvo em $DIR"    
 }
 
 sa ()
 {
 	import -quality 100 $DIR
-	notify-send -u low -i "$DIR" "PrintScreen" "Area saved in $DIR"   
+	notify-send -u low -i "$DIR" "PrintScreen" "Area selecioonada salvo e $DIR"   
 }
 
 cr ()
 {
 	import -quality 100 -window root $TMP
 	xclip -selection c -t image/png $TMP
-	notify-send -u low -i "$TMP" "PrintScreen" "Copied to clipboard"    
+	notify-send -u low -i "$TMP" "PrintScreen" "Copiado para clipboard"    
 }
 
 ca ()
 {
 	import -quality 100 $TMP
 	xclip -selection c -t image/png $TMP
-	notify-send -u low -i "$TMP" "PrintScreen" "Area copied to clipboard"
+	notify-send -u low -i "$TMP" "PrintScreen" "Área selecionada foi copiada para clipboard"
 }
 
 ur ()
 {
 	import -quality 100 -window root $TMP
 	xclip -selection c -i <<< $(curl -F file=@$TMP http://0x0.st)
-	notify-send -u low -i "$TMP" "PrintScreen" "Uploaded and url copied"
+	notify-send -u low -i "$TMP" "PrintScreen" "Upload url no clipboard"
 }
 
 ua ()
 {
 	import -quality 100 $TMP
 	xclip -selection c -i <<< $(curl -F file=@$TMP http://0x0.st)
-	notify-send -u low -i "$TMP" "PrintScreen" "Area uploaded and url copied"
+	notify-send -u low -i "$TMP" "PrintScreen" "Área selecionada foi feito upload no clipboard"
 }
 
 fun=$(echo $@ |sed 's/\-//g;s/ //g')
