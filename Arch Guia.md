@@ -212,7 +212,14 @@ sudo pacman -S i3 kitty git wget xorg-server xorg-xinit xdg-user-dirs ttf-jetbra
 echo exec i3 > .xinitrc && startx 
 ```
 
-### DEPOIS DE INICIAR O I3
+### Fontes para emojis:
+```
+sudo pacman -S ttf-joypixels (Fonte proprietária)
+
+sudo pacman -S noto-fonts-emoji (Fonte Open Source) 
+```
+
+### Script i3-gaps
 
 ```
 wget -c https://github.com/JoaoPedroPierri/dotfiles/raw/master/i3-install && chmod +x i3-install && ./i3-install
