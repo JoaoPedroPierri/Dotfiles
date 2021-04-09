@@ -198,12 +198,6 @@ nmtui
 sudo pacman -S xf86-video-ati --noconfirm
 ```
 
-### AMD (nova):
-
-```
-sudo pacman -S xf86-video-amdgpu --noconfirm
-```
-
 ### Baixar alguns pacotes:
 
 ```
