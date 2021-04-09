@@ -53,6 +53,25 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 #                          A T A L H O S                           #
 ####################################################################
 
+# Alterar Brilho
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+
+# Teclado -> Layout
+bindsym $win+b exec --no-startup-id setxkbmap br
+
+# Printar Tela
+bindsym $win+z exec --no-startup-id sleep 0 && shot -c -r
+
+# Bloquear a Tela
+bindsym $win+x exec --no-startup-id $HOME/.config/polybar/scripts/fortune.sh
+
+# Iniciar Terminal 
+bindsym $win+Return exec --no-startup-id i3-sensible-terminal
+
+# Fechar janela focada
+bindsym $win+q kill
+
 # Redshift.sh
 bindsym $win+Shift+b exec --no-startup-id $HOME/scripts/redshift.sh
 
@@ -66,18 +85,8 @@ bindsym $win+l scratchpad show
 # MPV
 bindsym $win+m exec mpv
 
-# qBittorent
+# QBittorent
 bindsym $win+F1 exec qbittorrent
-
-# Alterar Brilho
-bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
-bindsym XF86MonBrightnessUp exec brightnessctl set +5%
-
-# Teclado -> Layout
-bindsym $win+b exec --no-startup-id setxkbmap br
-
-# Printar Tela
-bindsym $win+z exec --no-startup-id sleep 0 && shot -c -r
 
 # Iniciar Google Chrome
 bindsym $win+g exec google-chrome-stable
@@ -85,14 +94,6 @@ bindsym $win+g exec google-chrome-stable
 # Iniciar Telegram
 bindsym $win+t exec --no-startup-id $HOME/.local/bin/telegram
 
-# Bloquear tela
-bindsym $win+x exec --no-startup-id $HOME/.config/polybar/scripts/fortune.sh
-
-# Iniciar Terminal
-bindsym $win+Return exec --no-startup-id i3-sensible-terminal
-
-# Fechar janela focada
-bindsym $win+q kill
 
 ####################################################################
 #                          FEATURES                                #
