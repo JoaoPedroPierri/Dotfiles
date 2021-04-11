@@ -6,16 +6,11 @@
 #                       P R I N C I P A L                          #
 ####################################################################
 
-# Mod4 = Windows
-# Mod1 = Alt
-
 # $win = Tecla Windows
-
 set $win Mod4
-#set $alt Mod1
 
 ####################################################################
-#                           FONTS                                  #
+#                           FONT                                   #
 ####################################################################
 
 font pango:Iosevkea Medium 8
@@ -66,7 +61,7 @@ bindsym $win+z exec --no-startup-id sleep 0 && shot -c -r
 # Bloquear a Tela
 bindsym $win+x exec --no-startup-id $HOME/.config/polybar/scripts/fortune.sh
 
-# Iniciar Terminal 
+# Terminal 
 bindsym $win+Return exec --no-startup-id i3-sensible-terminal
 
 # Fechar janela focada
@@ -88,12 +83,11 @@ bindsym $win+m exec mpv
 # QBittorent
 bindsym $win+F1 exec qbittorrent
 
-# Iniciar Google Chrome
+# Google Chrome
 bindsym $win+g exec google-chrome-stable
 
-# Iniciar Telegram
+# Telegram
 bindsym $win+t exec --no-startup-id $HOME/.local/bin/telegram
-
 
 ####################################################################
 #                          FEATURES                                #
@@ -223,7 +217,7 @@ for_window [class="(Gimp)"] move to workspace $ws6
 # Ativar o floating e mover a janela para o centro:[..., floating enable, move position center
 
 # Kitty (Terminal)
-for_window [class="(kitty)"]floating enable
+for_window [class="(kitty)"]floating enable, move positon center
 
 # Spotify (Streamer Music)
 for_window [class="(Spotify)"]floating enable, move position center
@@ -310,9 +304,6 @@ exec_always --no-startup-id nitrogen --restore
 
 # Dunst - Notificação
 exec --no-startup-id dunst -b
-
-# Flameshot
-exec --no-startup-id flameshot
 
 # Layout do teclado
 exec --no-startup-id setxkbmap br
