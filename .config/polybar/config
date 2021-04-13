@@ -152,7 +152,7 @@ separator = |
 
 modules-left = i3
 modules-center =
-modules-right = scratchpad-indicator xkeyboard up
+modules-right = net wifi scratchpad-indicator xkeyboard up
 
 #################################################################
 #                         TRAY BAR BOTTOM                       #
