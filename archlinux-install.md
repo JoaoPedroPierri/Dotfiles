@@ -116,7 +116,9 @@ pacman -S linux-hardened linux-hardened-headers ➜ Kernel focado na segurança
 
 ```
 nvim /etc/pacman.conf
-Descomentar linhas ➜ #multilib; #incluide.
+Descomentar linhas:
+#multilib
+#incluide
 
 #Easter egg:
 
