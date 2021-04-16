@@ -1,2 +1,0 @@
-# POCO M3
-SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", MODE="0666", GROUP="plugdev"
