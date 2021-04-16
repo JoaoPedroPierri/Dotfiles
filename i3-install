@@ -48,7 +48,7 @@ echo 'Press enter to continue'
 read
 
 # Baixando pacotes
-clear && sudo pacman -S python-pip pacman-contrib libnotify gvfs-mtp xdg-user-dirs xorg-xrandr usbutils w3m lib32-dbus-glib base-devel imagemagick aria2 mpv viewnior fortune-mod maim pavucontrol pulseaudio-alsa zsh-autosuggestions zsh-syntax-highlighting redshift zathura-pdf-nupdf lsd youtube-dl qbittorent gimp android-tools gucharmap viewnior mpv brightnessctl qbittorrent aria2 libreoffice zip unzip numlockx fzf ueberzug xclip dunst numlockx --noconfirm && xdg-user-dirs-update
+clear && sudo pacman -S python-pip pacman-contrib libnotify gvfs-mtp xdg-user-dirs xorg-xrandr usbutils w3m lib32-dbus-glib base-devel imagemagick aria2 mpv viewnior fortune-mod maim pavucontrol pulseaudio-alsa zsh-autosuggestions zsh-syntax-highlighting redshift zathura-pdf-nupdf lsd youtube-dl qbittorent gimp android-tools udev gucharmap viewnior mpv brightnessctl qbittorrent aria2 libreoffice zip unzip numlockx fzf ueberzug xclip dunst  --noconfirm && xdg-user-dirs-update
 
 # Compilações
 # Compilando -> Polybar
@@ -138,7 +138,7 @@ cp $HOME/.joao-repo/dotfiles/.config/dunst/dunstrc $HOME/.config/dunst
 # NITROGEN
 sudo pacman -S nitrogen --noconfirm
 cd $HOME/wallpapers
-cp $HOME;joao-repo/dotfiles/wallpapers/* $HOME/wallpapers
+cp $HOME/.joao-repo/dotfiles/wallpapers/* $HOME/wallpapers
 nitrogen --set-auto $HOME/wallpapers/8.jpg
 xdg-mim default org.pwmt.zathura.desktop application/pdf
 
@@ -147,8 +147,10 @@ cp $HOME/.joao-repo/dotfiles/.config/nvim/init.vim $HOME/.config/nvim
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
-# Android-tools
-adb kill-server && sudo adb start-server
+# Android-tools/udev
+cd /etc/udev/rules.d
+cp $HOME/.joao-repo/dotfiles/51-android.rules ~/etc/udev/rules.d
+udevadm control --reload-rules
 
 # Restart i3
 i3-msg restart
