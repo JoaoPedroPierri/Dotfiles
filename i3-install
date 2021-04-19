@@ -108,6 +108,8 @@ cp ~/.joao-repo/dotfiles/.zshrc $HOME
 cp ~/.joao-repo/dotfiles/.zshenv $HOME
 cp ~/.joao-repo/dotfiles/.zprofile $HOME
 cp ~/.joao-repo/dotfiles/.aliases $HOME
+wget -O $ZSH_CUSTOM/themes/pi.zsh-theme https://raw.githubusercontent.com/tobyjamesthomas/pi/master/pi.zsh-theme
+wget -O $ZSH_CUSTOM/themes/hyperzsh.zsh-theme https://raw.githubusercontent.com/tylerreckart/hyperzsh/master/hyperzsh.zsh-theme
 touch .zhistory $HOME
 
 # Aplicando tema
