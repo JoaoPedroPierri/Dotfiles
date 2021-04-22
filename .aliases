@@ -1,6 +1,7 @@
 # My aliases
 
  alias up='sudo pacman -Syu'
+ alias up2='sudo pacman -Syy'
  alias del='sudo pacman -Scc'
  alias reb='adb reboot'
  alias bootloader='adb reboot bootloader'
