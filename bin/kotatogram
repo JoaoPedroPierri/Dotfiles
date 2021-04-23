@@ -1,0 +1,6 @@
+#!/bin/bash
+# Credit: João Pedro Pierri
+# Telegram: @joaoppierri
+
+yay -S kotatogram-desktop --noconfirm
+
