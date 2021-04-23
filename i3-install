@@ -154,5 +154,8 @@ sudo sh -c "echo '# POCO M3' >> /etc/udev/rules.d/51-android.rules"
 sudo sh -c "echo 'SUBSYSTEM==\"usb\", ATTR{idVendor}==\"18d1\", MODE=\"0666\", GROUP=\"plugdev\"' >> /etc/udev/rules.d/51-android.rules"
 udevadm control --reload-rules
 
+# YAY
+cd && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si && cd && sudo rm -rf yay-bin
+
 # Restart i3
 i3-msg restart
