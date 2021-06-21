@@ -2,7 +2,7 @@
 # Credit: Franklin Souza
 # Telegram: @FranklinTech
 cd /tmp
-wget https://tdesktop.com/linux
+wget https://telegram.org/dl/desktop/linux
 tar -xf linux
 cd Telegram
 mv Telegram telegram
