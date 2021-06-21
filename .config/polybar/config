@@ -6,7 +6,7 @@
 #background = #00000000
 background = #191919
 foreground = #FFFFFF
-alert = #c22832
+alert = #bf616a
 
 #################################################################
 #                               Barra TOP                       #
@@ -21,7 +21,7 @@ height = 16
 #offset-x = 10%
 #pffset-y = 4px
 #override-redirect = true
-#radius = 10
+#radius = 0
 #fixed-center = true
 
 background = ${colors.background}
