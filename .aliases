@@ -3,6 +3,7 @@
 # COMPUTADOR
   alias up='sudo pacman -Syu'
   alias up2='sudo pacman -Syy'
+  alias ya='yay -Syua'
   alias del='sudo pacman -Scc'
   alias dep='sudo pacman -Rs $(sudo pacman -Qtdq)'
   alias help='cat ~/.aliases'
