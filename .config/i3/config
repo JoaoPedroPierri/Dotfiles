@@ -92,6 +92,8 @@ bindsym $win+t exec --no-startup-id $HOME/.local/bin/telegram
 # LibreOffice
 bindsym $win+Shift+w exec libreoffice
 
+# VSCODE
+bindsym $win+v exec code-oss
 
 ####################################################################
 #                          FEATURES                                #
@@ -142,7 +144,7 @@ bindsym Print exec --no-startup-id shot -s -r # -> Salvar tela
 bindsym $win+Print exec --no-startup-id shot -c -r # -> Copiar a tela
 bindsym $win+Shift+Print exec --no-startup-id shot -u -r # -> Upar print na web
 bindsym --release $win+c exec --no-startup-id shot -c -a  # -> Selecionar area
-bindsym --release $win+v exec --no-startup-id shot -u -a  # -> Selecionar area upload web
+bindsym --release $win+u exec --no-startup-id shot -u -a  # -> Selecionar area upload web
 
 ####################################################################
 #                              WORKSPACE                           #
@@ -155,6 +157,7 @@ set $ws4 " 4:  "
 set $ws5 " 5: 金 "
 set $ws6 " 6:   "
 set $ws7 " 7:  "
+set $ws8 " 8:  "
 
 #set $ws1 "1"
 #set $ws2 "2"
@@ -218,6 +221,9 @@ for_window [class="(qBittorrent)"] move to workspace $ws6
 # Gimp ws=7
 for_window [class="(Gimp)"] move to workspace $ws7
 
+# VSCODE ws=8
+for_window [class="(code-oss)"] move to workspace $ws8
+
 ####################################################################
 #                           R E G R A S                            #
 ####################################################################
@@ -242,6 +248,9 @@ for_window [class="(Viewnior)"]floating enable
 
 # Gucharmap (Mapa de caracteres)
 for_window [class="(Gucharmap)"]floating enable
+
+# VSCODE (Programar)
+for_window [class="(code-oss)"]floating enable, move position center
 
 # Qbittorrent (Gerenciador torrent)
 for_window [class="(qBittorrent)"]floating enable
