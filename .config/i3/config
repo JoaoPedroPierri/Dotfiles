@@ -330,4 +330,4 @@ exec --no-startup-id redshift
 exec --no-startup-id redshift -c ~/.config/redshift/redshift.conf
 
 # Bluetooth
-#exec --no-startup-id blueman-applet
+exec --no-startup-id blueman-applet
