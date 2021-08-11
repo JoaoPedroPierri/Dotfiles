@@ -161,8 +161,7 @@ set $ws5 " 5: 金 "
 set $ws6 " 6:   "
 set $ws7 " 7:  "
 set $ws8 " 8:  "
-set $ws9 " 9:  "
-set $ws10 "10: " 
+set $ws9 " 9: " 
 
 
 #set $ws1 "1"
@@ -230,8 +229,8 @@ for_window [class="(Gimp)"] move to workspace $ws7
 # VSCODE ws=8
 for_window [class="(code-oss)"] move to workspace $ws8
 
-# Teams ws=10
-for_window [class="(teams)"] move to workspace $ws10
+# Teams ws=9
+for_window [class="(teams)"] move to workspace $ws9
 
 ####################################################################
 #                           R E G R A S                            #
