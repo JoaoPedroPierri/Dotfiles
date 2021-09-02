@@ -14,7 +14,7 @@
 # GITHUB
   alias repo='cd ~/.joao-repo/dotfiles/'
   alias login='git remote set-url origin git@github.com:JoaoPedroPierri/dotfiles.git'
-  alias gith='git push origin master'
+  alias gith='git add. && git commit -m "update" && git push origin master'
   alias name='git config --global user.name JoaoPedroPierri'
   alias email='git config --global user.email joaopedropierri2002@gmail.com'
 
