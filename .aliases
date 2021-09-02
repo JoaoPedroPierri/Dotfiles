@@ -9,7 +9,8 @@
   alias help='cat ~/.aliases'
   alias i3='nvim .config/i3/config'
   alias poly='nvim .config/polybar/config'
- 
+  alias alia='nvim .aliases'
+
 # GITHUB
   alias repo='cd ~/.joao-repo/dotfiles/'
   alias gith='git add . && git commit -m "update" && git push -f'
@@ -19,44 +20,8 @@
 # CELULAR
   alias reb='adb reboot'
   alias boot='adb reboot bootloader'
-  alias stock='./flash_all.sh' 
+  alias stock='cd custom-stock/citrus_global_V12.0.10/ && ./flash_all.sh' 
   alias flash='adb reboot bootloader && fastboot --disable-verity --disable-verification flash vbmeta vbmeta-citrus.img && fastboot flash recovery recovery_citrus.img && fastboot reboot recovery'
   alias erase='fastboot erase userdata && fastboot -w'
  
-# EXTRAS
-  alias all='lsd -A'
-
-# du [diretório] (fornece o tamanho de um diretório)
-# Exemplo: du -h ou du -sh nomedapasta
-
-# cal (mostra um calendário do mês atual)
-# Exemplo:  cal
-
-# cal [ano] (mostra os 12 meses de um determinado ano)
-# Exemplo: cal 2005
-# -3 : exibe o mês anterior, o mês atual e o próximo mês.
-# -A num : exibe o mês atual e os num meses após o mês atual.
-# -B num : exibe os num meses antes do mês atual e o mês atual.
-# -m mês : exibe o calendário do mês especificado. Se o ano não for informado, será usado o ano atual.
-# -y ano : exibe o calendário do ano especificado.
-
-# Compactar
-# zip -r nomedozip.zip nomedapasta
-
-# Para descompactar basta dar o comando:
-# unzip nomedozip.zip
-
-# Compactar .tgz
-# tar -cvzf nome_arquivo.tgz nomedoarquivo/pasta
-
-# Descompactar
-# tar -xvzf nome_arquivo.tgz
-
-# mpv nomedasérie{1-10}.mkv
-# mv ~/nomedapasta/file ~/path/to/file
-
-# sudo sh -c "echo '# POCO M3' >> /etc/udev/rules.d/51-android.rules"
-# sudo sh -c "echo 'SUBSYSTEM==\"usb\", ATTR{idVendor}==\"18di\", MODE=\"0666\", GROUP=\"plugdev\"' >> /etc/udev/rules.d/51-android.rules"
-
-# sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
