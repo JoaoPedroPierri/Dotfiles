@@ -75,12 +75,6 @@ git clone https://aur.archlinux.org/google-chrome.git
 cd $HOME/.compile/google-chrome
 makepkg -sic --noconfirm
 
-# Compilando -> scrcpy
-cd $HOME/.compile
-git clone https://aur.archlinux.org/scrcpy.git
-cd $HOME/.compile/scrcpy
-makepkg -sic --noconfirm
-
 # Limpar console
 clear
 
