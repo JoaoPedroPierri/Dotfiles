@@ -21,7 +21,8 @@
 # CELULAR
   alias reb='adb reboot'
   alias boot='adb reboot bootloader'
-  alias stock='cd custom-stock/citrus_global_V12.0.10/ && ./flash_all.sh' 
+  alia citrus='cd custom-stock/citrus_global-v12.0.10/'
+  alias stock='./flash_all.sh' 
   alias flash='adb reboot bootloader && fastboot --disable-verity --disable-verification flash vbmeta vbmeta-citrus.img && fastboot flash recovery recovery_citrus.img && fastboot reboot recovery'
   alias erase='fastboot erase userdata && fastboot -w'
  
