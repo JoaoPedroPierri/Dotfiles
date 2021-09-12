@@ -15,6 +15,13 @@ cfdisk
 ### Formatar as partições:
 
 ```
+partição para o /home = linux
+partição root / = linux
+partição swap = linux swap
+partição efi  = EFI
+```
+
+```
 mkfs.vfat -F32 /dev/sda1 (EFI)
 mkfs.ext4 /dev/sda2 (LINUX ROOT)
 mkfs.ext4 /dev/sda3 ➜ mkswap /dev/sda3 (SWAP)
