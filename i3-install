@@ -8,6 +8,7 @@ mkdir $HOME/.joao-repo
 mkdir $HOME/.compile
 mkdir $HOME/.config/rofi
 mkdir $HOME/.config/rofi/themes
+mkdir $HOME/.config/redshift
 mkdir $HOME/.config/polybar
 mkdir $HOME/.config/dunst
 mkdir $HOME/.config/nvim
