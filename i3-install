@@ -49,7 +49,7 @@ echo 'Press enter to continue'
 read
 
 # Baixando pacotes
-sudo pacman -S python-pip pacman-contrib blueman maim libnotify gvfs-mtp xdg-user-dirs xorg-xrandr usbutils w3m lib32-dbus-glib base-devel imagemagick aria2 mpv viewnior fortune-mod maim pavucontrol pulseaudio-alsa zsh-autosuggestions zsh-syntax-highlighting redshift zathura-pdf-nupdf lsd youtube-dl qbittorent android-tools udev gucharmap viewnior mpv brightnessctl qbittorrent aria2 libreoffice zip unzip numlockx fzf ueberzug xclip dunst  --noconfirm && xdg-user-dirs-update
+  sudo pacman -S python-pip pacman-contrib blueman maim libnotify gvfs-mtp xdg-user-dirs xorg-xrandr usbutils w3m lib32-dbus-glib base-devel imagemagick python-pywall aria2 mpv viewnior fortune-mod maim pavucontrol pulseaudio-alsa zsh-autosuggestions zsh-syntax-highlighting redshift zathura-pdf-nupdf lsd youtube-dl qbittorent android-tools udev gucharmap viewnior mpv brightnessctl qbittorrent aria2 libreoffice zip unzip numlockx fzf ueberzug xclip dunst  --noconfirm && xdg-user-dirs-update
 
 # Compilações
 # Compilando -> Polybar
