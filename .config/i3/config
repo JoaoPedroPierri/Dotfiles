@@ -38,11 +38,11 @@ new_window pixel 1
 ####################################################################
 
 # classe                borda   fundo   texto   ind.    borda filho
-client.focused          #a3be8c #a3be8c #a3be8c #a3be8c   #a3be8c
-client.focused_inactive #ffffff #ffffff #ffffff #bf616a   #bf616a
-client.unfocused        #FF0000 #ff5555 #ffffff #ffffff   #bf616a
-client.urgent           #bf616a #bf616a #bf616a #bf616a   #bf616a
-client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+ client.focused          #a3be8c #a3be8c #a3be8c #a3be8c   #a3be8c
+ client.focused_inactive #ffffff #ffffff #ffffff #bf616a   #bf616a
+ client.unfocused        #FF0000 #ff5555 #ffffff #ffffff   #bf616a
+ client.urgent           #bf616a #bf616a #bf616a #bf616a   #bf616a
+ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 ####################################################################
 #                          A T A L H O S                           #
@@ -50,7 +50,7 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 # Alterar Brilho
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
-bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+bindsym XF86MonBrightnessUp exec brightnessctl set 5%-
 
 # Teclado -> Layout
 bindsym $win+b exec --no-startup-id setxkbmap br
@@ -79,6 +79,9 @@ bindsym $win+l scratchpad show
 
 # MPV
 bindsym $win+m exec mpv
+
+# Spotify 
+bindsym $win+Shift+s exec spotify
 
 # QBittorent
 bindsym $win+F1 exec qbittorrent
@@ -156,11 +159,12 @@ bindsym --release $win+u exec --no-startup-id shot -u -a  # -> Selecionar area u
 set $ws1 " 1:  "
 set $ws2 " 2:  "
 set $ws3 " 3:  "
-set $ws4 " 4:  "
-set $ws5 " 5: 金"
-set $ws6 " 6:  "
-set $ws7 " 7:  "
-set $ws8 " 8: " 
+set $ws4 " 4: 阮"
+set $ws5 " 5:  "
+set $ws6 " 6: 金"
+set $ws7 " 7:  "
+set $ws8 " 8:  "
+set $ws9 " 9: " 
 
 
 #set $ws1 "1"
@@ -211,22 +215,25 @@ for_window [class="(google-chrome-stable)"] move to workspace $ws1
 for_window [class="(kitty)"] move to workspace $ws2 
 
 # Telegram ws=3
-for_window [class="(Telegram)"] move to workspace $ws3 
+for_window [class="(Telegram)"] move to workspace $ws3
 
-# LibreOffice ws=4
-for_window [class="(libreoffice)"] move to workspace  $ws4
+# Spotify ws=4
+for_window [class="(spotify)"] move to workspace $ws4
 
-# MPV ws=5
-for_window [class="(mpv)"] move to workspace $ws5 
+# LibreOffice ws=5
+for_window [class="(libreoffice)"] move to workspace  $ws5
 
-# Qbittorrent ws=6
-for_window [class="(qBittorrent)"] move to workspace $ws6 
+# MPV ws=6
+for_window [class="(mpv)"] move to workspace $ws6 
 
-# VSCODE ws=7
-for_window [class="(code-oss)"] move to workspace $ws7
+# Qbittorrent ws=7
+for_window [class="(qBittorrent)"] move to workspace $ws7 
 
-# Teams ws=8
-for_window [class="(teams)"] move to workspace $ws8
+# VSCODE ws=8
+for_window [class="(code-oss)"] move to workspace $ws8
+
+# Teams ws=9
+for_window [class="(teams)"] move to workspace $ws9
 
 ####################################################################
 #                           R E G R A S                            #
@@ -235,10 +242,10 @@ for_window [class="(teams)"] move to workspace $ws8
 # Ativar o floating e mover a janela para o centro:[..., floating enable, move position center
 
 # Kitty (Terminal)
-for_window [class="(kitty)"]floating enable, move positon center
+for_window [class="(kitty)"]floating enable, move position center
 
 # Spotify (Streamer Music)
-for_window [class="(Spotify)"]floating enable, move position center
+for_window [class="(spotify)"]position, floating enable
 
 # Telegram (Desktop)
 for_window [class="(Telegram)"]floating enable, move position center
