@@ -84,7 +84,7 @@ git clone https://github.com/JoaoPedroPierri/dotfiles.git
 
 # i3Lock
 cd $HOME/.Lock
-cp $HOME/.joao-repo/dotfiles/lock/ArchLinux.png
+cp -r $HOME/.joao-repo/dotfiles/lock/ArchLinux.png ~/.Lock
 
 # dir ~/.local/bin e dando permissões aos scripts
 cp $HOME/.joao-repo/dotfiles/bin/* $HOME/.local/bin
@@ -96,8 +96,8 @@ cd $HOME/scripts && chmod +x *
 
 # Copiando as fontes para o sistema
 cp $HOME/.joao-repo/dotfiles/.fonts/* $HOME/.fonts
-sudo cp $HOME/.ffraanks-repo/dotfiles/fonts/Iosevka-Medium.ttf /usr/share/fonts/TTF
-sudo cp $HOME/.ffraanks-repo/dotfiles/fonts/Iosevka-Bold.ttf /usr/share/fonts/TTF
+sudo cp $HOME/.joao-repo/dotfiles/.fonts/Iosevka-Medium.ttf /usr/share/fonts/TTF
+sudo cp $HOME/.joao-repo/dotfiles/.fonts/Iosevka-Bold.ttf /usr/share/fonts/TTF
 
 # Copiando files zsh
 cp ~/.joao-repo/dotfiles/.zshrc $HOME
