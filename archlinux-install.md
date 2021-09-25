@@ -58,7 +58,7 @@ Sair ➜ CTRL+D
 ### Instalar sistema base:
 
 ```
-pacstrap /mnt base neovim linux-firmware base-devel
+pacstrap /mnt base dhcpcd neovim linux-firmware base-devel
 ```
 
 ### Gerar FSTAB:
@@ -107,7 +107,7 @@ echo KEYMAP=br-abnt2 > /etc/vconsole.conf
 ### Colocar nome host:
 
 ```
-echo joao > /etc/hostname ou echo arch > /etc/hostname
+echo joao > /etc/hostname
 ```
 
 ### Baixar kernel:
@@ -148,13 +148,13 @@ passwd
 
 ```
 BASH
-useradd -m -g users -s /bin/bash nomedouser
+useradd -m -g users -s /bin/bash joao
 ```
 
 ### Criar senha para o user:
 
 ```
-passwd NOMEDOUSER
+passwd joao
 ```
 
 ### Editar arquivo sudo:
@@ -168,7 +168,7 @@ root ALL=(ALL)ALL
 
 Você adiciona seu user:
 
-user ALL=(ALL)ALL
+joao ALL=(ALL)ALL
 
 ### (***)
 
