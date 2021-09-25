@@ -225,6 +225,12 @@ sudo pacman -S noto-fonts-emoji (Fonte Open Source)
 ### Script i3-gaps
 
 ```
+Se o teclado ficar diferente de:
+
+setxkbmap br
+```
+
+```
 wget -c https://github.com/JoaoPedroPierri/dotfiles/raw/master/i3-install && chmod +x i3-install && ./i3-install
 ```
 
