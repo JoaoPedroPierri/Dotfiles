@@ -4,7 +4,7 @@
 # Install config i3 script
 
 # Criando diretórios
-mkdir $HOME/joao-repo
+mkdir $HOME/.joao-repo
 mkdir $HOME/.compile
 mkdir $HOME/.config/rofi
 mkdir $HOME/.config/rofi/themes
@@ -96,14 +96,14 @@ cd $HOME/scripts && chmod +x *
 
 # Copiando as fontes para o sistema
 cp $HOME/.joao-repo/dotfiles/.fonts/* $HOME/.fonts
+sudo cp $HOME/.ffraanks-repo/dotfiles/fonts/Iosevka-Medium.ttf /usr/share/fonts/TTF
+sudo cp $HOME/.ffraanks-repo/dotfiles/fonts/Iosevka-Bold.ttf /usr/share/fonts/TTF
 
 # Copiando files zsh
 cp ~/.joao-repo/dotfiles/.zshrc $HOME
 cp ~/.joao-repo/dotfiles/.zshenv $HOME
 cp ~/.joao-repo/dotfiles/.zprofile $HOME
 cp ~/.joao-repo/dotfiles/.aliases $HOME
-wget -O $ZSH_CUSTOM/themes/pi.zsh-theme https://raw.githubusercontent.com/tobyjamesthomas/pi/master/pi.zsh-theme
-wget -O $ZSH_CUSTOM/themes/hyperzsh.zsh-theme https://raw.githubusercontent.com/tylerreckart/hyperzsh/master/hyperzsh.zsh-theme
 touch .zhistory $HOME
 
 # Aplicando tema
