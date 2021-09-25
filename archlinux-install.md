@@ -147,10 +147,6 @@ passwd
 ### Criar user:
 
 ```
-ZSH:
-pacman -S zsh --noconfirm
-useraddd -m -g users -s /bin/zsh nomedouser
-
 BASH
 useradd -m -g users -s /bin/bash nomedouser
 ```
