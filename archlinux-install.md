@@ -200,7 +200,7 @@ nmtui
 ### AMD (antiga):
 
 ```
-sudo pacman -S xf86-video-ati --noconfirm
+sudo pacman -S xf86-video-amdgpu --noconfirm
 ```
 
 ### Baixar alguns pacotes:
