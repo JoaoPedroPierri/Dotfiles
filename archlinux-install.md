@@ -148,8 +148,8 @@ passwd
 ### Criar user:
 
 ```
-BASH
-useradd -m -g users -s /bin/bash joao
+pacman -S zsh --noconfirm
+useradd -m -g users -s /bin/zsh joao
 ```
 
 ### Criar senha para o user:
@@ -198,16 +198,22 @@ grub-mkconfig -o /boot/grub/grub.cfg
 nmtui
 ```
 
-### AMD (antiga):
+### AMD (NOVA):
 
 ```
 sudo pacman -S xf86-video-amdgpu --noconfirm
 ```
 
+### AMD (ANTIGA):
+
+```
+sudo pacman -S xf86-video-ati --noconfirm
+```
+
 ### Baixar alguns pacotes:
 
 ```
-sudo pacman -S i3 kitty git curl wget xorg-server xorg-xinit xdg-user-dirs ttf-jetbrains-mono ttf-nerd-fonts-symbols-mono ttf-font-awesome noto-fonts noto-fonts-cjk ttf-fantasque-sans-mono ttf-fira-code ttf-joypixels noto-fonts-emoji noto-fonts-extra cmake python-sphinx --noconfirm && xdg-user-dirs-update
+sudo pacman -S i3-gapps usbutils kitty git curl wget xorg-xrandr xclip xorg-server xorg-xinit xdg-user-dirs ttf-jetbrains-mono ttf-nerd-fonts-symbols-mono ttf-font-awesome noto-fonts noto-fonts-cjk ttf-fantasque-sans-mono ttf-fira-code ttf-joypixels noto-fonts-emoji noto-fonts-extra cmake python-sphinx --noconfirm && xdg-user-dirs-update
 
 echo exec i3 > .xinitrc && startx 
 ```
