@@ -84,8 +84,9 @@ systemctl enable NetworkManager
 ### Setar o horário no sistema:
 
 ```
-date
-hwclock --systohc (se a hora estiver certa, de este comando)
+ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
+hwclock --systohc
+timedatectl set-ntp true
 ```
 
 ### Mudando o idioma do SISTEMA (OPCIONAL):
