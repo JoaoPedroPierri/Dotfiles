@@ -26,30 +26,6 @@ HYPHEN_INSENSITIVE="true"
 
 # Functions
 
-
-# Compilation 
-function job () {
-git clone https://github.com/JoaoPedroPierri/device_motorola_channel  device/motorola/channel
-git clone https://github.com/JoaoPedroPierri/device_motorola_ocean    device/motorola/ocean
-git clone https://github.com/JoaoPedroPierri/device_motorola_sdm632-common  device/motorola/sdm632-common
-git clone https://github.com/JoaoPedroPierri/vendor_motorola_ocean  vendor/motorola/ocean
-git clone https://github.com/JoaoPedroPierri/vendor_motorola_channel  vendor/motorola/channel
-git clone https://github.com/JoaoPedroPierri/vendor_motorola_sdm632-common  vendor/motorola/sdm632-common
-git clone https://github.com/JoaoPedroPierri/kernel_motorola_sdm632  kernel/motorola/sdm632
-}
-
-function vo () {
-. build/envsetup.sh
-lunch dot_ocean-userdebug
-make bacon  | tee ocean.log
-}
-
-function vc () {
-. build/envsetup.sh
-lunch dot_channel-userdebug
-make bacon | tee channel.log
-}
-
 # play audio based search
 yplay() {
     mpv --ytdl-format=bestaudio ytdl://ytsearch:"$*"
