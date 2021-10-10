@@ -38,11 +38,28 @@ new_window pixel 1
 ####################################################################
 
 # classe                borda   fundo   texto   ind.    borda filho
- client.focused          #a3be8c #a3be8c #a3be8c #a3be8c   #a3be8c
- client.focused_inactive #ffffff #ffffff #ffffff #bf616a   #bf616a
- client.unfocused        #FF0000 #ff5555 #ffffff #ffffff   #bf616a
- client.urgent           #bf616a #bf616a #bf616a #bf616a   #bf616a
- client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+ # client.focused          #a3be8c #a3be8c #a3be8c #a3be8c   #a3be8c
+ # client.focused_inactive #ffffff #ffffff #ffffff #bf616a   #bf616a
+ # client.unfocused        #FF0000 #ff5555 #ffffff #ffffff   #bf616a
+ # client.urgent           #bf616a #bf616a #bf616a #bf616a   #bf616a
+ # client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+ 
+ ####################################################################
+#                        C O R E S - PYWAL                         #
+####################################################################
+
+set_from_resource $fg i3wm.color7 #f0f0f0
+set_from_resource $bg i3wm.color2 #f0f0f0
+
+# class                 border  backgr. text indicator child_border
+client.focused          $bg     $bg     $fg  $bg       $bg
+client.focused_inactive $bg     $bg     $fg  $bg       $bg
+client.unfocused        $bg     $bg     $fg  $bg       $bg
+client.urgent           $bg     $bg     $fg  $bg       $bg
+client.placeholder      $bg     $bg     $fg  $bg       $bg
+
+client.background       $bg
+
 
 ####################################################################
 #                          A T A L H O S                           #
@@ -54,9 +71,6 @@ bindsym XF86MonBrightnessUp exec brightnessctl set 5%-
 
 # Teclado -> Layout
 bindsym $win+b exec --no-startup-id setxkbmap br
-
-# Printar Tela
-bindsym $win+z exec --no-startup-id sleep 0 && shot -c -r
 
 # Bloquear a Tela
 bindsym $win+x exec --no-startup-id $HOME/.config/polybar/scripts/fortune.sh
@@ -148,10 +162,7 @@ bindsym $win+d exec --no-startup-id rofi -show drun -theme "~/.config/rofi/drun.
 # Screenshot
 bindsym Print exec --no-startup-id shot -s -r # -> Salvar tela
 bindsym $win+Print exec --no-startup-id shot -c -r # -> Copiar a tela
-bindsym $win+Shift+Print exec --no-startup-id shot -u -r # -> Upar print na web
 bindsym --release $win+c exec --no-startup-id shot -c -a  # -> Selecionar area
-bindsym --release $win+u exec --no-startup-id shot -u -a  # -> Selecionar area upload web
-
 ####################################################################
 #                              WORKSPACE                           #
 ####################################################################
@@ -263,6 +274,9 @@ for_window [class="(Gucharmap)"]floating enable
 # VSCODE (Programar)
 for_window [class="(code-oss)"]floating enable, move position center
 
+# Teams (Chamada de Video)
+for_window [class="(teams)"]floating enable, move position center
+
 # Qbittorrent (Gerenciador torrent)
 for_window [class="(qBittorrent)"]floating enable
 
@@ -292,15 +306,11 @@ for_window [class="(Nitrogen)"]floating enable, move position center
 
 # FontPreview
 for_window [class="(Sxiv)"]floating enable, move position center
-
-# Scrcpy
-for_window [instance="scrcpy"] floating enable
-
 ####################################################################
 #                           G A P S                                #
 ####################################################################
 
-gaps inner 8
+gaps inner 2
 gaps outer 0
 #smart_gaps on
 
@@ -341,4 +351,4 @@ exec --no-startup-id redshift
 exec --no-startup-id redshift -c ~/.config/redshift/redshift.conf
 
 # Bluetooth
-exec --no-startup-id blueman-applet
+#exec --no-startup-id blueman-applet
