@@ -40,10 +40,10 @@ swapon /dev/sdaX (Montar SWAP)
 
 Como eu uso:
 
-mount /dev/sda2 /mnt 
-mkdir -p /mnt/boot/efi && mount /dev/sda1 /mnt/boot/efi
-mkdir /mnt/home && mount /dev/sda4 /mnt/home
-swapon /dev/sda3
+mount /dev/sda2 /mnt (ROOT)
+mkdir -p /mnt/boot/efi && mount /dev/sda1 /mnt/boot/efi (EFI)
+mkdir /mnt/home && mount /dev/sda4 /mnt/home (HOME)
+swapon /dev/sda3 (SWAP)
 ```
 
 ### Conectar ao WIFI:
@@ -116,8 +116,6 @@ echo joao > /etc/hostname
 ```
 pacman -S linux linux-headers ➜ Kernel Stable ➜ Default
 pacman -S linux-zen linux-zen-headers ➜ Kernel focado em desempenho
-pacman -S linux-lts linux-lts-headers ➜ Kernel a longo prazo
-pacman -S linux-hardened linux-hardened-headers ➜ Kernel focado na segurança
 ```
 
 ### Configurar pacman.conf:
@@ -216,13 +214,6 @@ sudo pacman -S xf86-video-ati --noconfirm
 sudo pacman -S i3-gapps usbutils kitty git curl wget xorg-xrandr xclip xorg-server xorg-xinit xdg-user-dirs ttf-jetbrains-mono ttf-nerd-fonts-symbols-mono ttf-font-awesome noto-fonts noto-fonts-cjk ttf-fantasque-sans-mono ttf-fira-code ttf-joypixels noto-fonts-emoji noto-fonts-extra cmake python-sphinx --noconfirm && xdg-user-dirs-update
 
 echo exec i3 > .xinitrc && startx 
-```
-
-### Fontes para emojis:
-```
-sudo pacman -S ttf-joypixels (Fonte proprietária)
-
-sudo pacman -S noto-fonts-emoji (Fonte Open Source) 
 ```
 
 ### Script i3-gaps
