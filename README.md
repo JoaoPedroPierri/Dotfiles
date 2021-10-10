@@ -22,4 +22,4 @@
 # i3 Gaps
 
 <img src="i3.png">
-<img src="i3fetch.png">
+#<img src="i3fetch.png">
