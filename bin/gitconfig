@@ -1,0 +1,6 @@
+#!/bin/env bash
+
+git config --global user.email "joaopedropierri2002@gmail.com"
+git config --global user.name "JoaoPedroPierri"
+printf "/n"
+read -p 'Configurado com sucesso PRESS ENTER TO CONTINUE...'
