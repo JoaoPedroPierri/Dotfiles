@@ -49,6 +49,10 @@ swapon /dev/sda3 (SWAP)
 ### Conectar ao WIFI:
 
 ```
+clicar umas 3 vezes no botão de wi-fi/modo avião pra ele reconhecer a conexão pelo iwctl. (não é em todos que acontece isto.) 
+```
+
+```
 iwctl
 station wlan0 connect <nomedarede>
 *SENHA*
@@ -188,7 +192,12 @@ pacman -S os-prober ntfs-3g --noconfirm
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-# REBOOTA O SISTEMA E TIRE A MÍDIA / INSTALAÇÃO FINALIZADA DO ARCH LINUX #
+```
+ctrl + d, para sair do arch-chroot, escreva "reboot", espere a tela ficar preta, e tire o pendrive.
+```
+
+
+# INSTALAÇÃO FINALIZADA DO ARCH LINUX #
 
 ### Notebooks via wifi usa o comando: (Requer NetworkManager instalado)
 
@@ -211,7 +220,7 @@ sudo pacman -S xf86-video-ati --noconfirm
 ### Baixar alguns pacotes:
 
 ```
-sudo pacman -S i3 usbutils kitty git curl wget xorg-xrandr xclip xorg-server xorg-xinit xdg-user-dirs ttf-jetbrains-mono ttf-nerd-fonts-symbols-mono ttf-font-awesome noto-fonts noto-fonts-cjk ttf-fantasque-sans-mono ttf-fira-code ttf-joypixels noto-fonts-emoji noto-fonts-extra cmake python-sphinx --noconfirm && xdg-user-dirs-update
+sudo pacman -S i3 usbutils kitty git curl wget xorg-xrandr xclip xorg-server xorg-xinit xdg-user-dirs ttf-jetbrains-mono ttf-nerd-fonts-symbols-mono ttf-font-awesome ttf-fantasque-sans-mono ttf-fira-code ttf-joypixels noto-fonts noto-fonts -cjk noto-fonts-emoji noto-fonts-extra cmake python-sphinx --noconfirm && xdg-user-dirs-update
 
 echo exec i3 > .xinitrc && startx 
 ```
@@ -219,7 +228,7 @@ echo exec i3 > .xinitrc && startx
 ### Script i3-gaps
 
 ```
-Se o teclado ficar diferente de:
+Se o teclado ficar diferente já no i3WM, dê o seguinte comando:
 
 setxkbmap br
 ```
@@ -228,8 +237,4 @@ setxkbmap br
 wget -c https://github.com/JoaoPedroPierri/dotfiles/raw/master/i3-install && chmod +x i3-install && ./i3-install
 ```
 
-### EXTRAS - YAY
-
-```
-cd && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si && cd && sudo rm -rf yay-bin
-```
+# FINALIZADO #
