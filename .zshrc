@@ -11,7 +11,7 @@ SAVEHIST=500 # Size history list
 export ZSH="/home/joao/.oh-my-zsh"
 
 # Themes
-ZSH_THEME="pi"
+ZSH_THEME="robbyrussell"
 
 # Plugins
 plugins=(git sudo) 
