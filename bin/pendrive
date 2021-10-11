@@ -1,127 +1,55 @@
-echo
+#!/bin/env bash
 
-# Descrição
-echo 'Script para montar e desmontar o pendrive'
+while true; do
+  clear
 
-# New Line
-echo
+  # Devices
+  printf "Pendrive Mount\n\n"
 
-# Listando dispositivos
-echo 'Listando dispositivos'
-echo
-lsblk
-echo
+  # Opções
+  printf "O que você deseja fazer?:\n\n"
+  printf "[1] - Montar pendrive\n"
+  printf "[2] - Desmontar pendrive\n"
+  printf "[3] - Formatar\n"
+  printf "[4] - Listar pastas montadas\n"
+  printf "[5] - Sair\n\n"
+  read OPC
 
-# Opção do user
-echo 'O que você deseja fazer?'
-echo
-echo '1 - Montar pendrive'
-echo
-echo '2 - Desmontar pendrive'
-echo
-read OPC
-echo
+  # Condições
+  if [ $OPC == '1' ];then
+    clear
+    cd /mnt
+    printf "\n\nDigite o nome da pasta para o seu pendrive (Evite espações e acentuações):\n\n"
+    read NAME_PENDRIVE
+    sudo mkdir $NAME_PENDRIVE
+    printf "\n\nOBS: Normalmente é sdb..." && echo && lsblk
+    printf "\n\nDigite o tipo do pendrive:\n\n"
+    read PENDRIVE_TYPE
+    sudo mount /dev/$PENDRIVE_TYPE /mnt/$NAME_PENDRIVE
 
-# Condição
-if [ $OPC == '1' ];then
-  echo 'Entrando no diretório /mnt...'
-  echo
-  cd /mnt
-  echo
-  echo 'Listando os arquivos'
-  echo
-  ls
-  echo
-  echo 'Escolha uma opção abaixo:'
-  echo
-  echo '1 - Criar a pasta para montar o pendrive'
-  echo
-  echo '2 - Entrar numa pasta já criada'
-  echo
-  read PASTE
-  echo
-fi
+  elif [ $OPC == '2' ];then
+    clear
+    cd /mnt && ls
+    printf "\n\nDigite o nome da pasta (Pendrive) que você queira desmontar:\n\n"
+    read DEL_PASTE
+    sudo umount -Rf /mnt/$DEL_PASTE
+    sudo rm -rf /mnt/$DEL_PASTE
 
-# Condição PASTE ->> SIM
-if [ $PASTE == '1' ];then
-  echo 'Digite o nome da sua pasta'
-  echo
-  read PASTE_NAME
-  echo
-  echo 'Criando pasta...'
-  echo
-  sudo mkdir $PASTE_NAME
-  echo
-  echo 'Montando o pendrive...'
-  echo
-  echo 'Escolha o tipo de montagem'
-  echo
-  echo '1 - sdb'
-  echo
-  echo '2 - sdb1'
-  echo
-  read MOUNT
-  echo
-fi
+  elif [ $OPC == '3' ] ; then
+    clear
+    sudo fdisk -l
+    printf "Digite o pendrive aqui:\n\n"
+    read PENDRIVE_TYPE1
+    sudo mkfs.vfta -I $PENDRIVE_TYPE1
 
-# Condição ->> SDB
-if [ $MOUNT == '1' ];then
-  echo 'Montando o pendrive sdb...'
-  echo
-  sudo mount /dev/sdb /mnt/$PASTE_NAME
-  echo
-  echo 'Finalizado'
-  echo
-  sleep 2 && exit
-fi
+  elif [ $OPC == '4' ];then
+    clear
+    ls /mnt
+    read -p 'PRESS ENTER TO CONTINUE...'
 
-# Condição ->> SDB1
-if [ $MOUNT == '2' ];then
-  echo 'Montando o pendrive sdb1...'
-  echo
-  sudo mount /dev/sdb1 /mnt/$PASTE_NAME
-  echo
-  echo 'Finalizado'
-  echo
-  sleep 2 && exit
-fi
-
-# Condição PASTE ->> NÃO
-if [ $PASTE == '2' ];then
-  echo 'Saindo...'
-  sleep 2 && exit
-  #echo 'Listando arquivos:'
-  #echo
-  #ls
-  #echo
-  #echo 'Path atual'
-  #echo
-  #pwd
-  #echo
-  ##echo 'Digite o nome da pasta'
-  #echo
-  #read NAME_PASTE
-  #echo
-  #cd /mnt/$NAME_PASTE/
-fi
-
-# Condição OPC ->> NÃO
-if [ $OPC == '2' ];then
-  echo 'Vamos desmontar o pendrive'
-  echo
-  echo 'Entrando no diretório...E listando.'
-  echo
-  cd /mnt && ls
-  echo
-  echo 'Digite o nome da pasta que o pendrive está montada:'
-  echo
-  read PASTE_NAMEE
-  echo
-  sudo umount -Rf /mnt/$PASTE_NAMEE
-  echo
-  echo 'Pendrive Desmontando'
-  echo
-  echo 'Saindo...'
-  echo
-  sleep 2 && exit
-fi
+  elif [ $OPC == '5' ];then
+    clear && exit 0
+  else
+    clear && exit 0
+  fi
+done
