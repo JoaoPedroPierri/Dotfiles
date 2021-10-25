@@ -95,12 +95,11 @@ systemctl enable NetworkManager
 ### Setar o horário no sistema:
 
 ```
-ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
-hwclock --systohc
-timedatectl set-ntp true
+date
+hwclock --systohc ( se a hora estiver certa)
 ```
 
-### Mudando o idioma do SISTEMA (OPCIONAL):
+### Mudando o idioma do SISTEMA:
 
 ```
 nvim /etc/locale.gen
@@ -137,9 +136,9 @@ Descomentar linhas:
 #multilib
 #incluide
 
-#EXTRA MEU: 
+#EXTRA: 
 Descomentar as linhas:
-UseSyslog, Color. CheckSpace, VerbosePkgLists e ParallelDownloads=5
+UseSyslog, Color CheckSpace, VerbosePkgLists e ParallelDownloads=5
 
 #Easter egg:
 
@@ -165,7 +164,7 @@ pacman -S zsh --noconfirm
 useradd -m -g users -s /bin/zsh joao
 ```
 
-### Criar senha para o user:
+### Senha para o user:
 
 ```
 passwd joao
@@ -201,11 +200,12 @@ pacman -S os-prober ntfs-3g --noconfirm
 
 ### Atualize o GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
+
+CTRL + d
 ```
 
-```
-ctrl + d, para sair do arch-chroot, escreva "reboot", espere a tela ficar preta, e tire o pendrive.
-```
+### ESCREVA REBOOT, E ESPERE A TELA FICAR PRETA, E TIRE O PENDRIVE.
+
 
 
 # INSTALAÇÃO FINALIZADA DO ARCH LINUX #
