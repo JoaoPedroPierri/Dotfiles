@@ -1,5 +1,5 @@
-"Franklin Souza
-"@FranklinTech
+"João Pedro Pierri
+"@joaoppierri
                                                   
 " Dicas: 
 
