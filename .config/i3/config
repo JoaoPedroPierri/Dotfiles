@@ -112,9 +112,6 @@ bindsym $win+Shift+w exec libreoffice
 # VSCODE
 bindsym $win+v exec code-oss
 
-# Teams
-bindsym $win+Shift+t exec --no-startup-id teams
-
 ####################################################################
 #                          FEATURES                                #
 ####################################################################
@@ -310,7 +307,7 @@ for_window [class="(Sxiv)"]floating enable, move position center
 #                           G A P S                                #
 ####################################################################
 
-gaps inner 2
+gaps inner 6
 gaps outer 0
 #smart_gaps on
 
