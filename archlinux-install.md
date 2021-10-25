@@ -6,6 +6,13 @@
 loadkeys br-abnt2
 ```
 
+### Mudar o tamanho da fonte:
+
+```
+setfont lat4-19
+```
+
+
 ### Separar as partições:
 
 ```
@@ -129,6 +136,10 @@ nvim /etc/pacman.conf
 Descomentar linhas:
 #multilib
 #incluide
+
+#EXTRA MEU: 
+Descomentar as linhas:
+UseSyslog, Color. CheckSpace, VerbosePkgLists e ParallelDownloads=5
 
 #Easter egg:
 
