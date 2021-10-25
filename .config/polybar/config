@@ -172,7 +172,7 @@ separator = |
 #################################################################
 
 modules-left = i3
-modules-center =
+modules-center = battery
 modules-right = scratchpad-indicator xkeyboard up
 
 #################################################################
@@ -643,6 +643,11 @@ margin-bottom = 5
 #################################################################
 #                      ALGUNS MÓDULOS CRIADOS                   #
 #################################################################
+
+[module/battery]
+type = custom/script
+exec = cat /sys/class/power_supply/BAT0/capacity
+interval = 0.1
 
 [module/info-redshift-temp]
 type = custom/script
