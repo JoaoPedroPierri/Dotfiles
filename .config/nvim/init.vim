@@ -121,7 +121,6 @@ let g:airline_extensions = []
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_left_sep = "\uE0B4"
 let g:airline_right_sep = "\uE0B6"
-let g:airline_section_z = airline#section#create(["\uE0A1" . '%{line(".")}' . "\uE0A3" . '%{col(".")}'])
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 let g:webdevicons_enable = 1
