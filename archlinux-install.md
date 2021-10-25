@@ -246,6 +246,8 @@ setxkbmap br
 
 ```
 wget -c https://github.com/JoaoPedroPierri/dotfiles/raw/master/i3-install && chmod +x i3-install && ./i3-install
+
+wget -c https://raw.githubusercontent.com/JoaoPedroPierri/dotfiles/raw/master/i3install.sh && chmod +x i3install && ./i3install
 ```
 
 # FINALIZADO #
