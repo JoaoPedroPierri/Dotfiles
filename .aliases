@@ -9,10 +9,10 @@
   alias help='cat ~/.aliases'
   alias i3='nvim .config/i3/config'
   alias poly='nvim .config/polybar/config'
-  alias alia='nvim .aliases'
  
 # GITHUB
   alias repo='cd ~/.joao-repo/dotfiles/'
+  alias plugins='cd ~/.joao-repo/joao-plugins/'
   alias gp='git pull'
   alias gc='git clone'
   alias gh='git push origin master'
