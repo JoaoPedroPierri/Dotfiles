@@ -172,7 +172,6 @@ set $ws5 " 5:  "
 set $ws6 " 6: 金"
 set $ws7 " 7:  "
 set $ws8 " 8:  "
-set $ws9 " 9: " 
 
 
 #set $ws1 "1"
@@ -239,10 +238,6 @@ for_window [class="(qBittorrent)"] move to workspace $ws7
 
 # VSCODE ws=8
 for_window [class="(code-oss)"] move to workspace $ws8
-
-# Teams ws=9
-for_window [class="(teams)"] move to workspace $ws9
-
 ####################################################################
 #                           R E G R A S                            #
 ####################################################################
