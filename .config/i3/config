@@ -216,7 +216,7 @@ bindsym $win+Shift+0 move container to workspace number $ws10
 # Ativar o floating e mover a janela para o centro:[..., floating enable, move position center
 
 # Browser ws=1
-for_window [class="(google-chrome-stable)"] move to workspace $ws1 
+for_window [class="(google-chrome-stable)"] $ws1 
 
 # Terminal ws=2
 for_window [class="(kitty)"] move to workspace $ws2 
@@ -265,9 +265,6 @@ for_window [class="(Gucharmap)"]floating enable
 
 # VSCODE (Programar)
 for_window [class="(code-oss)"]floating enable, move position center
-
-# Teams (Chamada de Video)
-for_window [class="(teams)"]floating enable, move position center
 
 # Qbittorrent (Gerenciador torrent)
 for_window [class="(qBittorrent)"]floating enable
