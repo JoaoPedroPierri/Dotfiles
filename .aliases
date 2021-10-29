@@ -9,7 +9,10 @@
   alias help='cat ~/.aliases'
   alias i3='nvim .config/i3/config'
   alias poly='nvim .config/polybar/config'
- 
+  alias scri='cd .config/polybar/scripts/'
+  alias lixo='cd .local/share/Trash/files'
+
+
 # GITHUB
   alias repo='cd ~/.joao-repo/dotfiles/'
   alias plugins='cd ~/.joao-repo/joao-plugins/'
