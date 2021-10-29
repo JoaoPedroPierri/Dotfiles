@@ -103,7 +103,7 @@ hwclock --systohc ( se a hora estiver certa)
 
 ```
 nvim /etc/locale.gen
-Descomenta a linha: #pt_BR.UTF-8
+Descomenta a linha: #pt_BR.UTF-8 e #pt_BR ISO-8859-1
 locale-gen
 echo LANG=pt_BR.UTF-8 > /etc/locale.conf
 export LANG=pt_BR.UTF-8
