@@ -138,7 +138,7 @@ Descomentar linhas:
 
 #EXTRA: 
 Descomentar as linhas:
-UseSyslog, Color CheckSpace, VerbosePkgLists e ParallelDownloads=5
+UseSyslog, Color, CheckSpace, VerbosePkgLists e ParallelDownloads=5
 
 #Easter egg:
 
