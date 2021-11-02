@@ -105,6 +105,10 @@ bindsym $win+Shift+y exec --no-startup-id kitty -e yt -t
 bindsym $win+o move scratchpad
 bindsym $win+l scratchpad show
 
+# Iniciar Gravação de Tela (SimpleScreenRecorder)
+bindsym $win+F8 exec --no-startup-id simplescreenrecorder --start-hidden # -> Inicia o ssr
+bindsym $win+Shift+m exec --no-startup-id killall simplescreenrecorder # -> Mata o ssr
+
 # MPV
 bindsym $win+m exec mpv
 
