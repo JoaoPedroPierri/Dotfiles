@@ -1,13 +1,26 @@
  # User: JoaoPedroPierri
  # Telegram @joaoppierri
  # https://i3wm.org/docs/userguide.html
+ 
+ ##################################################################
+# ██╗██████╗      ██████╗ ██████╗ ███╗   ██╗███████╗██╗ ██████╗  #
+# ██║╚════██╗    ██╔════╝██╔═══██╗████╗  ██║██╔════╝██║██╔════╝  #
+# ██║ █████╔╝    ██║     ██║   ██║██╔██╗ ██║█████╗  ██║██║  ███╗ #
+# ██║ ╚═══██╗    ██║     ██║   ██║██║╚██╗██║██╔══╝  ██║██║   ██║ #
+# ██║██████╔╝    ╚██████╗╚██████╔╝██║ ╚████║██║     ██║╚██████╔╝ #
+# ╚═╝╚═════╝      ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚═╝ ╚═════╝  #
+###################################################################
 
 ####################################################################
 #                       P R I N C I P A L                          #
 ####################################################################
 
+# Mod4 = Windows
+# Mod1 = Alt
 # $win = Tecla Windows
+
 set $win Mod4
+#set $alt Mod1
 
 ####################################################################
 #                           FONT                                   #
@@ -74,6 +87,7 @@ bindsym $win+b exec --no-startup-id setxkbmap br
 
 # Bloquear a Tela
 bindsym $win+x exec --no-startup-id $HOME/.config/polybar/scripts/fortune.sh
+#bindsym $win+x exec --no-startup-id lockscreen
 
 # Terminal 
 bindsym $win+Return exec --no-startup-id i3-sensible-terminal
@@ -238,6 +252,7 @@ for_window [class="(qBittorrent)"] move to workspace $ws7
 
 # VSCODE ws=8
 for_window [class="(code-oss)"] move to workspace $ws8
+
 ####################################################################
 #                           R E G R A S                            #
 ####################################################################
@@ -266,6 +281,9 @@ for_window [class="(Gucharmap)"]floating enable
 # VSCODE (Programar)
 for_window [class="(code-oss)"]floating enable, move position center
 
+# Teams (Chamada de Video)
+for_window [class="(teams)"]floating enable, move position center
+
 # Qbittorrent (Gerenciador torrent)
 for_window [class="(qBittorrent)"]floating enable
 
@@ -287,6 +305,9 @@ for_window [class="(SimpleScreenRecorder)"]floating enable, move position center
 # Bluetooth (Bluetooth)
 for_window [class="(Blueman-manager)"]floating enable
 
+# Lutris (Gerenciador de games)
+for_window [class="(Lutris)"]floating enable, move position center
+
 # Flameshot (PrintScreen)
 for_window [class="(flameshot)"]floating enable, move position center
 
@@ -302,6 +323,31 @@ for_window [class="(Sxiv)"]floating enable, move position center
 gaps inner 6
 gaps outer 0
 #smart_gaps on
+
+
+####################################################################
+#                         R E S I Z E                              #
+####################################################################
+
+mode "resize" {
+        bindsym $left       resize shrink width 10 px or 10 ppt
+        bindsym $down       resize grow height 10 px or 10 ppt
+        bindsym $up         resize shrink height 10 px or 10 ppt
+        bindsym $right      resize grow width 10 px or 10 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym Left        resize shrink width 10 px or 10 ppt
+        bindsym Down        resize grow height 10 px or 10 ppt
+        bindsym Up          resize shrink height 10 px or 10 ppt
+        bindsym Right       resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape or Mod1+r
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $win+r mode "default"
+}
+
+bindsym $win+r mode "resize"
 
 ####################################################################
 #                         CONTROLE DO AÚDIO                        #
