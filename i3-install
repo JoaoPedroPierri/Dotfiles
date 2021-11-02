@@ -105,6 +105,7 @@ cp ~/.joao-repo/dotfiles/.zshrc $HOME
 cp ~/.joao-repo/dotfiles/.zshenv $HOME
 cp ~/.joao-repo/dotfiles/.zprofile $HOME
 cp ~/.joao-repo/dotfiles/.aliases $HOME
+cp ~/.joao-repo/dotfiles/.xprofile $HOME
 touch .zhistory $HOME
 sudo mkdir /usr/share/zsh/plugins
 sudo pacman -S zsh-autosuggestions && sudo pacman -S zsh-syntax-highlighting
