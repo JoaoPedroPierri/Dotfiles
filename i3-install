@@ -124,7 +124,7 @@ chmod +x $HOME/.config/polybar/scripts/*
 # Rofi
 sudo pacman -S rofi --noconfirm
 cp $HOME/.joao-repo/dotfiles/.config/rofi/drun.rasi $HOME/.config/rofi/
-cp $HOME/.joao-repo/dotfiles/.config/rofi/themes/dark.rasi $HOME/.config/rofi/themes/
+cp $HOME/.joao-repo/dotfiles/.config/rofi/dark.rasi $HOME/.config/rofi/themes/
 
 # Kitty
 cp $HOME/.joao-repo/dotfiles/.config/kitty/kitty.conf $HOME/.config/kitty
