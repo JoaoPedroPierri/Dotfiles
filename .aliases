@@ -25,3 +25,8 @@
 # CELULAR
   alias reb='adb reboot'
   alias boot='adb reboot bootloader'
+
+# SSH
+
+  alias ubuntu='ssh ubuntu@140.238.184.242'
+
