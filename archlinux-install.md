@@ -22,8 +22,8 @@ cfdisk
 ### Formatar as partições:
 
 ```
-partição para o /home = linux
-partição root / = linux
+partição para o /home = linux home
+partição root / = linux root
 partição swap = linux swap
 partição efi  = EFI
 ```
@@ -69,7 +69,7 @@ Sair ➜ CTRL+D
 ### Instalar sistema base:
 
 ```
-pacstrap /mnt base dhcpcd neovim linux-firmware base-devel
+pacstrap /mnt base neovim linux-firmware base-devel
 ```
 
 ### Gerar FSTAB:
@@ -124,7 +124,6 @@ echo joao > /etc/hostname
 ### Baixar kernel:
 
 ```
-pacman -S linux linux-headers ➜ Kernel Stable ➜ Default
 pacman -S linux-zen linux-zen-headers ➜ Kernel focado em desempenho
 ```
 
@@ -220,12 +219,6 @@ nmtui
 
 ```
 sudo pacman -S xf86-video-amdgpu --noconfirm
-```
-
-### AMD (ANTIGA):
-
-```
-sudo pacman -S xf86-video-ati --noconfirm
 ```
 
 ### Baixar alguns pacotes:
