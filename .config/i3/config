@@ -374,7 +374,7 @@ bindsym XF86AudioNext exec --no-startup-id playerctl next
 exec_always --no-startup-id autotiling
 
 # Pywal
-exec_always --no-startup-id ~/.cache/wal/colors.sh
+exec_always wal -n -q -i wallpapers/8.jpg
 
 # Polybar
 exec_always --no-startup-id ~/.config/polybar/scripts/launch.sh
