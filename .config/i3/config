@@ -324,7 +324,7 @@ for_window [class="(Sxiv)"]floating enable, move position center
 #                           G A P S                                #
 ####################################################################
 
-gaps inner 6
+gaps inner 2
 gaps outer 0
 #smart_gaps on
 
@@ -372,6 +372,9 @@ bindsym XF86AudioNext exec --no-startup-id playerctl next
 
 # Autotiling
 exec_always --no-startup-id autotiling
+
+# Pywal
+exec_always --no-startup-id ~/.cache/wal/colors.sh
 
 # Polybar
 exec_always --no-startup-id ~/.config/polybar/scripts/launch.sh
