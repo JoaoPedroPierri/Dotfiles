@@ -118,6 +118,9 @@ bindsym $win+Shift+s exec spotify
 # QBittorent
 bindsym $win+F1 exec qbittorrent
 
+# Pycharm
+bindsym $win+p exec pycharm
+
 # Google Chrome
 bindsym $win+g exec google-chrome-stable
 
@@ -190,6 +193,8 @@ set $ws5 " 5:  "
 set $ws6 " 6: 金"
 set $ws7 " 7:  "
 set $ws8 " 8:  "
+set $ws9 " 9:  "
+
 
 
 #set $ws1 "1"
@@ -257,6 +262,10 @@ for_window [class="(qBittorrent)"] move to workspace $ws7
 # VSCODE ws=8
 for_window [class="(code-oss)"] move to workspace $ws8
 
+# Pycharm ws=9
+for_window [class="(pycharm)"] move to workspace $ws9
+
+
 ####################################################################
 #                           R E G R A S                            #
 ####################################################################
@@ -285,8 +294,8 @@ for_window [class="(Gucharmap)"]floating enable
 # VSCODE (Programar)
 for_window [class="(code-oss)"]floating enable, move position center
 
-# Teams (Chamada de Video)
-for_window [class="(teams)"]floating enable, move position center
+# Pycharm (Python)
+for_window [class="(pycharm)"]floating enable, move position center
 
 # Qbittorrent (Gerenciador torrent)
 for_window [class="(qBittorrent)"]floating enable
