@@ -109,6 +109,9 @@ bindsym $win+l scratchpad show
 bindsym $win+F8 exec --no-startup-id simplescreenrecorder --start-hidden # -> Inicia o ssr
 bindsym $win+Shift+m exec --no-startup-id killall simplescreenrecorder # -> Mata o ssr
 
+# Udemy
+bindsym $win+u exec google-chrome-stable https://www.udemy.com/course/python-3-do-zero-ao-avancado/learn/lecture/15216068?start=285#content
+
 # MPV
 bindsym $win+m exec mpv
 
