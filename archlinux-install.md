@@ -56,11 +56,12 @@ swapon /dev/sda3 (SWAP)
 ### Conectar ao WIFI:
 
 ```
-clicar umas 3 vezes no botão de wi-fi/modo avião pra ele reconhecer a conexão pelo iwctl. (não é em todos que acontece isto.) 
+clicar no botão de wi-fi/modo avião até aparecer "on" pelo iwctl. (não é em todos que acontece isto.) 
 ```
 
 ```
 iwctl
+device list
 station wlan0 connect <nomedarede>
 *SENHA*
 Sair ➜ CTRL+D
@@ -224,7 +225,7 @@ sudo pacman -S xf86-video-amdgpu --noconfirm
 ### Baixar alguns pacotes:
 
 ```
-sudo pacman -S i3 usbutils kitty git curl wget xorg-xrandr xclip xorg-server xorg-xinit xdg-user-dirs ttf-jetbrains-mono ttf-nerd-fonts-symbols-mono ttf-font-awesome ttf-fantasque-sans-mono ttf-fira-code ttf-joypixels noto-fonts noto-fonts -cjk noto-fonts-emoji noto-fonts-extra cmake python-sphinx --noconfirm && xdg-user-dirs-update
+sudo pacman -S i3 usbutils kitty git curl wget xorg-xrandr xclip xorg-server xorg-xinit xdg-user-dirs ttf-jetbrains-mono ttf-nerd-fonts-symbols-mono ttf-font-awesome ttf-fantasque-sans-mono ttf-fira-code ttf-joypixels noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra cmake python-sphinx --noconfirm && xdg-user-dirs-update
 
 echo exec i3 > .xinitrc && startx 
 ```
