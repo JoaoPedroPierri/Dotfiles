@@ -119,7 +119,7 @@ echo KEYMAP=br-abnt2 > /etc/vconsole.conf
 ### Colocar nome host:
 
 ```
-echo joao > /etc/hostname
+echo joao > /etc/hostname ou echo nomedouser > /etc/hostname
 ```
 
 ### Baixar kernel:
@@ -160,14 +160,21 @@ passwd
 ### Criar user:
 
 ```
+Se você usa zsh você pode fazer assim:
+
 pacman -S zsh --noconfirm
-useradd -m -g users -s /bin/zsh joao
+
+useradd -m -g users -s /bin/zsh user
+
+Se você usa bash pode fazer assim:
+
+useradd -m -g users -s /bin/bash user
 ```
 
 ### Senha para o user:
 
 ```
-passwd joao
+passwd NOMEDOUSER
 ```
 
 ### Editar arquivo sudo:
@@ -225,7 +232,7 @@ sudo pacman -S xf86-video-amdgpu --noconfirm
 ### Baixar alguns pacotes:
 
 ```
-sudo pacman -S i3 kitty git curl wget xorg-xrandr xorg-server xorg-xinit xdg-user-dirs cmake python-sphinx --noconfirm && xdg-user-dirs-update
+sudo pacman -S i3 kitty ttf-nerd-fonts-symbols-mono ttf-jetbrains-mono git curl wget xorg-xrandr xorg-server xorg-xinit xdg-user-dirs cmake python-sphinx --noconfirm && xdg-user-dirs-update
 
 echo exec i3 > .xinitrc && startx 
 ```
@@ -239,7 +246,7 @@ setxkbmap br
 ```
 
 ```
-wget -c https://github.com/JoaoPedroPierri/dotfiles/raw/master/i3-install && chmod +x i3-install && ./i3-install
+wget -c https://github.com/JoaoPedroPierri/dotfiles/raw/master/i3-install && chmod +x i3-install && sudo ./i3-install
 ```
 
 # FINALIZADO #
