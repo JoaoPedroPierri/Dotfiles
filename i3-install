@@ -1,5 +1,15 @@
 #!/bin/env bash
 
+# Root Checker
+if [ "$EUID" -ne 0 ] ; then 
+  printf "Execute esse script como ROOT!"
+  exit
+fi
+
+# Checagem do pacote git
+clear
+[ ! `command -v git` ] && echo "Git não instalado, por favor faça a instalação" && exit 1
+
 # License: GPL v3.0
 # Install config i3 script
 
@@ -21,35 +31,27 @@ mkdir $HOME/scripts
 mkdir $HOME/wallpapers
 
 # Aviso
-clear && echo 'ATENÇÃO: LEIA O SCRIPT ANTES DE EXECUTA-LO!!!'
-echo
-echo 'Deseja executar o script?'
-echo
-echo '1 - Sim'
-echo '2 - Não'
-echo
+clear && printf "ATENÇÃO: LEIA O SCRIPT ANTES DE EXECUTA-LO!!!\n"
+printf "Deseja executar o script?\n\n[1] - Sim\n[2] - Não\n\n"
 read EXECUTE
-echo
+
 if [ $EXECUTE == '1' ];then
   continue
 else
-  echo 'Saindo...' && sleep 1 && exit 0
+  printf "Saindo..." && exit 0
 fi
 
-clear && echo '
+clear && printf "
 ██╗██████╗       ██╗███╗   ██╗███████╗████████╗ █████╗ ██╗     ██╗     
 ██║╚════██╗      ██║████╗  ██║██╔════╝╚══██╔══╝██╔══██╗██║     ██║     
 ██║ █████╔╝█████╗██║██╔██╗ ██║███████╗   ██║   ███████║██║     ██║     
 ██║ ╚═══██╗╚════╝██║██║╚██╗██║╚════██║   ██║   ██╔══██║██║     ██║     
 ██║██████╔╝      ██║██║ ╚████║███████║   ██║   ██║  ██║███████╗███████╗
-╚═╝╚═════╝       ╚═╝╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚══════╝
-                                                                       '
-echo
-echo 'Press enter to continue'
-read
+╚═╝╚═════╝       ╚═╝╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚══════╝\n\n"
 
 # Baixando pacotes
-sudo pacman -S python-pip xclip pacman-contrib ttf-jetbrains-mono ttf-nerd-fonts-symbols-mono ttf-font-awesome ttf-fantasque-sans-mono ttf-fira-code ttf-joypixels noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra blueman maim dunst libnotify playerctl gvfs-mtp xdg-user-dirs  usbutils w3m lib32-dbus-glib base-devel imagemagick python-pywal aria2 mpv fortune-mod maim pavucontrol qbittorrent pulseaudio-alsa zsh-autosuggestions zsh-syntax-highlighting redshift lsd youtube-dl android-tools gucharmap viewnior brightnessctl libreoffice zip unzip numlockx fzf ueberzug cups hplip system-config-printer simplescreenrecorder i3lock --noconfirm && xdg-user-dirs-update
+clear && sudo pacman -S archlinux-keyring --noconfirm
+sudo pacman -S python-pip xclip pacman-contrib  blueman maim dunst libnotify playerctl gvfs-mtp xdg-user-dirs usbutils w3m lib32-dbus-glib base-devel imagemagick python-pywal aria2 mpv fortune-mod maim pavucontrol qbittorrent pulseaudio-alsa zsh-autosuggestions zsh-syntax-highlighting redshift lsd youtube-dl android-tools gucharmap viewnior brightnessctl libreoffice zip unzip numlockx fzf ueberzug cups hplip system-config-printer simplescreenrecorder i3lock yt-dlp --noconfirm && xdg-user-dirs-update
 
 # Compilações
 # Compilando -> Polybar
@@ -147,6 +149,9 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 
 # YAY
 cd && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si && cd && sudo rm -rf yay-bin
+
+# Instalando as fontes:
+sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-nerd-fonts-symbols-mono ttf-jetbrains-mono noto-fonts-extra ttf-nerd-fonts-symbols-mono ttf-font-awesome ttf-fantasque-sans-mono ttf-fira-code ttf-joypixels --noconfirm
 
 # Restart i3
 i3-msg restart
