@@ -49,7 +49,7 @@ echo 'Press enter to continue'
 read
 
 # Baixando pacotes
-sudo pacman -S python-pip  xclip pacman-contrib blueman maim dunst libnotify playerctl gvfs-mtp xdg-user-dirs xorg-xrandr usbutils w3m lib32-dbus-glib base-devel imagemagick python-pywal aria2 mpv fortune-mod maim pavucontrol qbittorrent pulseaudio-alsa zsh-autosuggestions zsh-syntax-highlighting redshift lsd youtube-dl android-tools udev gucharmap viewnior brightnessctl libreoffice zip unzip numlockx fzf ueberzug cups hplip system-config-printer simplescreenrecorder i3lock --noconfirm && xdg-user-dirs-update
+sudo pacman -S python-pip xclip pacman-contrib ttf-jetbrains-mono ttf-nerd-fonts-symbols-mono ttf-font-awesome ttf-fantasque-sans-mono ttf-fira-code ttf-joypixels noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra blueman maim dunst libnotify playerctl gvfs-mtp xdg-user-dirs  usbutils w3m lib32-dbus-glib base-devel imagemagick python-pywal aria2 mpv fortune-mod maim pavucontrol qbittorrent pulseaudio-alsa zsh-autosuggestions zsh-syntax-highlighting redshift lsd youtube-dl android-tools gucharmap viewnior brightnessctl libreoffice zip unzip numlockx fzf ueberzug cups hplip system-config-printer simplescreenrecorder i3lock --noconfirm && xdg-user-dirs-update
 
 # Compilações
 # Compilando -> Polybar
