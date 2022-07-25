@@ -109,20 +109,11 @@ bindsym $win+l scratchpad show
 bindsym $win+F8 exec --no-startup-id simplescreenrecorder --start-hidden # -> Inicia o ssr
 bindsym $win+Shift+m exec --no-startup-id killall simplescreenrecorder # -> Mata o ssr
 
-# Udemy
-bindsym $win+u exec google-chrome-stable https://www.udemy.com/course/python-3-do-zero-ao-avancado/learn/lecture/15216068?start=285#content
-
 # MPV
 bindsym $win+m exec mpv
 
-# Spotify 
-bindsym $win+Shift+s exec spotify
-
 # QBittorent
 bindsym $win+F1 exec qbittorrent
-
-# Pycharm
-bindsym $win+p exec pycharm
 
 # Google Chrome
 bindsym $win+g exec google-chrome-stable
@@ -250,24 +241,17 @@ for_window [class="(kitty)"] move to workspace $ws2
 # Telegram ws=3
 for_window [class="(Telegram)"] move to workspace $ws3
 
-# Spotify ws=4
-for_window [class="(spotify)"] move to workspace $ws4
+# LibreOffice ws=4
+for_window [class="(libreoffice)"] move to workspace $ws4
 
-# LibreOffice ws=5
-for_window [class="(libreoffice)"] move to workspace  $ws5
+# MPV ws=5
+for_window [class="(mpv)"] move to workspace  $ws5
 
-# MPV ws=6
-for_window [class="(mpv)"] move to workspace $ws6 
+# Qbittorrent ws=6
+for_window [class="(qBittorrent)"] move to workspace $ws6 
 
-# Qbittorrent ws=7
-for_window [class="(qBittorrent)"] move to workspace $ws7 
-
-# VSCODE ws=8
-for_window [class="(code-oss)"] move to workspace $ws8
-
-# Pycharm ws=9
-for_window [class="(pycharm)"] move to workspace $ws9
-
+# VSCODE ws=7
+for_window [class="(code-oss)"] move to workspace $ws7 
 
 ####################################################################
 #                           R E G R A S                            #
