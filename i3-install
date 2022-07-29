@@ -1,242 +1,150 @@
-#!/usr/bin/env bash
+#!/bin/env bash
 
-# Usernam: João Pedro Pierri 
-# Telegram: @joaoppierri
-
-# Checagem do pacote git
 clear
 [ ! `command -v git` ] && echo "Git não instalado, por favor faça a instalação" && exit 1
 
+# License: GPL v3.0
+# Install config i3 script
+
+# Criando diretórios
+mkdir $HOME/.joao-repo
+mkdir $HOME/.compile
+mkdir $HOME/.config/rofi
+mkdir $HOME/.config/rofi/themes
+mkdir $HOME/.config/redshift
+mkdir $HOME/.config/polybar
+mkdir $HOME/.config/dunst
+mkdir $HOME/.config/nvim
+mkdir $HOME/.fonts
+mkdir $HOME/.themes
+mkdir $HOME/.Lock
+mkdir $HOME/.icons
+mkdir $HOME/.local/bin
+mkdir $HOME/scripts
+mkdir $HOME/wallpapers
+
 # Aviso
-warning(){
-  cat << Warning
-WARNING: Eu criei esse script a fim de automatizar minha instalação no i3-Gaps, RECOMENDO QUE VOCÊ LEIA O SCRIPT ANTES DE EXECUTA-LO, NÃO ME RESPONSABILIZO POR DANOS!!!
-Não, ele não tem nada de malicioso que possa prejudicar seu sistema, mas ele tem pacotes a serem baixados, e eu recomendo baixar todos, a não ser que você saiba qual pacote quer e o funcionamento dele, ae você tem todo o direito de abrir o script e editar ao seu gosto....
+clear && printf "ATENÇÃO: LEIA O SCRIPT ANTES DE EXECUTA-LO!!!\n"
+printf "Deseja executar o script?\n\n[1] - Sim\n[2] - Não\n\n"
+read EXECUTE
 
-Warning
-printf "\n\n" && read -p 'PRESSIONE ENTER PARA CONTINUAR...'
-}
+if [ $EXECUTE == '1' ];then
+  continue
+else
+  printf "Saindo..." && exit 0
+fi
 
-# Titulo
-title(){
-  clear
-  cat << Script
+clear && printf "
 ██╗██████╗       ██╗███╗   ██╗███████╗████████╗ █████╗ ██╗     ██╗     
 ██║╚════██╗      ██║████╗  ██║██╔════╝╚══██╔══╝██╔══██╗██║     ██║     
 ██║ █████╔╝█████╗██║██╔██╗ ██║███████╗   ██║   ███████║██║     ██║     
 ██║ ╚═══██╗╚════╝██║██║╚██╗██║╚════██║   ██║   ██╔══██║██║     ██║     
 ██║██████╔╝      ██║██║ ╚████║███████║   ██║   ██║  ██║███████╗███████╗
-╚═╝╚═════╝       ╚═╝╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚══════╝
+╚═╝╚═════╝       ╚═╝╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚══════╝\n\n"
 
-
-Script
-read -p 'PRESSIONE ENTER PARA CONTINUAR...'
-}
-
-# Criação de pastas
-i3PATH(){
-  clear
-  mkdir $HOME/.ffraanks-repo
-  mkdir $HOME/.compile
-  mkdir $HOME/.config/rofi
-  mkdir $HOME/.config/rofi/themes
-  mkdir $HOME/.config/polybar
-  mkdir $HOME/.config/dunst
-  mkdir $HOME/.config/nvim
-  mkdir $HOME/.fonts
-  mkdir $HOME/.themes
-  mkdir $HOME/.icons
-  mkdir $HOME/.local/bin
-  mkdir $HOME/Scripts
-  mkdir $HOME/Wallpapers
-  mkdir $HOME/.projects
-  mkdir $HOME/.Lock
-  #mkdir $HOME/.config/qutebrowser
-  #mkdir $HOME/.config/wyebadblock
-  #mkdir $HOME/.config/vimb
-  #mkdir $HOME/.config/bookmarks
-  printf "\n\n" && read -p 'Pastas criadas com sucesso!!! PRESSIONE ENTER PARA CONTINUAR...'
-}
-
-# Instalação de pacotes
-packages_install(){
-  clear && sudo pacman -S archlinux-keyring --noconfirm
-  clear && sudo pacman -S bottom heimdall tmate feh htop wine-staging firefox-i18n-pt-br unzip unrar p7zip nitrogen socat clamav torbrowser-launcher thunderbird-i18n-pt-pt profanity scrcpy irssi youtube-dl lfs qbittorrent tor dunst fuse xorg-xrandr simplescreenrecorder mpv ttf-fantasque-sans-mono libnotify python-pip pacman-contrib lxappearance gvfs-mtp xdg-user-dirs pulseaudio-alsa w3m ttf-fira-code zsh zsh-autosuggestions zsh-syntax-highlighting reflector keepassxc redshift ttf-font-awesome lib32-dbus-glib imagemagick jq inetutils bc base-devel zathura-pdf-mupdf kitty wmctrl maim lsd yt-dlp perl-glib-object-introspection perl-html-parser bat net-tools polkit-gnome nodejs yarn gst-libav gst-plugins-base gst-plugins-base-libs gst-plugins-good gstreamer gstreamer-vaapi fzf ueberzug dmenu perl-file-mimeinfo cmus qemu xcompmgr samba man-db gucharmap python-pywal --noconfirm && xdg-user-dirs-update && printf "\n" && read -p 'Pacotes baixados PRESSIONE ENTER PARA CONTINUAR'
-}
+# Baixando pacotes
+clear && sudo pacman -S archlinux-keyring --noconfirm
+sudo pacman -S python-pip xclip pacman-contrib  blueman maim dunst libnotify playerctl gvfs-mtp xdg-user-dirs usbutils w3m lib32-dbus-glib base-devel imagemagick python-pywal aria2 mpv fortune-mod maim pavucontrol qbittorrent pulseaudio-alsa zsh-autosuggestions zsh-syntax-highlighting redshift lsd youtube-dl android-tools gucharmap viewnior brightnessctl libreoffice zip unzip numlockx fzf ueberzug cups hplip system-config-printer simplescreenrecorder i3lock yt-dlp --noconfirm && xdg-user-dirs-update
 
 # Compilações
-builds(){
-  #clear
-  #cd $HOME/.compile
-  #git clone https://aur.archlinux.org/freetube-bin.git
-  #cd freetube-bin
-  #makepkg -sic --noconfirm
+# Compilando -> Polybar
+cd $HOME/.compile
+git clone https://aur.archlinux.org/polybar.git
+cd $HOME/.compile/polybar
+makepkg -sic --noconfirm
 
-  clear
-  cd $HOME/.compile
-  git clone https://aur.archlinux.org/code-minimap-bin.git
-  cd code-minimap-bin
-  makepkg -sic --noconfirm
+# Compilando -> Autotiling
+cd $HOME/.compile
+git clone https://aur.archlinux.org/autotiling.git
+cd $HOME/.compile/autotiling
+makepkg -sic --noconfirm
 
-  clear
-  cd $HOME/.compile
-  git clone https://aur.archlinux.org/inxi.git
-  cd inxi
-  makepkg -sic --noconfirm
+# Compilando -> Pulseaudio-ctl
+cd $HOME/.compile
+git clone https://aur.archlinux.org/pulseaudio-ctl.git
+cd $HOME/.compile/pulseaudio-ctl
+makepkg -sic --noconfirm
 
-  #clear
-  #cd $HOME/.compile
-  #git clone https://aur.archlinux.org/jellyfin-bin.git
-  #cd jellyfin-bin
-  #makepkg -sic --noconfirm
+# Compilando -> Google Chrome
+cd $HOME/.compile
+git clone https://aur.archlinux.org/google-chrome.git
+cd $HOME/.compile/google-chrome
+makepkg -sic --noconfirm
 
-  clear
-  cd $HOME/.compile
-  git clone https://aur.archlinux.org/simple-mtpfs.git
-  cd simple-mtpfs
-  makepkg -sic --noconfirm
+# Limpar console
+clear
 
-  clear
-  cd $HOME/.compile
-  git clone https://aur.archlinux.org/polybar.git
-  cd polybar
-  makepkg -sic --noconfirm
+# Clonando meu repositório
+cd $HOME/.joao-repo
+git clone https://github.com/JoaoPedroPierri/dotfiles.git
 
-  #clear
-  #cd $HOME/.compile
-  #git clone https://aur.archlinux.org/qt5-webengine-widevine.git
-  #cd qt5-webengine-widevine
-  #makepkg -sic --noconfirm
+# i3Lock
+cd $HOME/.Lock
+cp -r $HOME/.joao-repo/dotfiles/lock/ArchLinux.png ~/.Lock
 
-  clear
-  cd $HOME/.compile
-  git clone https://aur.archlinux.org/autotiling.git
-  cd $HOME/.compile/autotiling
-  makepkg -sic --noconfirm
+# dir ~/.local/bin e dando permissões aos scripts
+cp $HOME/.joao-repo/dotfiles/bin/* $HOME/.local/bin
+cd $HOME/.local/bin && chmod +x *
 
-  clear
-  cd $HOME/.compile
-  git clone https://aur.archlinux.org/pulseaudio-ctl.git
-  cd $HOME/.compile/pulseaudio-ctl
-  makepkg -sic --noconfirm
+# dir ~/Scripts e dando permissões aos scripts
+cp $HOME/.joao-repo/dotfiles/scripts/* $HOME/scripts
+cd $HOME/scripts && chmod +x *
 
-  clear
-  cd $HOME/.compile
-  git clone https://aur.archlinux.org/i3lock-color.git
-  cd $HOME/.compile/i3lock-color
-  makepkg -sic --noconfirm
+# Copiando as fontes para o sistema
+cp $HOME/.joao-repo/dotfiles/.fonts/* $HOME/.fonts
+sudo cp $HOME/.joao-repo/dotfiles/.fonts/Iosevka-Medium.ttf /usr/share/fonts/TTF
+sudo cp $HOME/.joao-repo/dotfiles/.fonts/Iosevka-Bold.ttf /usr/share/fonts/TTF
 
-  clear
-  cd $HOME/.compile
-  git clone https://aur.archlinux.org/grabc.git
-  cd $HOME/.compile/grabc
-  makepkg -sic --noconfirm
+# Copiando files zsh
+cp ~/.joao-repo/dotfiles/.zshrc $HOME
+cp ~/.joao-repo/dotfiles/.zshenv $HOME
+cp ~/.joao-repo/dotfiles/.zprofile $HOME
+cp ~/.joao-repo/dotfiles/.aliases $HOME
+cp ~/.joao-repo/dotfiles/.xprofile $HOME
+touch .zhistory $HOME
+sudo mkdir /usr/share/zsh/plugins
+sudo pacman -S zsh-autosuggestions && sudo pacman -S zsh-syntax-highlighting
 
-  clear
-  git clone --depth 1 https://github.com/matteoguarda/telegram-palette-gen $HOME/.telegram-palette-gen
+# Aplicando tema - i3wm
+cp $HOME/.joao-repo/dotfiles/.config/i3/config $HOME/.config/i3/
 
-  #clear
-  #cd $HOME/.projects
-  #git clone https://git.suckless.org/tabbed
-  #cd $HOME/.projects/tabbed && make
-  #sudo make clean install
+# YTFZF - CONFIG
+cp -r ~/.joao-repo/dotfiles/.config/ytfzf $HOME/.config/
 
-  clear
-  cd $HOME/.projects
-  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git
-  echo 'source ~/.projects/powerlevel10k/powerlevel10k.zsh-theme' >> $HOME/.zshrc
+# Polybar
+cp -r $HOME/.joao-repo/dotfiles/.config/polybar/scripts $HOME/.config/polybar
+cp $HOME/.joao-repo/dotfiles/.config/polybar/config $HOME/.config/polybar
+chmod +x $HOME/.config/polybar/scripts/*
 
-  clear
-  #cd $HOME/.projects
-  #git clone https://github.com/jun7/wyebadblock.git
-  #cd wyebadblock && make
-  #sudo make install
-  #cd $HOME/.config/wyebadblock && wget -c https://github.com/ffraanks/dotfiles/raw/master/.config/wyebadblock/easylist.txt
-  #wyebab --css
-  #sudo ln -s /usr/lib/wyebrowser/adblock.so /usr/lib/vimb
+# Rofi
+sudo pacman -S rofi --noconfirm
+cp $HOME/.joao-repo/dotfiles/.config/rofi/drun.rasi $HOME/.config/rofi/
+cp $HOME/.joao-repo/dotfiles/.config/rofi/dark.rasi $HOME/.config/rofi/themes/
 
-  clear
-  cd $HOME/.projects
-  git clone https://github.com/mafredri/zsh-async.git
+# Kitty
+cp $HOME/.joao-repo/dotfiles/.config/kitty/kitty.conf $HOME/.config/kitty
+cp $HOME/.joao-repo/dotfiles/.config/kitty/theme.conf $HOME/.config/kitty
+sudo ln -sv /usr/bin/kitty /usr/bin/xterm
 
-  clear
-  cd $HOME/.ffraanks-repo
-  git clone https://github.com/ffraanks/dotfiles.git
-  printf "\n\n" && read -p 'Compilações finalizadas!!! PRESSIONE ENTER PARA CONTINUAR...'
-}
+# DUNST
+cp $HOME/.joao-repo/dotfiles/.config/dunst/dunstrc $HOME/.config/dunst
 
-# Copiando arquivos
-copy_files(){
-  clear && echo 'Copiando arquivos...' && sleep 2
-  cp $HOME/.ffraanks-repo/dotfiles/bin/* $HOME/.local/bin
-  cd $HOME/.local/bin && wget -c "https://github.com/ffraanks/pywal-installer/raw/master/pywal"
-  cd $HOME/.local/bin && chmod +x *
-  cp $HOME/.ffraanks-repo/dotfiles/scripts/* $HOME/Scripts
-  cd $HOME/Scripts && chmod +x *
-  cd $HOME/Scripts
-  wget -c "https://github.com/ffraanks/encurtador-link/raw/master/short_url.py"
-  wget -c "https://github.com/ffraanks/qrcode-generator/raw/master/qrcode.py"
-  wget -c "https://github.com/ffraanks/email_generator/raw/master/email_generator.py"
+# NITROGEN
+sudo pacman -S nitrogen --noconfirm
+cd $HOME/wallpapers
+cp $HOME/.joao-repo/dotfiles/wallpapers/* $HOME/wallpapers
+nitrogen --set-auto $HOME/wallpapers/8.jpg
 
-  cp $HOME/.ffraanks-repo/dotfiles/fonts/* $HOME/.fonts
-  cp $HOME/.ffraanks-repo/dotfiles/home/.zshrc $HOME
-  cp $HOME/.ffraanks-repo/dotfiles/home/.zshenv $HOME
-  cp $HOME/.ffraanks-repo/dotfiles/home/.zprofile $HOME
-  cp $HOME/.ffraanks-repo/dotfiles/home/.aliases $HOME
-  cp $HOME/.ffraanks-repo/dotfiles/home/.scripts $HOME
-  cp $HOME/.ffraanks-repo/dotfiles/home/.emojis $HOME
-  touch .zhistory $HOME
-  sudo cp $HOME/.ffraanks-repo/dotfiles/fonts/Iosevka-Medium.ttf /usr/share/fonts/TTF
-  sudo cp $HOME/.ffraanks-repo/dotfiles/fonts/Iosevka-Bold.ttf /usr/share/fonts/TTF
-  printf "\n\n" && read -p 'Arquivos copiados com sucesso!!! PRESSIONE ENTER PARA CONTINUAR...'
-}
-
-# Finalizando o script
-end_script(){
-  #cd $HOME/usr/share/applications && rm -rf ppsspp-qt.desktop
-  cp $HOME/.ffraanks-repo/dotfiles/.config/starship.toml $HOME/.config
-  cp $HOME/.ffraanks-repo/dotfiles/.config/i3/config $HOME/.config/i3/
-  cp -r $HOME/.ffraanks-repo/dotfiles/.config/polybar/scripts $HOME/.config/polybar
-  cp $HOME/.ffraanks-repo/dotfiles/.config/polybar/config $HOME/.config/polybar
-  chmod +x $HOME/.config/polybar/scripts/*
-  sudo pacman -S rofi --noconfirm
-  cp $HOME/.ffraanks-repo/dotfiles/lock/ArchLinux.png $HOME/.Lock
-  #cp -r $HOME/.ffraanks-repo/dotfiles/.config/vimb/startpage $HOME/.config/vimb
-  #cp -r $HOME/.ffraanks-repo/dotfiles/.config/qutebrowser/config.py $HOME/.config
-  #cp -r $HOME/.ffraanks-repo/dotfiles/.config/qutebrowser/gruvbox.py $HOME/.config
-  cp $HOME/.ffraanks-repo/dotfiles/.config/rofi/drun.rasi $HOME/.config/rofi/
-  cp $HOME/.ffraanks-repo/dotfiles/.config/rofi/themes/dark.rasi $HOME/.config/rofi/themes/
-  cp $HOME/.ffraanks-repo/dotfiles/.config/kitty/kitty.conf $HOME/.config/kitty
-  cp $HOME/.ffraanks-repo/dotfiles/.config/kitty/theme.conf $HOME/.config/kitty
-  sudo ln -sv /usr/bin/kitty /usr/bin/xterm
-  cp $HOME/.ffraanks-repo/dotfiles/.config/dunst/dunstrc $HOME/.config/dunst
-  cp $HOME/.ffraanks-repo/dotfiles/.config/dunst/launchdunst.sh $HOME/.config/dunst && chmod +x $HOME/.config/dunst/launchdunst.sh
-  xdg-mime default org.pwmt.zathura.desktop application/pdf
-  cp $HOME/.ffraanks-repo/dotfiles/.config/nvim/init.vim $HOME/.config/nvim
-  sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+# NEOVIM
+cp $HOME/.joao-repo/dotfiles/.config/nvim/init.vim $HOME/.config/nvim
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-  cp -r $HOME/.local/share/nvim/site/autoload $HOME/.config/nvim
-  #cd $HOME/.config/vimb && wget -c https://github.com/ffraanks/dotfiles/raw/master/.config/vimb/config
-  #cp $HOME/.ffraanks-repo/dotfiles/.config/qutebrowser/* $HOME/.config/qutebrowser && cd $HOME/.config/qutebrowser && pip install -r requirements.txt && cd $HOME
-  pip install --user pyshorteners pyqrcode pypng pylint jedi qbittorrent-api terminaltables forex-python brotab
-  clear
-  pip install --index-url https://test.pypi.org/simple/ pywalfox==2.8.0rc1
-  pywalfox install
-  clear
-  
-  mkdir $HOME/Downloads/qute_down
-  cd $HOME/Wallpapers
-  wget -c "https://github.com/ffraanks/dotfiles/raw/master/wallpapers/CyberPunk.jpg"
-  wal -i $HOME/Wallpapers/CyberPunk.jpg
-  sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-nerd-fonts-symbols-mono --noconfirm
-  mkdir -p /home/$USER/.radionix; wget https://libregit.org/pekman/radionix/raw/branch/master/radionix -O /home/$USER/.radionix/radionix; chmod +x /home/$USER/.radionix/radionix
-  clear && read -p 'Script finalizado com sucesso! PRESSIONE ENTER PARA CONTINUAR...' && cd $HOME && i3-msg restart && clear && exit 0
-}
 
-warning
-title
-i3PATH
-packages_install
-builds
-copy_files
-end_script
+# YAY
+cd && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si && cd && sudo rm -rf yay-bin
+
+# Instalando as fontes:
+sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-nerd-fonts-symbols-mono ttf-jetbrains-mono noto-fonts-extra ttf-nerd-fonts-symbols-mono ttf-font-awesome ttf-fantasque-sans-mono ttf-fira-code ttf-joypixels --noconfirm
+
+# Restart i3
+i3-msg restart
