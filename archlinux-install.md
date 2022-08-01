@@ -88,7 +88,7 @@ arch-chroot /mnt
 # INTERNET
 
 ```
--NetworkManager
+NetworkManager
 pacman -S networkmanager
 systemctl enable NetworkManager
 ```
@@ -174,7 +174,7 @@ useradd -m -g users -s /bin/bash user
 ### Senha para o user:
 
 ```
-passwd NOMEDOUSER
+passwd USER
 ```
 
 ### Editar arquivo sudo:
@@ -188,7 +188,7 @@ root ALL=(ALL)ALL
 
 Você adiciona seu user:
 
-joao ALL=(ALL)ALL
+user ALL=(ALL)ALL
 
 ### (***)
 
@@ -201,10 +201,14 @@ Debaixo de Read drop-in files from /etc/sudoers.d ➜ Defaults pwfeedback
 # UEFI
 pacman -S grub efibootmgr
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=Grub_Arch --recheck
+```
 
+```
 ### Caso tenha Dualboot:
 pacman -S os-prober ntfs-3g --noconfirm
+```
 
+```
 ### Atualize o GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 
@@ -232,7 +236,7 @@ sudo pacman -S xf86-video-amdgpu --noconfirm
 ### Baixar alguns pacotes:
 
 ```
-sudo pacman -S i3 kitty ttf-nerd-fonts-symbols-mono ttf-jetbrains-mono git curl wget xorg-xrandr xorg-server xorg-xinit xdg-user-dirs cmake python-sphinx --noconfirm && xdg-user-dirs-update
+sudo pacman -S i3 kitty git curl wget ttf-nerd-fonts-symbols-mono ttf-jetbrains-mono xorg-xrandr xorg-server xorg-xinit xdg-user-dirs cmake python-sphinx --noconfirm && xdg-user-dirs-update
 
 echo exec i3 > .xinitrc && startx 
 ```
