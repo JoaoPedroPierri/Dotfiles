@@ -89,7 +89,7 @@ arch-chroot /mnt
 
 ```
 NetworkManager
-pacman -S networkmanager
+pacman -S networkmanager -noconfirm
 systemctl enable NetworkManager
 ```
 
@@ -125,7 +125,7 @@ echo joao > /etc/hostname ou echo nomedouser > /etc/hostname
 ### Baixar kernel:
 
 ```
-pacman -S linux-zen linux-zen-headers ➜ Kernel focado em desempenho
+pacman -S linux-zen linux-zen-headers --noconfirm ➜ Kernel focado em desempenho
 ```
 
 ### Configurar pacman.conf:
@@ -164,11 +164,11 @@ Se você usa zsh você pode fazer assim:
 
 pacman -S zsh --noconfirm
 
-useradd -m -g users -s /bin/zsh user
+useradd -m -g users -s /bin/zsh seuuser
 
 Se você usa bash pode fazer assim:
 
-useradd -m -g users -s /bin/bash user
+useradd -m -g users -s /bin/bash seuuser
 ```
 
 ### Senha para o user:
