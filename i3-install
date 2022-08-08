@@ -149,6 +149,7 @@ sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-nerd-fonts-symbols
 # Steam 
 sudo pacman -S steam --noconfirm
 sudo pacman -S gamemode lib32-gamemode --noconfirm
+yay -S proton-ge-custom-bin 
 
 # Restart i3
 i3-msg restart
