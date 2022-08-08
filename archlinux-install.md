@@ -6,13 +6,6 @@
 loadkeys br-abnt2
 ```
 
-### Mudar o tamanho da fonte:
-
-```
-setfont lat4-19
-```
-
-
 ### Separar as partições:
 
 ```
