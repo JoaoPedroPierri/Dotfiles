@@ -1,5 +1,12 @@
 ### Arch Linux Install - Eu uso esse guia para meu próprio uso, não me responsabilizo por problemas.
 
+### Ou pode usar meu script automatizado, mas é por sua conta e risco:
+
+```
+curl hhttps://raw.githubusercontent.com/JoaoPedroPierri/arch-install/master/arch-install.sh > arch-install.sh
+chmod +x arch-install.sh
+./arch-install.sh
+
 ### Layout do Teclado ABNT2:
 
 ```
