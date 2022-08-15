@@ -6,6 +6,7 @@
 curl hhttps://raw.githubusercontent.com/JoaoPedroPierri/arch-install/master/arch-install.sh > arch-install.sh
 chmod +x arch-install.sh
 ./arch-install.sh
+```
 
 ### Layout do Teclado ABNT2:
 
