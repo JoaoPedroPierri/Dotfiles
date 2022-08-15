@@ -3,7 +3,7 @@
 ### Ou pode usar meu script automatizado, mas é por sua conta e risco:
 
 ```
-curl hhttps://raw.githubusercontent.com/JoaoPedroPierri/arch-install/master/arch-install.sh > arch-install.sh
+curl https://raw.githubusercontent.com/JoaoPedroPierri/arch-install/master/arch-install.sh > arch-install.sh
 chmod +x arch-install.sh
 ./arch-install.sh
 ```
@@ -85,6 +85,13 @@ genfstab -p /mnt >> /mnt/etc/fstab
 ```
 arch-chroot /mnt
 ```
+
+### Pode usar meu script automatizado também, mas o risco é todo seu:
+
+```
+curl https://raw.githubusercontent.com/JoaoPedroPierri/arch-chroot/master/arch-chroot.sh > arch-chroot.sh
+chmod +x arch-chroot.sh
+./arch-chroot.sh
 
 # INTERNET
 
