@@ -44,7 +44,7 @@ clear && printf "
 
 # Baixando pacotes
 clear && sudo pacman -S archlinux-keyring --noconfirm
-sudo pacman -S python-pip xclip pacman-contrib  blueman maim dunst libnotify playerctl gvfs-mtp xdg-user-dirs usbutils w3m lib32-dbus-glib base-devel imagemagick python-pywal aria2 mpv fortune-mod maim pavucontrol qbittorrent pulseaudio-alsa zsh-autosuggestions zsh-syntax-highlighting redshift lsd youtube-dl android-tools gucharmap viewnior brightnessctl libreoffice zip unzip numlockx fzf ueberzug cups hplip system-config-printer simplescreenrecorder i3lock yt-dlp --noconfirm && xdg-user-dirs-update
+sudo pacman -S python-pip xclip arandr pacman-contrib  blueman maim dunst libnotify playerctl gvfs-mtp xdg-user-dirs usbutils w3m lib32-dbus-glib base-devel imagemagick python-pywal aria2 mpv fortune-mod maim pavucontrol qbittorrent pulseaudio-alsa zsh-autosuggestions zsh-syntax-highlighting redshift lsd youtube-dl android-tools gucharmap viewnior brightnessctl libreoffice zip unzip numlockx fzf ueberzug cups hplip system-config-printer simplescreenrecorder i3lock yt-dlp --noconfirm && xdg-user-dirs-update
 
 # Compilações
 # Compilando -> Polybar
@@ -145,6 +145,11 @@ cd && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -
 
 # Instalando as fontes:
 sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-nerd-fonts-symbols-mono ttf-jetbrains-mono noto-fonts-extra ttf-nerd-fonts-symbols-mono ttf-font-awesome ttf-fantasque-sans-mono ttf-fira-code ttf-joypixels --noconfirm
+
+# Steam 
+sudo pacman -S steam --noconfirm
+sudo pacman -S gamemode lib32-gamemode --noconfirm
+yay -S proton-ge-custom-bin 
 
 # Restart i3
 i3-msg restart
