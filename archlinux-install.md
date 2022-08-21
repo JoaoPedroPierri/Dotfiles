@@ -1,13 +1,5 @@
 ### Arch Linux Install - Eu uso esse guia para meu próprio uso, não me responsabilizo por problemas.
 
-### Ou pode usar meu script automatizado, mas é por sua conta e risco:
-
-```
-curl hhttps://raw.githubusercontent.com/JoaoPedroPierri/arch-install/master/arch-install.sh > arch-install.sh
-chmod +x arch-install.sh
-./arch-install.sh
-```
-
 ### Layout do Teclado ABNT2:
 
 ```
@@ -18,6 +10,15 @@ loadkeys br-abnt2
 
 ```
 cfdisk
+```
+
+### Ou pode usar meu script automatizado, mas é por sua conta e risco:
+
+```
+pacman -S curl
+curl https://raw.githubusercontent.com/JoaoPedroPierri/arch-install/master/arch-install.sh > arch-install.sh
+chmod +x arch-install.sh
+./arch-install.sh
 ```
 
 ### Formatar as partições:
@@ -67,7 +68,7 @@ Sair ➜ CTRL+D
 ### Instalar sistema base:
 
 ```
-pacstrap /mnt base neovim linux-firmware base-devel
+pacstrap /mnt base wget neovim linux-firmware base-devel
 ```
 
 ### Gerar FSTAB:
@@ -81,6 +82,13 @@ genfstab -p /mnt >> /mnt/etc/fstab
 ```
 arch-chroot /mnt
 ```
+
+### Pode usar meu script automatizado também, mas o risco é todo seu:
+
+```
+wget https://raw.githubusercontent.com/JoaoPedroPierri/arch-chroot/master/arch-chroot.sh > arch-chroot.sh
+chmod +x arch-chroot.sh
+./arch-chroot.sh
 
 # INTERNET
 
