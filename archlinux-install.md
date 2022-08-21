@@ -25,15 +25,13 @@ cfdisk
 ```
 partição para o /home = linux home
 partição root / = linux root
-partição swap = linux swap
 partição efi  = EFI
 ```
 
 ```
 mkfs.vfat -F32 /dev/sda1 (EFI)
 mkfs.ext4 /dev/sda2 (LINUX ROOT)
-mkfs.ext4 /dev/sda3 ➜ mkswap /dev/sda3 (SWAP)
-mkfs.ext4 /dev/sda4 (HOME)
+mkfs.ext4 /dev/sda3 (HOME)
 ```
 
 ### Montar partições:
@@ -44,14 +42,12 @@ OBS: Comece montando a sua partição root.
 mount /dev/sdaX (Montar ROOT)
 mount /dev/sdaX (Montar UEFI)
 mount /dev/sdaX (Montar HOME)
-swapon /dev/sdaX (Montar SWAP)
 
 Como eu uso:
 
 mount /dev/sda2 /mnt (ROOT)
 mkdir -p /mnt/boot/efi && mount /dev/sda1 /mnt/boot/efi (EFI)
 mkdir /mnt/home && mount /dev/sda4 /mnt/home (HOME)
-swapon /dev/sda3 (SWAP)
 ```
 
 ### Conectar ao WIFI:
@@ -166,10 +162,6 @@ Se você usa zsh você pode fazer assim:
 pacman -S zsh --noconfirm
 
 useradd -m -g users -s /bin/zsh seuuser
-
-Se você usa bash pode fazer assim:
-
-useradd -m -g users -s /bin/bash seuuser
 ```
 
 ### Senha para o user:
