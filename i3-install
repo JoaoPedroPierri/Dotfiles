@@ -107,6 +107,7 @@ cp ~/.joao-repo/dotfiles/.xprofile $HOME
 touch .zhistory $HOME
 sudo mkdir /usr/share/zsh/plugins
 sudo pacman -S zsh-autosuggestions && sudo pacman -S zsh-syntax-highlighting
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Aplicando tema - i3wm
 cp $HOME/.joao-repo/dotfiles/.config/i3/config $HOME/.config/i3/
