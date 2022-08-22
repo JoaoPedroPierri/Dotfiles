@@ -172,8 +172,8 @@ bindsym $win+Shift+r restart
 bindsym $win+d exec --no-startup-id rofi -show drun -theme "~/.config/rofi/drun.rasi"
 
 # Screenshot
-bindsym Print exec --no-startup-id shot -s -r # -> Salvar tela
-bindsym $win+Print exec --no-startup-id shot -c -r # -> Copiar a tela
+bindsym $win+Print exec --no-startup-id shot -s -r # -> Salvar tela
+bindsym Print exec --no-startup-id shot -c -r # -> Copiar a tela
 bindsym --release $win+c exec --no-startup-id shot -c -a  # -> Selecionar area
 ####################################################################
 #                              WORKSPACE                           #
@@ -261,9 +261,6 @@ for_window [class="(code-oss)"] move to workspace $ws7
 
 # Kitty (Terminal)
 for_window [class="(kitty)"]floating enable, move position center
-
-# Spotify (Streamer Music)
-for_window [class="(spotify)"]position, floating enable
 
 # Telegram (Desktop)
 for_window [class="(Telegram)"]floating enable, move position center
