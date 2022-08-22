@@ -320,7 +320,7 @@ for_window [class="(Sxiv)"]floating enable, move position center
 #                           G A P S                                #
 ####################################################################
 
-gaps inner 2
+gaps inner 4
 gaps outer 0
 #smart_gaps on
 
@@ -383,6 +383,9 @@ exec --no-startup-id dunst -b
 
 # Layout do teclado
 exec --no-startup-id setxkbmap br
+
+# Monitor
+exec --no-startup-id ~/.screenlayout/principal.sh
 
 # Redshift
 exec --no-startup-id redshift
