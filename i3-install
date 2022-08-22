@@ -1,5 +1,8 @@
 #!/bin/env bash
 
+# Usernam: Franklin Souza
+# Telegram: @FranklinTech
+
 clear
 [ ! `command -v git` ] && echo "Git não instalado, por favor faça a instalação" && exit 1
 
@@ -44,7 +47,7 @@ clear && printf "
 
 # Baixando pacotes
 clear && sudo pacman -S archlinux-keyring --noconfirm
-sudo pacman -S python-pip xclip arandr pacman-contrib  blueman maim dunst libnotify playerctl gvfs-mtp xdg-user-dirs usbutils w3m lib32-dbus-glib base-devel imagemagick python-pywal aria2 mpv fortune-mod maim pavucontrol qbittorrent pulseaudio-alsa zsh-autosuggestions zsh-syntax-highlighting redshift lsd youtube-dl android-tools gucharmap viewnior brightnessctl libreoffice zip unzip numlockx fzf ueberzug cups hplip system-config-printer simplescreenrecorder i3lock yt-dlp --noconfirm && xdg-user-dirs-update
+sudo pacman -S python-pip xclip arandr pacman-contrib  blueman maim dunst libnotify playerctl gvfs-mtp xdg-user-dirs usbutils w3m lib32-dbus-glib base-devel imagemagick python-pywal aria2 mpv fortune-mod maim pavucontrol qbittorrent pulseaudio-alsa jq zsh-autosuggestions zsh-syntax-highlighting redshift lsd youtube-dl android-tools gucharmap viewnior brightnessctl libreoffice zip unzip numlockx fzf ueberzug cups hplip system-config-printer simplescreenrecorder i3lock yt-dlp --noconfirm && xdg-user-dirs-update
 
 # Compilações
 # Compilando -> Polybar
