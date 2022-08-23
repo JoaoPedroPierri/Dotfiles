@@ -105,9 +105,8 @@ bindsym $win+Shift+y exec --no-startup-id kitty -e yt -t
 bindsym $win+o move scratchpad
 bindsym $win+l scratchpad show
 
-# Iniciar Gravação de Tela (SimpleScreenRecorder)
-bindsym $win+F8 exec --no-startup-id simplescreenrecorder --start-hidden # -> Inicia o ssr
-bindsym $win+Shift+m exec --no-startup-id killall simplescreenrecorder # -> Mata o ssr
+# Notify cal and date
+bindsym $win+Shift+d exec --no-startup-id notify-send -u low "$(date '+%d/%m/%Y     %H:%M')" "$(cal)"
 
 # MPV
 bindsym $win+m exec mpv
@@ -172,7 +171,7 @@ bindsym $win+Shift+r restart
 bindsym $win+d exec --no-startup-id rofi -show drun -theme "~/.config/rofi/drun.rasi"
 
 # Screenshot
-bindsym $win+Print exec --no-startup-id shot -s -r # -> Salvar tela
+bindsym $win+Print exec --no-startup-id shot sr # -> Salvar tela
 bindsym Print exec --no-startup-id shot -c -r # -> Copiar a tela
 bindsym --release $win+c exec --no-startup-id shot -c -a  # -> Selecionar area
 ####################################################################
@@ -182,12 +181,11 @@ bindsym --release $win+c exec --no-startup-id shot -c -a  # -> Selecionar area
 set $ws1 " 1:  "
 set $ws2 " 2:  "
 set $ws3 " 3:  "
-set $ws4 " 4: 阮"
-set $ws5 " 5:  "
-set $ws6 " 6: 金"
-set $ws7 " 7:  "
-set $ws8 " 8:  "
-set $ws9 " 9:  "
+set $ws4 " 4:  "
+set $ws5 " 5: 金"
+set $ws6 " 6:  "
+set $ws7 " 7:  "
+set $ws8 " 8:  "
 
 
 
