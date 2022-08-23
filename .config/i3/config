@@ -95,6 +95,9 @@ bindsym $win+Return exec --no-startup-id i3-sensible-terminal
 # Fechar janela focada
 bindsym $win+q kill
 
+# Notify cal and date
+bindsym $win+Shift+d exec --no-startup-id notify-send -u low "$(date '+%d/%m/%Y     %H:%M')" "$(cal)" 
+
 # Redshift.sh
 bindsym $win+Shift+b exec --no-startup-id $HOME/scripts/redshift.sh
 
@@ -105,11 +108,11 @@ bindsym $win+Shift+y exec --no-startup-id kitty -e yt -t
 bindsym $win+o move scratchpad
 bindsym $win+l scratchpad show
 
-# Notify cal and date
-bindsym $win+Shift+d exec --no-startup-id notify-send -u low "$(date '+%d/%m/%Y     %H:%M')" "$(cal)"
-
 # MPV
 bindsym $win+m exec mpv
+
+# Tidal 
+bindsym $win+Shift+t exec tidal-hifi
 
 # QBittorent
 bindsym $win+F1 exec qbittorrent
@@ -171,7 +174,7 @@ bindsym $win+Shift+r restart
 bindsym $win+d exec --no-startup-id rofi -show drun -theme "~/.config/rofi/drun.rasi"
 
 # Screenshot
-bindsym $win+Print exec --no-startup-id shot sr # -> Salvar tela
+bindsym $win+Print exec --no-startup-id shot -s -r # -> Salvar tela
 bindsym Print exec --no-startup-id shot -c -r # -> Copiar a tela
 bindsym --release $win+c exec --no-startup-id shot -c -a  # -> Selecionar area
 ####################################################################
@@ -181,11 +184,11 @@ bindsym --release $win+c exec --no-startup-id shot -c -a  # -> Selecionar area
 set $ws1 " 1:  "
 set $ws2 " 2:  "
 set $ws3 " 3:  "
-set $ws4 " 4:  "
-set $ws5 " 5: 金"
-set $ws6 " 6:  "
-set $ws7 " 7:  "
-set $ws8 " 8:  "
+set $ws4 " 4:  "
+set $ws5 " 5:  "
+set $ws6 " 6: 金"
+set $ws7 " 7:  "
+set $ws8 " 8:  "
 
 
 
@@ -239,17 +242,20 @@ for_window [class="(kitty)"] move to workspace $ws2
 # Telegram ws=3
 for_window [class="(Telegram)"] move to workspace $ws3
 
-# LibreOffice ws=4
-for_window [class="(libreoffice)"] move to workspace $ws4
+# Tidal-Hifi ws=4
+for_window [class="(tidal-hifi)"] move to workspace $ws4
 
-# MPV ws=5
-for_window [class="(mpv)"] move to workspace  $ws5
+# LibreOffice ws=5
+for_window [class="(libreoffice)"] move to workspace $ws5
 
-# Qbittorrent ws=6
-for_window [class="(qBittorrent)"] move to workspace $ws6 
+# MPV ws=6
+for_window [class="(mpv)"] move to workspace  $ws6
 
-# VSCODE ws=7
-for_window [class="(code-oss)"] move to workspace $ws7 
+# Qbittorrent ws=7
+for_window [class="(qBittorrent)"] move to workspace $ws7 
+
+# VSCODE ws=8
+for_window [class="(code-oss)"] move to workspace $ws8 
 
 ####################################################################
 #                           R E G R A S                            #
