@@ -83,7 +83,7 @@ separator = |
 #################################################################
 
 modules-left = 
-modules-center = title
+modules-center = battery cpu memory
 modules-right = pulse date info-redshift-temp powermenu
 
 #################################################################
@@ -172,8 +172,8 @@ separator = |
 #################################################################
 
 modules-left = i3
-modules-center = battery
-modules-right = scratchpad-indicator xkeyboard up
+modules-center = title
+modules-right = xkeyboard scratchpad-indicator up
 
 #################################################################
 #                         TRAY BAR BOTTOM                       #
