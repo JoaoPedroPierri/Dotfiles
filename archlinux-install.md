@@ -12,6 +12,18 @@ loadkeys br-abnt2
 cfdisk
 ```
 
+### Conectar ao WIFI:
+
+```
+clicar no botão de wi-fi/modo avião até aparecer "on" pelo iwctl. (não é em todos que acontece isto.) 
+
+iwctl
+device list
+station wlan0 connect <nomedarede>
+*SENHA*
+Sair ➜ CTRL+D
+```
+
 ### Ou pode usar meu script automatizado, mas é por sua conta e risco:
 
 ```
@@ -48,27 +60,13 @@ Como eu uso:
 
 mount /dev/sda2 /mnt (ROOT)
 mkdir -p /mnt/boot/efi && mount /dev/sda1 /mnt/boot/efi (EFI)
-mkdir /mnt/home && mount /dev/sda4 /mnt/home (HOME)
-```
-
-### Conectar ao WIFI:
-
-```
-clicar no botão de wi-fi/modo avião até aparecer "on" pelo iwctl. (não é em todos que acontece isto.) 
-```
-
-```
-iwctl
-device list
-station wlan0 connect <nomedarede>
-*SENHA*
-Sair ➜ CTRL+D
+mkdir /mnt/home && mount /dev/sda3 /mnt/home (HOME)
 ```
 
 ### Instalar sistema base:
 
 ```
-pacstrap /mnt base wget neovim linux-firmware base-devel
+pacstrap /mnt base wget git neovim linux-firmware base-devel
 ```
 
 ### Gerar FSTAB:
@@ -89,6 +87,7 @@ arch-chroot /mnt
 wget https://raw.githubusercontent.com/JoaoPedroPierri/arch-chroot/master/arch-chroot.sh > arch-chroot.sh
 chmod +x arch-chroot.sh
 ./arch-chroot.sh
+```
 
 # INTERNET
 
@@ -237,7 +236,7 @@ sudo pacman -S xf86-video-amdgpu --noconfirm
 ### Baixar alguns pacotes:
 
 ```
-sudo pacman -S i3 kitty git curl wget ttf-nerd-fonts-symbols-mono ttf-jetbrains-mono xorg-xrandr xorg-server xorg-xinit xdg-user-dirs cmake python-sphinx --noconfirm && xdg-user-dirs-update
+sudo pacman -S i3 kitty ttf-nerd-fonts-symbols-mono ttf-jetbrains-mono xorg-xrandr xorg-server xorg-xinit xdg-user-dirs cmake python-sphinx --noconfirm && xdg-user-dirs-update
 
 echo exec i3 > .xinitrc && startx 
 ```
